@@ -1,0 +1,3551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- OneTrust Cookies Consent Notice start for fandango.com -->
+        <!-- salt=jsScriptBlock-CMP2.1.1-feature-flag -->
+        <script type="text/javascript">
+            window.useOnetrustActiveGroups = true;
+        </script>
+        <!-- salt=jsScriptBlock-808a-m1Pa2209 -->
+        <!-- OneTrust Cookies Consent Notice start for fandango.com -->
+        <script type="text/javascript">
+            function OptanonWrapper() {}
+        </script>
+        <!-- OneTrust Cookies Consent Notice end for fandango.com -->
+        <!-- add image back in for all platforms IF in the US v1.5 -->
+        <style>
+            body #ot-sdk-btn.ot-sdk-show-settings.footer-site-info__link.us-privacy:not(:empty)::before {
+                content: '';
+                background-image: none;
+                display: inline-block;
+                height: 14px;
+                width: 29px;
+                margin-right: 4px;
+            }
+
+            body #ot-sdk-btn.ot-sdk-show-settings.footer-site-info__link.us-privacy.take2-5287:not(:empty)::before {
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAOCAYAAADT0Rc6AAAACXBIWXMAAACWAAAAlgEGQc5mAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAkZJREFUOI2VlE1IVFEYhp9zZqwZTaeNCdEiIgzLVmFUY4swadFyaFFQoNYwLlpJjhmaAxXWCBL9OWaQkUILWwSBZJTBMNOP5UL6oSLIoHIhQ/iT48zc0+Kqd+7cMcd39b3vd77v/e655xxBJryqDWgA1llyq8c00EG3CKSLYinyKTcaYZeT5BUPsroMmb9mKZvQFDFNIwZo6Q02NVGWk73CzW0RMUwXDHuOE6+rZG2un5HUIK8+19WAYB8hEbUDoBG+c4JUrTt3Q4D7L1ezGlBEACGlT7W4nKRq3dhWqik4DY/HDH5jOK1fCLz7Db57s6458jKaeFWzXUBT0LOyYWkLlBTB4Z2GNvLdiHddhLfn9C0fHYdXZ6GmF+YSllaN9pRG/qEdZvXzBJSWGNzTBT9iMHvN0CZnzDXvxqHiErxp1rmvD+5Gss7vkgDCOMNMzcG2VuiN6rzzKTwchYmged2tYWu36bgRz8St+UXYbZK/Qx9w1rp1odABUT/svQyffkP7IIydhyKnufDmCzPfWgwfA9A4AOGvEPGDpqD/tcVzSiroODNAKl3ds0Uvah+EezVQvtE67a8/Zv7lArQ+guATiH6DyiD01cH6jGERdAhQAi9a/0m0oxXI5TfFwPufUB4wa4UO/dekI88GiZRZo1sICUKhUXWsB/lgBOtZy4Lrz61apiFkMZQcgPRn8JQ6iGBoQxHJziPYq7eDM/OOLaC4IetV+D8kVXSJZ2ZTgDYlCybpnJ2nXimWsVwV5oGrhPAjhFoU/wFkb7M55NWangAAAABJRU5ErkJggg==");
+                vertical-align: middle;
+            }
+        </style>
+        <script>
+            (function() {
+                const info = '808a-m1Pa2209: cmp 2, OneTrust';
+                const maxAttempts = 8;
+                const attemptDelay = 300;
+
+                let attempts = 0;
+
+                function updateOtBtn() {
+                    let isSuccess = false;
+                    const country = (window.OneTrust && window.OneTrust.getGeolocationData() || {}).country;
+                    if (country === 'US') {
+                        isSuccess = true;
+                        const btn = document.getElementById('ot-sdk-btn');
+                        if (!btn)
+                            return;
+                        btn.classList.add('ot-sdk-show-settings', 'footer-site-info__link', 'us-privacy', 'take2-5287');
+                        btn.innerHTML = btn.innerText || 'Your Privacy Choices';
+                    }
+                    const feedback = window.Fandango && window.Fandango.debug || console;
+                    feedback.log(attempts, info, 'country:', country, isSuccess ? 'success' : 'fail');
+                    return isSuccess;
+                }
+
+                const intHandle = setInterval( () => {
+                    const isSuccess = updateOtBtn();
+                    attempts++;
+                    if (isSuccess || attempts >= maxAttempts) {
+                        clearInterval(intHandle);
+                    }
+                }
+                , attemptDelay);
+
+            }
+            )();
+        </script>
+        <!-- OneTrust Cookies Consent Notice end for fandango.com -->
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- salt=lyt_base-1ab3-gc -->
+        <title id="page-title">Movie Tickets &amp;Movie Times | Fandango</title>
+        <meta name="description" content="Buy movie tickets in advance, find movie times, watch trailers, read movie reviews, and more at Fandango."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="dns-prefetch" href="//images.fandango.com/">
+        <link rel="dns-prefetch" href="//mps.nbcuni.com">
+        <link rel="dns-prefetch" href="//assets.adobetm.com">
+        <link rel="dns-prefetch" href="//www.googletagservices.com">
+        <meta property="fb:app_id" content="5885186655">
+        <meta property="og:site_name" content="Fandango">
+        <meta property="og:title" content="Movie Tickets  Movie Times">
+        <meta property="og:description" content="Buy movie tickets in advance, find movie times, watch trailers, read movie reviews, and more at Fandango.">
+        <meta property="og:url" content="https://www.fandango.com/about-us">
+        <meta property="og:image" content="https://images.fandango.com/mobile/web/img/assets/logo-fandango.svg">
+        <meta property="og:type" content="website">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:site" content="@Fandango">
+        <meta property="twitter:creator" content="@Fandango">
+        <meta property="twitter:title" content="Movie Tickets  Movie Times">
+        <meta property="twitter:description" content="Buy movie tickets in advance, find movie times, watch trailers, read movie reviews, and more at Fandango.">
+        <meta property="twitter:img:src" content="https://images.fandango.com/mobile/web/img/assets/logo-fandango.svg">
+        <meta name="google-site-verification" content="jp4hUqV-kbwARmgxWd_D8APmS1r1JSZtr9Kb05AKyPA"/>
+        <meta name="theme-color" content="#FF7300">
+        <link rel="apple-touch-icon" href="//images.fandango.com/cms/assets/37249a90-47f8-11ec-a769-91f6c1f3c5b6--icon-180x180-apple-touch.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="//images.fandango.com/cms/assets/26459a80-47f8-11ec-a065-7510ce730a40--icon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="//images.fandango.com/cms/assets/00f069e0-47f8-11ec-ae31-05a670d2d590--icon-16x16.png">
+        <link rel="canonical" href="#"/>
+        <!-- JSON+LD unavailable -->
+        <!-- fandango:critical-path -->
+        <!-- salt=critical-css-desktop-about-aboutUs -->
+        <style data-qa="critical-path__base">
+            .icon-safety-whats-playing {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2273%22%20height%3D%2273%22%20viewBox%3D%220%200%2073%2073%22%3E%3Cstyle%3E.st3%2C.st4%7Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%3Bfill%3A%233478c1%3Bstroke%3A%23295b92%3Bstroke-width%3A1.881%7D.st4%7Bfill%3A%23fff%7D.st5%7Bfill%3Anone%3Bstroke%3A%23ff7300%3Bstroke-width%3A2.5455%3Bstroke-linecap%3Around%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%239cbde1%22%20fill-rule%3D%22evenodd%22%20stroke%3D%22%23295b92%22%20stroke-width%3D%221.85%22%20d%3D%22M46.3%2037.8l7-2.8c1-.4%202.2.1%202.6%201.1.1.2.1.5.1.7v10.1c0%201.1-.9%202-2%202-.2%200-.4%200-.6-.1l-7-2.1c-.8-.3-1.4-1-1.4-1.9v-5.3c0-.6.5-1.4%201.3-1.7z%22%20clip-rule%3D%22evenodd%22%2F%3E%3Ccircle%20cx%3D%2236.5%22%20cy%3D%2236.5%22%20r%3D%2236%22%20fill%3D%22%233478c1%22%20fill-rule%3D%22evenodd%22%20stroke%3D%22%233478c1%22%20clip-rule%3D%22evenodd%22%20opacity%3D%22.085%22%2F%3E%3Cpath%20fill%3D%22%239cbde1%22%20fill-rule%3D%22evenodd%22%20stroke%3D%22%23295b92%22%20stroke-width%3D%221.884%22%20d%3D%22M13.2%2053c-1.5%200-2.7-1.1-2.7-2.5V34c0-1.4%201.2-2.5%202.7-2.5h31.7c1.5%200%202.7%201.1%202.7%202.5v16.5c0%201.4-1.2%202.5-2.7%202.5H13.2z%22%20clip-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M28.8%2029.2c0%205.1-4.1%209.2-9.2%209.2s-9.2-4.1-9.2-9.2%204.1-9.2%209.2-9.2%209.2%204.1%209.2%209.2%22%20class%3D%22st3%22%2F%3E%3Cpath%20d%3D%22M24.7%2029.2c0%202.8-2.3%205.1-5.1%205.1s-5.1-2.3-5.1-5.1%202.3-5.1%205.1-5.1%205.1%202.3%205.1%205.1%22%20class%3D%22st4%22%2F%3E%3Cpath%20d%3D%22M47.7%2029.2c0%205.1-4.1%209.2-9.2%209.2s-9.2-4.1-9.2-9.2%204.1-9.2%209.2-9.2%209.2%204.1%209.2%209.2%22%20class%3D%22st3%22%2F%3E%3Cpath%20d%3D%22M43.5%2029.2c0%202.8-2.3%205.1-5.1%205.1s-5.1-2.3-5.1-5.1%202.3-5.1%205.1-5.1%205.1%202.3%205.1%205.1%22%20class%3D%22st4%22%2F%3E%3Cpath%20d%3D%22M60.4%2039.3l4.1-2M60.4%2044.4l4.1%202.1%22%20class%3D%22st5%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.icon-safety-whats-playing {
+                width: 73px;
+                height: 73px;
+                background-position: center
+            }
+
+            .apple-app-store {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2290%22%20height%3D%2230%22%20viewBox%3D%220%200%2090%2030%22%3E%3Cstyle%3E.st1%7Bfill%3A%23fff%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%23a6a6a6%22%20d%3D%22M82.6%200H5.6c-.5%200-1%20.1-1.5.1-.5.1-1%20.2-1.4.5-.4.2-.8.5-1.2.9-.4.4-.7.8-.9%201.2-.2.5-.4.9-.5%201.4%200%20.5-.1%201-.1%201.5v18.7c0%20.5.1%201%20.1%201.5.1.5.2%201%20.5%201.4.2.4.5.9.9%201.2.4.4.8.7%201.2.9.4.2.9.4%201.4.5.5.1%201%20.1%201.5.1h78.5c.5%200%201-.1%201.5-.1.5-.1%201-.2%201.4-.5.4-.2.9-.5%201.2-.9.4-.4.7-.8.9-1.2.2-.4.4-.9.5-1.4.1-.5.1-1%20.1-1.5v-.7V7.2v-.8-.7c0-.5-.1-1-.1-1.5-.1-.5-.2-1-.5-1.4-.5-.9-1.2-1.6-2.1-2.1-.5-.2-.9-.4-1.4-.5-.5-.1-1-.1-1.5-.1h-.7c-.3-.1-.5-.1-.8-.1z%22%2F%3E%3Cpath%20d%3D%22M6.3%2029.3h-.7c-.5%200-.9%200-1.4-.1-.4-.1-.8-.2-1.2-.4-.4-.2-.7-.5-1-.8-.3-.3-.6-.7-.8-1-.2-.4-.3-.8-.4-1.2-.1-.5-.1-.9-.1-1.4V6.3v-.7c0-.5%200-.9.1-1.4.1-.4.2-.8.4-1.2.2-.4.5-.7.8-1%20.3-.3.6-.6%201-.8.4-.2.8-.3%201.3-.4.5-.1.9-.1%201.4-.1h78.5c.5%200%20.9%200%201.4.1.4.1.9.2%201.3.4.8.4%201.4%201%201.8%201.8.2.4.3.8.4%201.2.1.5.1.9.1%201.4v18.7c0%20.5-.1.9-.1%201.4-.1.4-.2.9-.4%201.3s-.5.7-.8%201c-.3.3-.7.6-1%20.8-.4.2-.8.3-1.3.4-.5.1-.9.1-1.4.1H6.3z%22%2F%3E%3Cpath%20d%3D%22M18.6%2015.2c0-1.3.7-2.4%201.8-3.1-.7-1-1.8-1.6-3-1.6-1.3-.1-2.5.8-3.1.8-.7%200-1.6-.7-2.7-.7-1.4%200-2.7.8-3.4%202-1.5%202.5-.4%206.2%201%208.2.7%201%201.5%202.1%202.6%202.1%201%200%201.4-.7%202.7-.7%201.2%200%201.6.7%202.7.6%201.1%200%201.8-1%202.5-2%20.5-.7.9-1.5%201.1-2.3-1.4-.5-2.2-1.8-2.2-3.3zM16.5%209.2c.6-.7.9-1.7.8-2.6-.9.1-1.8.5-2.4%201.2-.6.7-.9%201.6-.9%202.5%201%200%201.9-.4%202.5-1.1zM31.7%2020.4h-3.6l-.9%202.5h-1.5l3.4-9.3h1.6l3.4%209.3h-1.5l-.9-2.5zm-3.2-1.2h2.8L30%2015.1l-1.5%204.1zM41.4%2019.5c0%202.1-1.1%203.5-2.8%203.5-.9%200-1.7-.4-2.1-1.2v3.4H35v-9h1.3v1.1c.4-.8%201.3-1.2%202.2-1.2%201.7-.1%202.9%201.3%202.9%203.4zm-1.5%200c0-1.4-.7-2.3-1.8-2.3s-1.8.9-1.8%202.3.7%202.3%201.8%202.3%201.8-.9%201.8-2.3zM48.8%2019.5c0%202.1-1.1%203.5-2.8%203.5-.9%200-1.7-.4-2.1-1.2v3.4h-1.4v-9h1.3v1.1c.4-.8%201.3-1.2%202.2-1.2%201.7-.1%202.8%201.3%202.8%203.4zm-1.4%200c0-1.4-.7-2.3-1.8-2.3s-1.8.9-1.8%202.3.7%202.3%201.8%202.3%201.8-.9%201.8-2.3zM53.8%2020.3c.1.9%201%201.5%202.2%201.5%201.2%200%202-.6%202-1.4%200-.7-.5-1.2-1.7-1.5l-1.2-.3c-1.7-.4-2.5-1.2-2.5-2.5%200-1.6%201.4-2.7%203.4-2.7s3.3%201.1%203.4%202.7H58c-.1-.9-.9-1.5-2-1.5s-1.9.6-1.9%201.4c0%20.7.5%201%201.7%201.3l1%20.3c1.9.5%202.7%201.2%202.7%202.6%200%201.7-1.4%202.8-3.6%202.8-2.1%200-3.5-1.1-3.6-2.8l1.5.1zM62.5%2014.5v1.6h1.3v1.1h-1.3v3.7c0%20.6.3.9.8.9h.5v1.1c-.3%200-.5.1-.8.1-1.4%200-1.9-.5-1.9-1.8v-3.9h-1v-1.1h1v-1.6h1.4zM64.5%2019.5c0-2.1%201.3-3.5%203.2-3.5%202%200%203.2%201.3%203.2%203.5%200%202.1-1.2%203.5-3.2%203.5-1.9%200-3.2-1.4-3.2-3.5zm5.1%200c0-1.5-.7-2.3-1.8-2.3s-1.8.9-1.8%202.3c0%201.5.7%202.3%201.8%202.3s1.8-.9%201.8-2.3zM72.1%2016.1h1.3v1.2c.2-.7.9-1.3%201.6-1.2.2%200%20.3%200%20.5.1v1.3c-.2-.1-.4-.1-.6-.1-.4%200-.8.1-1.1.4-.3.3-.4.7-.4%201.1v4H72v-6.8zM82%2020.9c-.2%201.2-1.4%202.1-2.9%202.1-2%200-3.2-1.3-3.2-3.4%200-2.1%201.2-3.5%203.1-3.5%201.9%200%203.1%201.3%203.1%203.3v.5h-4.8v.1c0%20.5.1%201%20.5%201.4.3.4.8.6%201.3.5.7.1%201.3-.3%201.6-1H82zm-4.7-2h3.4c0-.5-.1-.9-.5-1.2-.3-.3-.8-.5-1.2-.5-.5%200-.9.2-1.2.5s-.5.7-.5%201.2zM28.4%206.5c.6%200%201.2.2%201.6.6s.6%201%20.5%201.6c0%201.4-.8%202.3-2.1%202.3h-1.6V6.5h1.6zm-1%203.9h.8c.4%200%20.8-.1%201.1-.5.3-.3.4-.7.4-1.2.1-.4-.1-.8-.4-1.1-.3-.3-.7-.5-1.1-.5h-.8v3.3zM31.3%209.3c-.1-.6.2-1.2.7-1.5.5-.3%201.2-.3%201.7%200s.8.9.7%201.5c.1.6-.2%201.2-.7%201.5s-1.2.3-1.7%200-.8-.9-.7-1.5zm2.5%200c0-.7-.3-1.2-.9-1.2-.6%200-.9.4-.9%201.2%200%20.7.3%201.2.9%201.2.5%200%20.9-.4.9-1.2zM38.7%2011H38l-.7-2.5h-.1l-.7%202.5h-.6l-1-3.4h.7l.6%202.6h.1l.7-2.6h.6l.7%202.6.6-2.6h.7zM40.4%207.6h.6v.5c.2-.4.6-.6%201-.6.3%200%20.7.1.9.3.2.2.3.6.3.9V11h-.7V9c0-.5-.2-.8-.7-.8-.2%200-.4.1-.6.2-.1.2-.2.4-.1.6v2h-.7V7.6zM44.3%206.3h.7V11h-.7zM45.9%209.3c-.1-.6.2-1.2.7-1.5.5-.3%201.2-.3%201.7%200s.8.9.7%201.5c.1.6-.2%201.2-.7%201.5s-1.2.3-1.7%200-.7-.9-.7-1.5zm2.5%200c0-.7-.3-1.2-.9-1.2-.6%200-.9.4-.9%201.2%200%20.7.3%201.2.9%201.2.6%200%20.9-.4.9-1.2zM49.8%2010.1c0-.6.5-1%201.3-1L52%209v-.3c0-.4-.2-.6-.7-.6-.4%200-.6.1-.7.4H50c.1-.6.6-1%201.4-1%20.8%200%201.3.4%201.3%201.1V11H52v-.5h-.1c-.2.3-.6.5-1%20.5-.3%200-.6-.1-.8-.3s-.3-.3-.3-.6zm2.2-.3v-.3l-.8.1c-.5%200-.7.2-.7.5s.3.5.6.5c.2%200%20.4%200%20.6-.2.2-.2.3-.4.3-.6zM53.5%209.3c0-1.1.5-1.7%201.4-1.7.4%200%20.8.2%201%20.6V6.3h.7V11H56v-.5c-.2.4-.6.6-1.1.6-.8%200-1.4-.7-1.4-1.8zm.7%200c0%20.7.3%201.1.9%201.1.6%200%20.9-.4.9-1.1%200-.7-.4-1.1-.9-1.1-.6%200-.9.4-.9%201.1zM59.4%209.3c-.1-.6.2-1.2.7-1.5.5-.3%201.2-.3%201.7%200s.8.9.7%201.5c.1.6-.2%201.2-.7%201.5-.5.3-1.2.3-1.7%200s-.7-.9-.7-1.5zm2.5%200c0-.7-.3-1.2-.9-1.2-.6%200-.9.4-.9%201.2%200%20.7.3%201.2.9%201.2.6%200%20.9-.4.9-1.2zM63.5%207.6h.6v.5c.2-.4.6-.6%201-.6.3%200%20.7.1.9.3.2.2.3.6.3.9V11h-.7V9c0-.5-.2-.8-.7-.8-.2%200-.4.1-.6.2-.2.2-.2.4-.2.6v2h-.7V7.6zM70.1%206.8v.9h.7v.6h-.7V10c0%20.4.1.5.5.5h.3v.5h-.4c-.7%200-1-.3-1-.9V8.2H69v-.5h.5v-.9h.6zM71.8%206.3h.7v1.9h.1c.2-.4.6-.6%201-.6.3%200%20.7.1.9.4.2.2.3.6.3.9V11H74V9c0-.5-.3-.8-.7-.8-.2%200-.5.1-.6.2-.2.2-.2.4-.2.6v2h-.7V6.3zM78.6%2010.1c-.2.6-.8%201-1.5%201-.5%200-.9-.2-1.2-.5-.3-.3-.4-.8-.4-1.2-.1-.4.1-.9.4-1.2.3-.3.7-.5%201.2-.5.9%200%201.5.6%201.5%201.7v.2h-2.4c0%20.3.1.5.2.7s.4.3.7.3c.3%200%20.6-.1.8-.4l.7-.1zM76.2%209h1.7c0-.2-.1-.5-.2-.6-.2-.2-.4-.3-.6-.3-.2%200-.5.1-.6.3-.2.2-.3.4-.3.6z%22%20class%3D%22st1%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.apple-app-store {
+                width: 90px;
+                height: 30px;
+                background-position: center
+            }
+
+            .facebook {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cpath%20fill%3D%22%233b579d%22%20d%3D%22M15%2030C6.7%2030%200%2023.3%200%2015S6.7%200%2015%200s15%206.7%2015%2015-6.7%2015-15%2015z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M18.9%2030V18.4h3.9l.6-4.5h-4.5V11c0-1.3.4-2.2%202.2-2.2h2.4v-4c-.4-.1-1.8-.2-3.5-.2-3.5%200-5.8%202.1-5.8%206v3.3h-3.9v4.5h3.9V30h4.7z%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.facebook {
+                width: 30px;
+                height: 30px;
+                background-position: center
+            }
+
+            .google-play-store {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%2230%22%20viewBox%3D%220%200%20100%2030%22%3E%3Cpath%20fill%3D%22%23afafaf%22%20d%3D%22M95.44.26H3.98C1.97.26.32%201.91.32%203.92v21.95c0%202.01%201.65%203.66%203.66%203.66h91.46c2.01%200%203.66-1.65%203.66-3.66V3.91A3.66%203.66%200%200095.44.26z%22%2F%3E%3Cpath%20d%3D%22M95.44.84c1.7%200%203.07%201.38%203.07%203.07v21.95c0%201.7-1.38%203.07-3.07%203.07H3.98a3.07%203.07%200%2001-3.07-3.07V3.91C.91%202.21%202.29.84%203.98.84h91.46z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M35.02%207.75c0%20.61-.18%201.1-.55%201.46-.41.43-.95.65-1.61.65-.64%200-1.17-.22-1.62-.66-.45-.44-.67-.99-.67-1.63%200-.65.22-1.19.67-1.63.45-.44.98-.66%201.62-.66.31%200%20.61.06.9.18.29.12.51.29.69.49l-.39.39c-.29-.34-.69-.52-1.2-.52-.46%200-.86.16-1.2.49-.34.32-.5.75-.5%201.27s.17.94.5%201.27c.34.32.74.49%201.2.49.49%200%20.9-.16%201.23-.49.21-.21.34-.51.37-.89h-1.6v-.53h2.13c.02.11.03.22.03.32zM38.39%205.92H36.4v1.39h1.8v.53h-1.8v1.39h1.99v.54h-2.56V5.38h2.56zM40.77%209.77h-.56V5.92h-1.23v-.54h3.01v.54h-1.23v3.85zM44.18%209.77V5.38h.56v4.39zM47.25%209.77h-.57V5.92h-1.23v-.54h3.02v.54h-1.23v3.85zM54.18%209.2c-.43.45-.97.67-1.61.67-.64%200-1.18-.22-1.61-.67-.43-.45-.64-.99-.64-1.62%200-.64.21-1.19.64-1.62.43-.45.97-.67%201.61-.67.64%200%201.17.22%201.61.67.43.45.65.99.65%201.62%200%20.64-.22%201.18-.65%201.62zm-2.8-.37c.32.33.72.49%201.19.49s.87-.16%201.19-.49c.32-.33.49-.75.49-1.26s-.16-.93-.49-1.26c-.32-.33-.72-.49-1.19-.49s-.87.16-1.19.49c-.32.33-.49.75-.49%201.26s.17.93.49%201.26zM55.62%209.77V5.38h.69l2.14%203.42h.02l-.02-.85V5.38h.56v4.39h-.58L56.2%206.19h-.03l.03.85v2.74h-.58zM50.18%2016.17c-1.72%200-3.12%201.31-3.12%203.11%200%201.79%201.4%203.11%203.12%203.11s3.12-1.32%203.12-3.11c0-1.8-1.4-3.11-3.12-3.11zm0%205c-.94%200-1.76-.78-1.76-1.89%200-1.12.81-1.89%201.76-1.89.94%200%201.76.77%201.76%201.89%200%201.11-.82%201.89-1.76%201.89zm-6.81-5c-1.72%200-3.12%201.31-3.12%203.11%200%201.79%201.4%203.11%203.12%203.11s3.12-1.32%203.12-3.11c0-1.8-1.4-3.11-3.12-3.11zm0%205c-.94%200-1.76-.78-1.76-1.89%200-1.12.81-1.89%201.76-1.89.94%200%201.76.77%201.76%201.89-.01%201.11-.83%201.89-1.76%201.89zm-8.11-4.04v1.32h3.16c-.1.75-.34%201.29-.72%201.66-.46.46-1.18.97-2.44.97-1.95%200-3.47-1.57-3.47-3.51s1.52-3.51%203.47-3.51c1.05%200%201.81.41%202.38.94l.93-.93c-.79-.75-1.84-1.33-3.31-1.33-2.66%200-4.9%202.17-4.9%204.84%200%202.66%202.24%204.84%204.9%204.84%201.44%200%202.52-.47%203.37-1.35.87-.87%201.14-2.1%201.14-3.09%200-.31-.02-.59-.07-.83l-4.44-.02zm33.15%201.02c-.26-.7-1.05-1.98-2.66-1.98-1.6%200-2.93%201.26-2.93%203.11%200%201.74%201.32%203.11%203.09%203.11%201.43%200%202.25-.87%202.59-1.38l-1.06-.71c-.35.52-.83.86-1.53.86s-1.19-.31-1.51-.94l4.16-1.72-.15-.35zm-4.24%201.04c-.04-1.2.93-1.81%201.62-1.81.54%200%201%20.27%201.16.66l-2.78%201.15zm-3.39%203.02h1.37v-9.15h-1.37v9.15zm-2.24-5.34h-.04c-.31-.37-.89-.7-1.64-.7-1.56%200-2.99%201.37-2.99%203.12%200%201.74%201.43%203.1%202.99%203.1.75%200%201.33-.33%201.64-.71h.04v.45c0%201.19-.64%201.83-1.66%201.83-.83%200-1.35-.6-1.57-1.1l-1.19.5c.34.83%201.25%201.84%202.76%201.84%201.6%200%202.96-.94%202.96-3.24v-5.59h-1.3v.5zm-1.56%204.3c-.94%200-1.73-.79-1.73-1.87%200-1.1.79-1.9%201.73-1.9.93%200%201.66.8%201.66%201.9%200%201.08-.73%201.87-1.66%201.87zm17.84-8.11h-3.27v9.15h1.37v-3.47h1.91c1.51%200%203-1.1%203-2.84-.01-1.74-1.5-2.84-3.01-2.84zm.03%204.41h-1.94v-3.14h1.94c1.02%200%201.6.85%201.6%201.57%200%20.71-.58%201.57-1.6%201.57zm8.44-1.31c-.99%200-2.01.44-2.44%201.4l1.21.5c.26-.5.74-.67%201.24-.67.71%200%201.43.42%201.43%201.18v.1a3.07%203.07%200%2000-1.43-.35c-1.31%200-2.63.72-2.63%202.06%200%201.22%201.07%202.01%202.27%202.01.91%200%201.43-.41%201.74-.89h.04v.71h1.32v-3.5c.02-1.65-1.18-2.55-2.75-2.55zm-.17%205.01c-.45%200-1.07-.23-1.07-.78%200-.7.78-.97%201.45-.97.6%200%20.89.13%201.24.31-.1.84-.83%201.44-1.62%201.44zm7.75-4.82l-1.57%203.97h-.04l-1.62-3.97h-1.47l2.44%205.55-1.39%203.08h1.43l3.75-8.63h-1.53zm-12.3%205.86h1.37v-9.15h-1.37v9.15z%22%2F%3E%3Cpath%20fill%3D%22%232cdefd%22%20d%3D%22M7.96%205.77c-.21.23-.34.58-.34%201.03v16.19c0%20.45.12.8.34%201.02l.05.05L17.08%2015v-.22L8.01%205.71l-.05.06z%22%2F%3E%3Cpath%20fill%3D%22%23fed034%22%20d%3D%22M20.1%2018.02L17.08%2015v-.22l3.02-3.02.07.04%203.58%202.03c1.02.58%201.02%201.53%200%202.11l-3.58%202.03-.07.05z%22%2F%3E%3Cpath%20fill%3D%22%23f94355%22%20d%3D%22M20.17%2017.98l-3.09-3.09-9.12%209.12c.34.36.89.4%201.52.04l10.69-6.07%22%2F%3E%3Cpath%20fill%3D%22%232cf086%22%20d%3D%22M20.17%2011.8L9.48%205.73c-.63-.36-1.18-.32-1.52.04l9.12%209.12%203.09-3.09z%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.google-play-store {
+                width: 100px;
+                height: 30px;
+                background-position: center
+            }
+
+            .instagram {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cpath%20fill%3D%22%23BF1ABA%22%20d%3D%22M25.607%2025.607c-5.857%205.857-15.356%205.857-21.213%200-5.857-5.857-5.857-15.356%200-21.213%205.857-5.857%2015.356-5.857%2021.213%200%205.857%205.856%205.857%2015.356%200%2021.213z%22%2F%3E%3Cpath%20fill%3D%22%23FED743%22%20d%3D%22M4.393%2025.607A14.919%2014.919%200%20009.78%2029.05L.95%2020.22a14.935%2014.935%200%20003.443%205.387z%22%2F%3E%3Cpath%20fill%3D%22%23FDC33F%22%20d%3D%22M.95%2020.22l8.83%208.83c.869.322%201.759.564%202.663.72L.231%2017.557c.155.904.397%201.794.719%202.663z%22%2F%3E%3Cpath%20fill%3D%22%23FCAF3B%22%20d%3D%22M.231%2017.557L12.444%2029.77c.713.123%201.433.192%202.155.211L.02%2015.402c.019.722.088%201.441.211%202.155z%22%2F%3E%3Cpath%20fill%3D%22%23FA9A38%22%20d%3D%22M.02%2015.402L14.598%2029.98c.63.017%201.26.006%201.887-.056L.076%2013.515a15.042%2015.042%200%2000-.056%201.887z%22%2F%3E%3Cpath%20fill%3D%22%23F98634%22%20d%3D%22M.076%2013.515l16.409%2016.409a15.097%2015.097%200%20001.673-.271L.347%2011.842a15.06%2015.06%200%2000-.271%201.673z%22%2F%3E%3Cpath%20fill%3D%22%23F87230%22%20d%3D%22M.347%2011.842l17.812%2017.812c.515-.11%201.024-.251%201.527-.417L.763%2010.315a14.862%2014.862%200%2000-.416%201.527z%22%2F%3E%3Cpath%20fill%3D%22%23F75E2C%22%20d%3D%22M.763%2010.315l18.922%2018.922c.475-.156.942-.337%201.403-.541L1.305%208.912c-.205.46-.386.928-.542%201.403z%22%2F%3E%3Cpath%20fill%3D%22%23F64A28%22%20d%3D%22M1.305%208.912l19.783%2019.783c.439-.195.87-.412%201.293-.651L1.956%207.619c-.24.423-.456.854-.651%201.293z%22%2F%3E%3Cpath%20fill%3D%22%23F43525%22%20d%3D%22M1.956%207.619l20.425%2020.425c.407-.23.805-.48%201.193-.751L2.707%206.427c-.272.388-.521.786-.751%201.192z%22%2F%3E%3Cpath%20fill%3D%22%23F32121%22%20d%3D%22M2.707%206.427l20.867%2020.867c.376-.263.744-.542%201.1-.843L3.55%205.326c-.301.357-.58.724-.843%201.101z%22%2F%3E%3Cpath%20fill%3D%22%23BF1ABA%22%20d%3D%22M29.05%209.78c-.728-1.964-1.866-3.809-3.443-5.387S22.183%201.678%2020.22.95l8.83%208.83z%22%2F%3E%3Cpath%20fill%3D%22%23C419AA%22%20d%3D%22M17.557.231L29.77%2012.444a14.923%2014.923%200%2000-.72-2.663L20.22.951a14.84%2014.84%200%2000-2.663-.72z%22%2F%3E%3Cpath%20fill%3D%22%23C9179B%22%20d%3D%22M15.402.02L29.98%2014.598a15.006%2015.006%200%2000-.211-2.155L17.557.231A15.006%2015.006%200%200015.402.02z%22%2F%3E%3Cpath%20fill%3D%22%23CE168B%22%20d%3D%22M13.515.076l16.409%2016.409c.062-.628.073-1.258.056-1.887L15.402.02c-.63-.017-1.26-.006-1.887.056z%22%2F%3E%3Cpath%20fill%3D%22%23D3157B%22%20d%3D%22M11.842.347l17.812%2017.812c.119-.554.215-1.111.271-1.673L13.515.076a15.06%2015.06%200%2000-1.673.271z%22%2F%3E%3Cpath%20fill%3D%22%23D9146C%22%20d%3D%22M10.315.763l18.922%2018.922c.165-.503.306-1.012.417-1.527L11.842.347c-.515.11-1.024.251-1.527.416z%22%2F%3E%3Cpath%20fill%3D%22%23DE125C%22%20d%3D%22M8.912%201.305l19.783%2019.783c.204-.46.385-.928.541-1.403L10.315.763c-.475.156-.943.337-1.403.542z%22%2F%3E%3Cpath%20fill%3D%22%23E3114C%22%20d%3D%22M7.619%201.956l20.425%2020.425c.239-.423.456-.853.651-1.293L8.912%201.305c-.439.195-.87.411-1.293.651z%22%2F%3E%3Cpath%20fill%3D%22%23E8103C%22%20d%3D%22M6.427%202.707l20.867%2020.867c.271-.388.521-.786.751-1.193L7.619%201.956c-.406.23-.804.479-1.192.751z%22%2F%3E%3Cpath%20fill%3D%22%23ED0E2D%22%20d%3D%22M5.326%203.55L26.45%2024.674c.302-.356.581-.724.843-1.1L6.427%202.707a15.15%2015.15%200%2000-1.101.843z%22%2F%3E%3Cpath%20fill%3D%22%23F20D1D%22%20d%3D%22M4.393%204.393c-.3.3-.574.615-.843.933L24.674%2026.45c.318-.269.633-.543.933-.843s.574-.615.843-.933L5.326%203.55a15.36%2015.36%200%2000-.933.843z%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M15%206.606c2.733%200%203.057.009%204.137.06.999.045%201.542.213%201.902.354.477.186.819.408%201.176.765s.579.699.765%201.176c.141.36.306.903.354%201.902.048%201.08.06%201.404.06%204.137s-.009%203.057-.06%204.137c-.045.999-.213%201.542-.354%201.902-.186.477-.408.819-.765%201.176s-.699.579-1.176.765c-.36.141-.903.306-1.902.354-1.08.048-1.404.06-4.137.06s-3.057-.009-4.137-.06c-.999-.045-1.542-.213-1.902-.354-.477-.186-.819-.408-1.176-.765s-.579-.699-.765-1.176c-.141-.36-.306-.903-.354-1.902-.048-1.08-.06-1.404-.06-4.137s.009-3.057.06-4.137c.045-.999.213-1.542.354-1.902.186-.477.408-.819.765-1.176s.699-.579%201.176-.765c.36-.141.903-.306%201.902-.354%201.08-.051%201.404-.06%204.137-.06zm0-1.845c-2.781%200-3.129.012-4.221.063-1.089.051-1.833.222-2.487.477A4.943%204.943%200%20006.48%206.48a5.04%205.04%200%2000-1.182%201.815c-.252.651-.426%201.395-.477%202.487-.051%201.092-.063%201.44-.063%204.221s.012%203.129.063%204.221c.051%201.089.222%201.833.477%202.487A5.005%205.005%200%20006.48%2023.52c.57.57%201.14.918%201.815%201.182.651.252%201.395.426%202.487.477%201.092.051%201.44.063%204.221.063s3.129-.012%204.221-.063c1.089-.051%201.833-.222%202.487-.477a5.005%205.005%200%20001.809-1.182%205.04%205.04%200%20001.182-1.815c.252-.651.426-1.395.477-2.487.051-1.092.063-1.44.063-4.221s-.012-3.129-.063-4.221c-.051-1.089-.222-1.833-.477-2.487A5.005%205.005%200%200023.52%206.48a5.04%205.04%200%2000-1.815-1.182c-.651-.252-1.395-.426-2.487-.477-1.089-.048-1.437-.06-4.218-.06z%22%2F%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M15%209.741a5.26%205.26%200%2010.001%2010.52A5.26%205.26%200%200015%209.74zm0%208.673a3.414%203.414%200%20110-6.828%203.414%203.414%200%20010%206.828z%22%2F%3E%3Ccircle%20cx%3D%2220.466%22%20cy%3D%229.534%22%20r%3D%221.23%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.instagram {
+                width: 30px;
+                height: 30px;
+                background-position: center
+            }
+
+            .twitter {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cpath%20fill%3D%22%231da1f2%22%20d%3D%22M15%200c8.3%200%2015%206.7%2015%2015s-6.7%2015-15%2015S0%2023.3%200%2015%206.7%200%2015%200z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M11.5%2022.6c7.1%200%2010.9-5.9%2010.9-10.9v-.5c.8-.5%201.4-1.2%201.9-2-.7.3-1.4.5-2.2.6.8-.5%201.4-1.2%201.7-2.1-.8.4-1.6.8-2.4.9C20%207%2017.5%207%2016%208.4c-1%20.9-1.4%202.3-1.1%203.7-3.1-.2-6-1.6-7.9-4-1%201.8-.5%204%201.2%205.1-.6%200-1.2-.2-1.7-.5%200%201.8%201.3%203.4%203.1%203.8-.6.2-1.2.2-1.7.1.5%201.6%201.9%202.6%203.6%202.7-1.4%201.1-3%201.7-4.8%201.6-.3%200-.6%200-.9-.1%201.6%201.2%203.6%201.8%205.7%201.8%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.twitter {
+                width: 30px;
+                height: 30px;
+                background-position: center
+            }
+
+            .youtube {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cpath%20fill%3D%22red%22%20d%3D%22M15%2030C6.7%2030%200%2023.3%200%2015S6.7%200%2015%200s15%206.7%2015%2015-6.7%2015-15%2015z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M24.5%2010.2c-.2-.9-.9-1.5-1.8-1.8C21.2%208%2015%208%2015%208s-6.2%200-7.8.4c-.9.2-1.5.9-1.8%201.8C5%2011.7%205%2015%205%2015s0%203.3.4%204.8c.2.9.9%201.5%201.8%201.8%201.6.4%207.8.4%207.8.4s6.2%200%207.8-.4c.9-.2%201.5-.9%201.8-1.8.4-1.5.4-4.8.4-4.8s0-3.3-.5-4.8zM13%2018v-6l5.2%203-5.2%203z%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.youtube {
+                width: 30px;
+                height: 30px;
+                background-position: center
+            }
+
+            html {
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%
+            }
+
+            body {
+                margin: 0
+            }
+
+            main {
+                display: block
+            }
+
+            h1 {
+                font-size: 2em;
+                margin: .67em 0
+            }
+
+            a {
+                background-color: transparent
+            }
+
+            button,input {
+                font-family: inherit;
+                font-size: 100%;
+                line-height: 1.15;
+                margin: 0
+            }
+
+            button,input {
+                overflow: visible
+            }
+
+            button {
+                text-transform: none
+            }
+
+            [type=submit],button {
+                -webkit-appearance: button
+            }
+
+            [type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+                border-style: none;
+                padding: 0
+            }
+
+            [type=submit]:-moz-focusring,button:-moz-focusring {
+                outline: 1px dotted ButtonText
+            }
+
+            ::-webkit-file-upload-button {
+                -webkit-appearance: button;
+                font: inherit
+            }
+
+            *,:after,:before {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box
+            }
+
+            body {
+                margin: 0
+            }
+
+            a {
+                text-decoration: none
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none
+            }
+
+            h1,h3 {
+                margin: 0;
+                font-weight: 400;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale
+            }
+
+            button,input {
+                font-size: inherit;
+                font-family: inherit;
+                line-height: inherit
+            }
+
+            button {
+                border: none;
+                background-color: unset;
+                padding: 0
+            }
+
+            .sr-only {
+                border: 0;
+                clip: rect(0,0,0,0);
+                clip: rect(1px,1px,1px,1px);
+                clip-path: inset(50%);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+                word-wrap: normal!important
+            }
+
+            .skip-link {
+                clip: rect(1px,1px,1px,1px);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px
+            }
+
+            .skip-link:focus {
+                clip: auto;
+                color: #2a2c32;
+                height: auto;
+                overflow: auto;
+                position: absolute;
+                width: auto;
+                background: rgba(255,255,255,.95);
+                border: 1px solid rgba(128,128,128,.25);
+                padding: 10px;
+                margin-top: -5px;
+                z-index: 100;
+                line-height: 1
+            }
+
+            @font-face {
+                font-family: alternate-gothic-no-1-d;
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.385de3dc8d4.eot);
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.385de3dc8d4.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.f4100372f7c.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.a61aa58d0a9.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.51062984fba.svg#alternate_gothic_no1_proRg) format('svg');
+                font-weight: 400;
+                font-style: normal;
+                font-display: fallback
+            }
+
+            @font-face {
+                font-family: proxima-nova;
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.2636f179d38.eot);
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.2636f179d38.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.63625dba7f3.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.3bcfd265b4b.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.67bc3e888a6.svg#proxima_novaregular) format('svg');
+                font-weight: 400;
+                font-style: normal;
+                font-display: fallback
+            }
+
+            @font-face {
+                font-family: proxima-nova;
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.ae7a58f2215.eot);
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.ae7a58f2215.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.cb7c09afd5c.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.de26fc34122.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.724b839a357.svg#proxima_novaitalic) format('svg');
+                font-weight: 400;
+                font-style: italic;
+                font-display: fallback
+            }
+
+            @font-face {
+                font-family: proxima-nova;
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.97bd7ce156c.eot);
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.97bd7ce156c.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.0afb923296b.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.be89e0f0415.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.b85661b6470.svg#proxima_novabold) format('svg');
+                font-weight: 700;
+                font-style: normal;
+                font-display: fallback
+            }
+
+            @font-face {
+                font-family: proxima-nova;
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.4a9159d0117.eot);
+                src: url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.4a9159d0117.eot?#iefix) format('embedded-opentype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2) format('woff2'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.5c195808de0.woff) format('woff'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.c0e436c6b22.ttf) format('truetype'),url(//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.243ee08e413.svg#proxima_novabold_italic) format('svg');
+                font-weight: 700;
+                font-style: italic;
+                font-display: fallback
+            }
+
+            .row {
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 1280px
+            }
+
+            .row:after,.row:before {
+                display: block;
+                visibility: hidden;
+                overflow: hidden;
+                width: 0;
+                height: 0;
+                content: "";
+                font-size: 0;
+                line-height: 0
+            }
+
+            .row:after {
+                clear: both
+            }
+
+            .width-25,.width-50 {
+                float: left;
+                padding-right: 10px;
+                padding-left: 10px
+            }
+
+            .width-25 {
+                width: 25%
+            }
+
+            .width-50 {
+                width: 50%
+            }
+
+            .fd-loading {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                background-image: url(//images.fandango.com/fandango-www/screenplay/assets/images/shared/loading.7e99e1159a3.gif);
+                background-repeat: no-repeat;
+                background-size: contain;
+                vertical-align: middle
+            }
+
+            html {
+                font-size: 16px
+            }
+
+            body {
+                background-color: #fff;
+                color: #333e48;
+                padding: 50px 0;
+                font-size: .8125rem;
+                font-family: proxima-nova,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",HelveticaNeue,arial,sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale
+            }
+
+            body.is-desktop {
+                padding: 0
+            }
+
+            .a,a {
+                color: #3478c1;
+                font-weight: 700
+            }
+
+            .icon {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: transparent;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 0;
+                direction: ltr
+            }
+
+            .fd-panel {
+                padding: 1rem;
+                background-color: #fff;
+                border-top: 8px solid #ecedee;
+                margin-bottom: 7px;
+                position: relative
+            }
+
+            .hide {
+                display: none!important
+            }
+
+            @media (orientation: landscape) {
+                body {
+                    margin:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)
+                }
+            }
+
+            .splide__container {
+                box-sizing: border-box;
+                position: relative
+            }
+
+            .splide__list {
+                backface-visibility: hidden;
+                display: -ms-flexbox;
+                display: flex;
+                height: 100%;
+                margin: 0!important;
+                padding: 0!important
+            }
+
+            .splide.is-initialized:not(.is-active) .splide__list {
+                display: block
+            }
+
+            .splide__pagination {
+                -ms-flex-align: center;
+                align-items: center;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-pack: center;
+                justify-content: center;
+                margin: 0
+            }
+
+            .splide__pagination li {
+                display: inline-block;
+                line-height: 1;
+                list-style-type: none;
+                margin: 0
+            }
+
+            .splide:not(.is-overflow) .splide__pagination {
+                display: none
+            }
+
+            .splide__progress__bar {
+                width: 0
+            }
+
+            .splide {
+                position: relative;
+                visibility: hidden
+            }
+
+            .splide.is-initialized,.splide.is-rendered {
+                visibility: visible
+            }
+
+            .splide__slide {
+                backface-visibility: hidden;
+                box-sizing: border-box;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                list-style-type: none!important;
+                margin: 0;
+                position: relative
+            }
+
+            .splide__slide img {
+                vertical-align: bottom
+            }
+
+            .splide__spinner {
+                animation: splide-loading 1s linear infinite;
+                border: 2px solid #999;
+                border-left-color: transparent;
+                border-radius: 50%;
+                bottom: 0;
+                contain: strict;
+                display: inline-block;
+                height: 20px;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 20px
+            }
+
+            .splide__sr {
+                clip: rect(0 0 0 0);
+                border: 0;
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px
+            }
+
+            .splide__toggle.is-active .splide__toggle__play,.splide__toggle__pause {
+                display: none
+            }
+
+            .splide__toggle.is-active .splide__toggle__pause {
+                display: inline
+            }
+
+            .splide__track {
+                overflow: hidden;
+                position: relative;
+                z-index: 0
+            }
+
+            @keyframes splide-loading {
+                0% {
+                    transform: rotate(0)
+                }
+
+                to {
+                    transform: rotate(1turn)
+                }
+            }
+
+            .splide__track--draggable {
+                -webkit-touch-callout: none
+            }
+
+            .splide__track--fade>.splide__list>.splide__slide {
+                margin: 0!important;
+                opacity: 0;
+                z-index: 0
+            }
+
+            .splide__track--fade>.splide__list>.splide__slide.is-active {
+                opacity: 1;
+                z-index: 1
+            }
+
+            .splide--rtl {
+                direction: rtl
+            }
+
+            .splide__track--ttb>.splide__list {
+                display: block
+            }
+
+            .splide__arrow {
+                -ms-flex-align: center;
+                align-items: center;
+                background: #ccc;
+                border: 0;
+                border-radius: 50%;
+                display: -ms-flexbox;
+                display: flex;
+                height: 2em;
+                -ms-flex-pack: center;
+                justify-content: center;
+                opacity: .7;
+                padding: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2em;
+                z-index: 1
+            }
+
+            .splide__arrow svg {
+                fill: #000;
+                height: 1.2em;
+                width: 1.2em
+            }
+
+            .splide__arrow:hover:not(:disabled) {
+                opacity: .9
+            }
+
+            .splide__arrow:disabled {
+                opacity: .3
+            }
+
+            .splide__arrow:focus-visible {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__arrow--prev {
+                left: 1em
+            }
+
+            .splide__arrow--prev svg {
+                transform: scaleX(-1)
+            }
+
+            .splide__arrow--next {
+                right: 1em
+            }
+
+            .splide.is-focus-in .splide__arrow:focus {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__pagination {
+                bottom: .5em;
+                left: 0;
+                padding: 0 1em;
+                position: absolute;
+                right: 0;
+                z-index: 1
+            }
+
+            .splide__pagination__page {
+                background: #ccc;
+                border: 0;
+                border-radius: 50%;
+                display: inline-block;
+                height: 8px;
+                margin: 3px;
+                opacity: .7;
+                padding: 0;
+                position: relative;
+                width: 8px
+            }
+
+            .splide__pagination__page.is-active {
+                background: #fff;
+                transform: scale(1.4);
+                z-index: 1
+            }
+
+            .splide__pagination__page:hover {
+                opacity: .9
+            }
+
+            .splide__pagination__page:focus-visible {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide.is-focus-in .splide__pagination__page:focus {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__progress__bar {
+                background: #ccc;
+                height: 3px
+            }
+
+            .splide__slide:focus {
+                outline: 0
+            }
+
+            @supports (outline-offset: -3px) {
+                .splide__slide:focus-visible {
+                    outline:3px solid #0bf;
+                    outline-offset: -3px
+                }
+            }
+
+            @media screen and (-ms-high-contrast:none) {
+                .splide__slide:focus-visible {
+                    border: 3px solid #0bf
+                }
+            }
+
+            @supports (outline-offset: -3px) {
+                .splide.is-focus-in .splide__slide:focus {
+                    outline:3px solid #0bf;
+                    outline-offset: -3px
+                }
+            }
+
+            @media screen and (-ms-high-contrast:none) {
+                .splide.is-focus-in .splide__slide:focus {
+                    border: 3px solid #0bf
+                }
+
+                .splide.is-focus-in .splide__track>.splide__list>.splide__slide:focus {
+                    border-color: #0bf
+                }
+            }
+
+            .splide__toggle:focus-visible {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide.is-focus-in .splide__toggle:focus {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__track--nav>.splide__list>.splide__slide {
+                border: 3px solid transparent
+            }
+
+            .splide__track--nav>.splide__list>.splide__slide.is-active {
+                border: 3px solid #000
+            }
+
+            .splide__arrows--rtl .splide__arrow--prev {
+                left: auto;
+                right: 1em
+            }
+
+            .splide__arrows--rtl .splide__arrow--prev svg {
+                transform: scaleX(1)
+            }
+
+            .splide__arrows--rtl .splide__arrow--next {
+                left: 1em;
+                right: auto
+            }
+
+            .splide__arrows--rtl .splide__arrow--next svg {
+                transform: scaleX(-1)
+            }
+
+            .splide__arrows--ttb .splide__arrow {
+                left: 50%;
+                transform: translate(-50%)
+            }
+
+            .splide__arrows--ttb .splide__arrow--prev {
+                top: 1em
+            }
+
+            .splide__arrows--ttb .splide__arrow--prev svg {
+                transform: rotate(-90deg)
+            }
+
+            .splide__arrows--ttb .splide__arrow--next {
+                bottom: 1em;
+                top: auto
+            }
+
+            .splide__arrows--ttb .splide__arrow--next svg {
+                transform: rotate(90deg)
+            }
+
+            .splide__pagination--ttb {
+                bottom: 0;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                left: auto;
+                padding: 1em 0;
+                right: .5em;
+                top: 0
+            }
+
+            .revealable {
+                visibility: hidden;
+                opacity: 0
+            }
+
+            .revealable--visible {
+                visibility: visible
+            }
+
+            .revealable.revealable--unhide {
+                opacity: 1;
+                visibility: visible
+            }
+
+            .ad {
+                overflow: hidden;
+                text-align: center;
+                width: 100%
+            }
+
+            #top-banner div {
+                margin: 0 auto
+            }
+
+            #top-banner>.ad-topbanner {
+                padding: 10px 0;
+                text-align: center
+            }
+
+            .ad-unit--sidebar:first-child {
+                margin-top: 25px
+            }
+
+            .ad-unit--sidebar {
+                margin-bottom: 20px
+            }
+
+            [data-slot=homepagelogo] {
+                display: none
+            }
+
+            @media (min-width: 1025px) {
+                #top-banner>.ad-topbanner {
+                    min-height:110px
+                }
+            }
+
+            @media (max-width: 767px) {
+                .carousel>.ad-box:first-child {
+                    position:static;
+                    margin-top: 20px
+                }
+            }
+
+            .btn {
+                background-color: #ff7300;
+                border: 0;
+                border-radius: 4px;
+                box-shadow: none;
+                display: inline-block;
+                overflow: hidden;
+                position: relative;
+                padding: .5em 1em;
+                line-height: 1em;
+                font-size: .8125rem;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase
+            }
+
+            .btn {
+                color: #fff
+            }
+
+            .fd-carousel {
+                background-color: #fff;
+                max-width: 1280px;
+                margin: 0 auto;
+                padding: 40px 0
+            }
+
+            .fd-carousel__heading {
+                color: #171c20;
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 0 20px 20px
+            }
+
+            .fd-carousel-placeholder {
+                display: flex;
+                overflow: hidden;
+                flex-wrap: nowrap;
+                padding-left: 20px
+            }
+
+            .fd-carousel-placeholder__item {
+                height: 227px;
+                width: calc((100% / 3));
+                border-radius: 10px;
+                animation: loading 3s infinite linear;
+                background: linear-gradient(135deg,#eff1f3 0,#eff1f3 34%,#fff 55%,#f9fbfd 59%,#eff1f3 66%);
+                background-size: 100%;
+                margin-right: 20px
+            }
+
+            .fd-carousel__link {
+                display: block;
+                color: #171c20;
+                position: relative
+            }
+
+            .fd-carousel .fd-carousel__link:focus,.fd-carousel .fd-carousel__link:hover {
+                color: #3478c1;
+                text-decoration: none;
+                border: 0;
+                outline: 0
+            }
+
+            .fd-carousel__fig {
+                margin: 0;
+                padding: 0
+            }
+
+            .fd-carousel__img-wrap {
+                border-radius: 10px;
+                background-color: #000;
+                overflow: hidden;
+                position: relative
+            }
+
+            .fd-carousel__img-wrap--is-video::after {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2256%22%20height%3D%2256%22%20fill%3D%22none%22%20viewBox%3D%220%200%2056%2056%22%3E%3Cpath%20fill%3D%22%23000%22%20fill-opacity%3D%22.6%22%20fill-rule%3D%22evenodd%22%20d%3D%22M56%2028c0%2015.464-12.535%2028-28%2028C12.536%2056%200%2043.464%200%2028S12.536%200%2028%200c15.465%200%2028%2012.536%2028%2028z%22%20clip-rule%3D%22evenodd%22%2F%3E%3Ccircle%20cx%3D%2228%22%20cy%3D%2228%22%20r%3D%2226.5%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20d%3D%22M38.244%2026.6L22.637%2016.286C21.51%2015.54%2020%2016.34%2020%2017.686v20.63c0%201.342%201.51%202.144%202.637%201.399l15.607-10.316a1.674%201.674%200%20000-2.8%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                content: "";
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                height: 28px;
+                width: 28px
+            }
+
+            @media (min-width: 1024px) {
+                .fd-carousel__img-wrap--is-video::after {
+                    bottom:20px;
+                    left: 20px;
+                    height: 56px;
+                    width: 56px
+                }
+            }
+
+            .fd-carousel__link:focus .fd-carousel__img,.fd-carousel__link:hover .fd-carousel__img {
+                opacity: .65
+            }
+
+            .fd-carousel__link:focus .fd-carousel__img {
+                outline: 5px solid #3478c1;
+                outline-offset: -5px
+            }
+
+            .fd-carousel__description,.fd-carousel__title {
+                margin: 0;
+                padding: 0
+            }
+
+            .fd-carousel__title {
+                text-transform: none;
+                font-size: 16px;
+                margin: 8px 0 4px;
+                line-height: 1.25;
+                font-weight: 700
+            }
+
+            .fd-carousel__description {
+                font-weight: 400
+            }
+
+            .fd-carousel__arrow[disabled] {
+                display: none
+            }
+
+            .fd-carousel__arrow {
+                position: absolute;
+                z-index: 1;
+                top: 100px;
+                left: 3px;
+                width: 28px;
+                height: 28px;
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%2210%22%20fill%3D%22non%22%20viewBox%3D%220%200%206%2010%22%3E%3Cpath%20fill%3D%22%23626B72%22%20fill-rule%3D%22evenodd%22%20d%3D%22M5.834%209.126L1.261%204.99%205.817.876A.5.5%200%20005.853.17L5.85.166V.164a.51.51%200%2000-.716-.033L.166%204.618a.5.5%200%2000-.038.706c.012.013.024.026.037.037L5.15%209.869a.51.51%200%2000.716-.033.5.5%200%2000-.028-.707l-.005-.004%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+                background-position: center;
+                background-size: 6px 10px;
+                background-repeat: no-repeat;
+                background-color: #fff;
+                border-radius: 100%;
+                box-shadow: 0 2px 7px 0 rgba(0,0,0,.21)
+            }
+
+            .fd-carousel__arrow--right {
+                transform: rotate(180deg);
+                left: auto;
+                right: 3px
+            }
+
+            .fd-carousel__arrow:focus,.fd-carousel__arrow:hover {
+                outline: 0;
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%2210%22%20fill%3D%22non%22%20viewBox%3D%220%200%206%2010%22%3E%3Cpath%20fill%3D%22%23FFF%22%20fill-rule%3D%22evenodd%22%20d%3D%22M5.834%209.126L1.261%204.99%205.817.876A.5.5%200%20005.853.17L5.85.166V.164a.51.51%200%2000-.716-.033L.166%204.618a.5.5%200%2000-.038.706c.012.013.024.026.037.037L5.15%209.869a.51.51%200%2000.716-.033.5.5%200%2000-.028-.707l-.005-.004%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+                background-color: #3478c1
+            }
+
+            @keyframes loading {
+                0% {
+                    background-position: -412px 0
+                }
+
+                100% {
+                    background-position: 412px 0
+                }
+            }
+
+            .global-offer-banner {
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                position: relative;
+                z-index: 1;
+                background-color: #fff
+            }
+
+            .splide.global-offer-banner__splide {
+                visibility: visible
+            }
+
+            .global-offer-banner__wrap {
+                max-width: 375px;
+                margin: auto;
+                position: relative
+            }
+
+            .is-desktop .global-offer-banner__wrap {
+                max-width: 600px
+            }
+
+            .global-offer-banner__slide {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center
+            }
+
+            .is-desktop .global-offer-banner__slide {
+                height: 80px
+            }
+
+            .global-offer-banner__link {
+                display: flex;
+                font-size: 12px;
+                text-align: center
+            }
+
+            .global-offer-banner__slide .global-offer-banner__link:hover {
+                text-decoration: none
+            }
+
+            .global-offer-banner__link:hover .global-offer-banner__label {
+                text-decoration: underline
+            }
+
+            .global-offer-banner__gift-box-icon.icon.icon-gift-box-white,.global-offer-banner__icon {
+                border-radius: 50%;
+                height: 26px;
+                margin-right: 8px
+            }
+
+            .global-offer-banner__gift-box-icon.icon.icon-gift-box-white {
+                background-color: #9c4eb0;
+                background-size: 15px 15px;
+                flex: 0 0 26px;
+                width: 26px
+            }
+
+            .is-desktop .global-offer-banner__gift-box-icon.icon.icon-gift-box-white {
+                background-size: 20px 20px;
+                flex: 0 0 38px;
+                width: 38px;
+                height: 38px
+            }
+
+            .is-desktop .global-offer-banner__icon {
+                height: 38px
+            }
+
+            .global-offer-banner__label {
+                color: #3478c1
+            }
+
+            .global-offer-banner__label,.global-offer-banner__title {
+                display: block;
+                text-overflow: ellipsis;
+                white-space: nowrap
+            }
+
+            .is-desktop .global-offer-banner__label,.is-desktop .global-offer-banner__title {
+                font-size: 16px
+            }
+
+            .global-offer-banner__title {
+                color: #333e48;
+                font-weight: 400
+            }
+
+            .global-offer-banner .fd-carousel__arrow {
+                top: 50%;
+                transform: translateY(-50%)
+            }
+
+            .global-offer-banner .fd-carousel__arrow--left {
+                left: 0
+            }
+
+            .global-offer-banner .fd-carousel__arrow--right {
+                transform: translateY(-50%) rotate(180deg);
+                right: 0
+            }
+
+            .dialog {
+                position: fixed;
+                top: -100%;
+                left: -100%;
+                z-index: 100
+            }
+
+            .dialog.open {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0
+            }
+
+            .dialog .dialog-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: auto;
+                transform: translate(-50%,-50%)
+            }
+
+            .dialog.style-lightbox {
+                background-color: rgba(0,0,0,.6)
+            }
+
+            .dialog-content.style-plain {
+                padding: 20px;
+                min-width: 200px;
+                border-radius: 4px;
+                background-color: #fff
+            }
+
+            .dialog.style-lightbox.animate-fade-in {
+                background-color: transparent
+            }
+
+            .dialog.style-lightbox.open.animate-fade-in {
+                background-color: rgba(0,0,0,.6)
+            }
+
+            .dialog-content.animate-slide-down {
+                top: 0
+            }
+
+            .dialog.open .dialog-content.animate-slide-down {
+                top: 50%
+            }
+
+            .dialog-content.animate-fade-in {
+                opacity: 0
+            }
+
+            .dialog.open .dialog-content.animate-fade-in {
+                opacity: 1
+            }
+
+            .covid-overlay {
+                position: relative
+            }
+
+            .covid-overlay__close-btn {
+                position: absolute;
+                top: 0;
+                right: 0
+            }
+
+            input[type=search]::-webkit-search-cancel-button {
+                -webkit-appearance: none
+            }
+
+            .fandango-logo {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22242%22%20height%3D%2256%22%20viewBox%3D%220%200%20242%2056%22%3E%3Cstyle%3E.st0%7Bfill%3A%233e8ede%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M207.7%2016.5c-6.5%200-11.3%204.5-11.3%2011%200%206.4%204.8%2010.9%2011.3%2010.9S219%2033.9%20219%2027.5c0-6.5-4.8-11-11.3-11zm6.2%2011.4c-.1%201.5-.7%202.8-1.6%203.9-.1.1-.2.2-.4.3-1.1%201-2.6%201.7-4.2%201.7-3.4%200-6.2-2.8-6.2-6.2%200-3.5%202.8-6.2%206.2-6.2%203.3%200%206%202.6%206.2%205.9v.6zm-29.8-2v4.8h4.8v1.7c-.8.7-2.3%201.2-3.9%201.2-3.4%200-5.9-2.7-5.9-6.2s2.5-6.1%205.9-6.1c2.1%200%203.7%201.3%204.5%202.7l4.6-2.4c-1.5-2.6-4.3-5.1-9.1-5.1-6.3%200-11.4%204.2-11.4%2011s5.2%2011%2011.4%2011c3.6%200%206.5-1.3%208.6-3.3l.1-.2c.4-.4.6-.9.6-1.5v-7.6h-10.2zm-16-9h-.4c-1.2.1-2.1%201-2.1%202.2v9.4L157%2016.9h-5.6v21.2h5.4V25.8l9%2012.3h5.2V16.9h-2.9zm-26.8%200h-6.9l-8%2021.2h6.2l1-3.1h8.4l.5%201.6c.3.8%201.1%201.4%202.1%201.5h4.7l-8-21.2zm-6.1%2013.3l2.7-8%202.6%208h-5.3zm-19.5-13.3h-8.9v18.9c.1%201.2%201%202.2%202.3%202.2h6.6c6.7%200%2011.5-4%2011.5-10.6-.1-6.5-4.9-10.5-11.5-10.5zm0%2016.3h-3.5V21.6h3.5c3.8%200%205.8%202.5%205.8%205.8%200%203.2-2.2%205.8-5.8%205.8zM100%2016.9h-.3c-1.2%200-2.1%201-2.2%202.2v9.4l-8.6-11.6h-5.6v21.2h5.4V25.8l9%2012.3h5.2V16.9H100zm-26.6%200h-7l-8%2021.2h6.4l1-3.1h8.4l.5%201.6c.4.8%201.1%201.4%202.1%201.5h4.7l-8.1-21.2zm-6.2%2013.3l2.7-8%202.7%208h-5.4zm-6.7-8.7v-4.7H44.3V38h5.8v-7.5h5.7c1-.1%201.8-1%201.8-2v-2.8H50v-4.2h10.5z%22%20class%3D%22st0%22%2F%3E%3Cpath%20fill%3D%22%23ef7622%22%20d%3D%22M30.9%2019.8l-2.7-10L0%2017.3l2.7%2010c1.7.4%203.2%201.6%203.6%203.4.5%201.8-.1%203.6-1.4%204.8l2.7%2010L35.8%2038l-2.7-10.1c-1.7-.4-3.2-1.6-3.6-3.4-.5-1.8.1-3.6%201.4-4.7z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M20.4%2020.1L12%2022.3l1.7%206.3%208.4-2.2%201.7%206.3-8.4%202.2%201.7%206.3-8.4%202.2-2-7.6c1.2-1.5%201.8-3.5%201.2-5.6-.6-2-2-3.5-3.9-4.2l-2.1-7.7%2016.8-4.5%201.7%206.3z%22%2F%3E%3Cpath%20d%3D%22M219.85%2014.91c.6%200%201.09.49%201.09%201.09s-.49%201.09-1.09%201.09-1.09-.49-1.09-1.09.49-1.09%201.09-1.09zm-.84%201.09c0%20.46.37.83.83.83s.83-.37.83-.83c0-.46-.37-.83-.83-.83s-.83.37-.83.83z%22%20class%3D%22st0%22%2F%3E%3Cpath%20d%3D%22M219.98%2016.03c.12.03.26.45.33.55h-.25c-.09-.13-.16-.51-.37-.46v.46h-.23v-1.16c.17.01.54-.03.65.08.16.13.13.52-.13.53zm-.29-.42v.32c.13%200%20.29.01.28-.16.01-.17-.15-.16-.28-.16z%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon-gift-box-white {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2244%22%20height%3D%2254%22%20viewBox%3D%220%200%2044%2054%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M16.6%2019.8h-.5c-.3%200-.8-.1-1.5-.2-.6-.1-1.4-.2-2.2-.5-.4-.1-.9-.2-1.3-.4-.5-.2-.9-.3-1.5-.5-.5-.2-1-.4-1.6-.7-.5-.2-1-.5-1.6-.9-.5-.4-1.1-.8-1.7-1.2-.6-.5-1.1-1-1.7-1.7-.3-.3-.5-.7-.8-1.1-.2-.4-.5-.8-.7-1.3-.4-1-.7-2.2-.6-3.5%200-.6.2-1.3.4-1.9.2-.6.5-1.1.8-1.6l.3-.3.1-.1.1-.1.1-.1.1-.1s0-.1.1-.1l.3-.3c.2-.5.5-.8%201-1.2C5%201.3%206%20.6%207.3.2%207.9.1%208.5%200%209.2%200s1.3.1%201.9.3c.6.2%201.2.4%201.6.7.5.3.9.6%201.3.9.8.6%201.3%201.3%201.8%201.9.2.3.5.6.7%201%20.2.3.4.6.5%201%20.3.6.6%201.3.8%201.9.5%201.2.8%202.4%201%203.5.2%201.1.3%202.1.3%202.9v2.3c0%20.6-.1%201.1-.2%201.5%200%20.2%200%20.4-.1.4v.2l-.4.1s-.1-.2-.1-.5c-.1-.3-.2-.8-.3-1.3-.2-.6-.4-1.3-.6-2-.3-.8-.6-1.6-.9-2.5-.3-1.3-.7-2.3-1.3-3.3-.6-1-1.2-2-2-2.9-.4-.4-.9-.9-1.4-1.2-.5-.3-1-.6-1.6-.8-.6-.1-1.2%200-1.7.1-.6.2-1.1.6-1.6%201l-.6.6c-.1.2-.2.3-.3.4l-.1.1-.2.3c-.4.5-.6%201.1-.6%201.6-.1.6%200%201.2.2%201.8.2.6.5%201.1.8%201.6.7%201%201.5%201.8%202.4%202.6.9.7%201.7%201.4%202.5%201.9%201.6%201.1%203.1%202%204.1%202.5%201%20.6%201.6.8%201.6.8l-.1.4zm8.9.9h.1c.1%200%20.2.1.4.1.3.1.8.2%201.4.3.6.1%201.4.2%202.3.2h1.4l1.5-.1c.5-.1%201.1-.1%201.7-.2l1.8-.4c.6-.2%201.3-.4%201.9-.7.7-.3%201.4-.7%202.1-1.1.4-.2.7-.5%201.1-.8.3-.3.7-.7%201-1.1.7-.8%201.3-1.9%201.5-3.2.3-.7.3-1.4.3-2%200-.6-.2-1.2-.3-1.8l-.1-.4v-.1l-.1-.1v-.2s0-.1-.1-.1l-.2-.4c-.2-.5-.4-.9-.7-1.3-.6-.9-1.3-1.8-2.5-2.5-.6-.4-1.2-.6-1.8-.8-.7-.2-1.3-.3-1.9-.3-.6%200-1.2.1-1.8.2-.5.1-1%20.3-1.5.5-.9.4-1.6.8-2.3%201.3l-.9.7-.8.8c-.5.5-.9%201-1.3%201.6-.8%201-1.4%202.1-1.9%203.1s-.9%201.9-1.1%202.7c-.3.8-.5%201.6-.6%202.2-.1.6-.2%201.1-.2%201.4%200%20.2-.1.4-.1.4v.2l.4.2s.1-.2.3-.5c.2-.3.4-.7.7-1.2.3-.5.7-1.1%201.1-1.8.5-.7%201-1.4%201.6-2.2.6-.8%201.3-1.6%202.1-2.4.8-.8%201.7-1.6%202.7-2.2.5-.3%201.1-.6%201.6-.8.6-.2%201.2-.3%201.8-.3.6%200%201.2.2%201.7.6.5.3.9.8%201.2%201.3.2.3.3.5.4.8l.2.4v.2l.1.2c.2.6.2%201.2.1%201.8-.1.6-.4%201.1-.7%201.6-.4.5-.8.9-1.3%201.3-.9.8-2%201.3-3%201.8s-2%20.8-3%201.2c-1.9.6-3.5%201-4.6%201.3-1.1.3-1.8.4-1.8.4l.1.2zm-7.8%202.4h7.4s.2-3.6-3.6-3.6c-3.8%200-3.8%203.6-3.8%203.6zm11%201.5h13.1v9.5H28.7zM0%2024.6h14.1v9.5H0zm17.1-.5h9V54h-9zM0%2037.4h14.1V54H0zm28.7%200h13.1V54H28.7z%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat
+            }
+
+            .icon.icon-gift-box-white {
+                width: 44px;
+                height: 54px;
+                background-position: center
+            }
+
+            .tablet-width-100 {
+                padding-right: 10px;
+                padding-left: 10px
+            }
+
+            @media screen and (max-width: 1024px) {
+                .tablet-width-100 {
+                    clear:both;
+                    width: 100%
+                }
+            }
+
+            .heading-style-1 {
+                display: block;
+                color: #4c4c4c;
+                text-transform: uppercase;
+                font-size: inherit;
+                font-family: alternate-gothic-no-1-d,"Futura Condensed","Arial Narrow",Arial,sans-serif
+            }
+
+            .heading-style-2 {
+                display: block;
+                text-transform: capitalize;
+                font-style: italic;
+                font-family: "Times New Roman",Times,Baskerville,Georgia,serif
+            }
+
+            .heading-style-3 {
+                display: block;
+                color: #929292;
+                text-transform: uppercase;
+                font-weight: 700
+            }
+
+            .heading-style-4 {
+                display: block;
+                color: #929292;
+                text-transform: uppercase
+            }
+
+            .heading-style-5 {
+                display: block;
+                color: #4c4c4c;
+                text-transform: uppercase;
+                font-weight: 700
+            }
+
+            .heading-style-stub {
+                position: relative;
+                display: inline-block;
+                margin: 0 0 15px;
+                padding: 0 30px;
+                border-bottom: 10px solid #4c4c4c;
+                color: #4c4c4c;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden
+            }
+
+            .heading-style-stub:after {
+                position: absolute;
+                right: 0;
+                bottom: -15px;
+                left: 0;
+                display: block;
+                margin: auto;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: #ebebeb;
+                content: ""
+            }
+
+            .heading-style-stub-2 {
+                position: relative;
+                display: inline-block;
+                margin: 0 0 15px;
+                padding: 0 20px 0 0;
+                border-right: 1px solid #4c4c4c;
+                color: #4c4c4c;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                vertical-align: middle
+            }
+
+            .heading-size-xl {
+                font-size: 48px;
+                line-height: 45px
+            }
+
+            .heading-size-l {
+                font-size: 38px;
+                line-height: 35px
+            }
+
+            .heading-size-m {
+                font-size: 28px;
+                line-height: 25px
+            }
+
+            .heading-size-s {
+                font-size: 18px;
+                line-height: 22px
+            }
+
+            .heading-size-xs {
+                font-size: 16px;
+                line-height: 19px
+            }
+
+            .heading-size-xxs {
+                font-size: 14px;
+                line-height: 19px
+            }
+
+            .heading-size-ss {
+                font-size: 18px;
+                line-height: 21px
+            }
+
+            .heading-style-1.heading-size-s {
+                line-height: 18px
+            }
+
+            html {
+                height: 100%
+            }
+
+            body {
+                background-color: #ebebeb;
+                color: #4c4c4c;
+                font-size: 14px;
+                font-family: proxima-nova,Helvetica,Arial,sans-serif;
+                overflow: auto;
+                height: 100%
+            }
+
+            .a,a {
+                color: #3478c1;
+                font-weight: 700
+            }
+
+            .hide {
+                display: none!important
+            }
+
+            .icon {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: transparent;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 0;
+                direction: ltr
+            }
+
+            #page {
+                background-color: #ebebeb
+            }
+
+            .layout-content-sidebar>.sidebar>.ad {
+                margin-bottom: 20px
+            }
+
+            .layout-content-sidebar>.sidebar>.ad~.ad {
+                margin-top: -20px
+            }
+
+            @media (min-width: 1025px) {
+                .layout-content-sidebar>.sidebar {
+                    width:330px
+                }
+
+                .layout-content-sidebar>.sidebar+.content {
+                    margin-right: 330px
+                }
+
+                .layout-content-sidebar.pull-sidebar>.content,.layout-content-sidebar.pull-sidebar>.sidebar {
+                    display: table-cell;
+                    width: 100%;
+                    vertical-align: top
+                }
+
+                .layout-content-sidebar.pull-sidebar>.sidebar {
+                    overflow: hidden;
+                    min-width: 320px
+                }
+            }
+
+            .btn {
+                background-color: #ff7300;
+                border: none;
+                border-radius: 4px;
+                box-shadow: none;
+                color: #fff;
+                display: inline-block;
+                font-family: proxima-nova,Helvetica,Arial,sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                overflow: hidden;
+                position: relative;
+                padding: 10px 20px;
+                vertical-align: middle
+            }
+
+            input[type=checkbox]+label,input[type=radio]+label {
+                padding: 0 10px 0 8px;
+                display: inline-block
+            }
+
+            input {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background-color: #fff;
+                box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+                color: #333;
+                font-size: 14px;
+                line-height: 18px
+            }
+
+            input[type=radio] {
+                margin: 0 0 15px 0
+            }
+
+            input[type=date],input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=text],input[type=time],input[type=url],input[type=week] {
+                border-radius: 4px;
+                width: 100%
+            }
+
+            input[type=checkbox] {
+                box-shadow: none
+            }
+
+            input:not([type=submit]):not([type=button]):focus {
+                border-color: #999;
+                background: #fafafa
+            }
+
+            input.error {
+                border-color: #f15500;
+                border-radius: 0;
+                color: #222;
+                color: rgba(0,0,0,.75)
+            }
+
+            input.error {
+                display: block;
+                padding: .5rem;
+                width: 100%;
+                height: 2.3125rem;
+                background-color: #fff;
+                box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+                font-size: .875rem;
+                font-family: inherit
+            }
+
+            .splide__container {
+                box-sizing: border-box;
+                position: relative
+            }
+
+            .splide__list {
+                backface-visibility: hidden;
+                display: -ms-flexbox;
+                display: flex;
+                height: 100%;
+                margin: 0!important;
+                padding: 0!important
+            }
+
+            .splide.is-initialized:not(.is-active) .splide__list {
+                display: block
+            }
+
+            .splide__pagination {
+                -ms-flex-align: center;
+                align-items: center;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-pack: center;
+                justify-content: center;
+                margin: 0
+            }
+
+            .splide__pagination li {
+                display: inline-block;
+                line-height: 1;
+                list-style-type: none;
+                margin: 0
+            }
+
+            .splide:not(.is-overflow) .splide__pagination {
+                display: none
+            }
+
+            .splide__progress__bar {
+                width: 0
+            }
+
+            .splide {
+                position: relative;
+                visibility: hidden
+            }
+
+            .splide.is-initialized,.splide.is-rendered {
+                visibility: visible
+            }
+
+            .splide__slide {
+                backface-visibility: hidden;
+                box-sizing: border-box;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                list-style-type: none!important;
+                margin: 0;
+                position: relative
+            }
+
+            .splide__slide img {
+                vertical-align: bottom
+            }
+
+            .splide__spinner {
+                animation: splide-loading 1s linear infinite;
+                border: 2px solid #999;
+                border-left-color: transparent;
+                border-radius: 50%;
+                bottom: 0;
+                contain: strict;
+                display: inline-block;
+                height: 20px;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 20px
+            }
+
+            .splide__sr {
+                clip: rect(0 0 0 0);
+                border: 0;
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px
+            }
+
+            .splide__toggle.is-active .splide__toggle__play,.splide__toggle__pause {
+                display: none
+            }
+
+            .splide__toggle.is-active .splide__toggle__pause {
+                display: inline
+            }
+
+            .splide__track {
+                overflow: hidden;
+                position: relative;
+                z-index: 0
+            }
+
+            @keyframes splide-loading {
+                0% {
+                    transform: rotate(0)
+                }
+
+                to {
+                    transform: rotate(1turn)
+                }
+            }
+
+            .splide__track--draggable {
+                -webkit-touch-callout: none
+            }
+
+            .splide__track--fade>.splide__list>.splide__slide {
+                margin: 0!important;
+                opacity: 0;
+                z-index: 0
+            }
+
+            .splide__track--fade>.splide__list>.splide__slide.is-active {
+                opacity: 1;
+                z-index: 1
+            }
+
+            .splide--rtl {
+                direction: rtl
+            }
+
+            .splide__track--ttb>.splide__list {
+                display: block
+            }
+
+            .splide__arrow {
+                -ms-flex-align: center;
+                align-items: center;
+                background: #ccc;
+                border: 0;
+                border-radius: 50%;
+                display: -ms-flexbox;
+                display: flex;
+                height: 2em;
+                -ms-flex-pack: center;
+                justify-content: center;
+                opacity: .7;
+                padding: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2em;
+                z-index: 1
+            }
+
+            .splide__arrow svg {
+                fill: #000;
+                height: 1.2em;
+                width: 1.2em
+            }
+
+            .splide__arrow:hover:not(:disabled) {
+                opacity: .9
+            }
+
+            .splide__arrow:disabled {
+                opacity: .3
+            }
+
+            .splide__arrow:focus-visible {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__arrow--prev {
+                left: 1em
+            }
+
+            .splide__arrow--prev svg {
+                transform: scaleX(-1)
+            }
+
+            .splide__arrow--next {
+                right: 1em
+            }
+
+            .splide.is-focus-in .splide__arrow:focus {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__pagination {
+                bottom: .5em;
+                left: 0;
+                padding: 0 1em;
+                position: absolute;
+                right: 0;
+                z-index: 1
+            }
+
+            .splide__pagination__page {
+                background: #ccc;
+                border: 0;
+                border-radius: 50%;
+                display: inline-block;
+                height: 8px;
+                margin: 3px;
+                opacity: .7;
+                padding: 0;
+                position: relative;
+                width: 8px
+            }
+
+            .splide__pagination__page.is-active {
+                background: #fff;
+                transform: scale(1.4);
+                z-index: 1
+            }
+
+            .splide__pagination__page:hover {
+                opacity: .9
+            }
+
+            .splide__pagination__page:focus-visible {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide.is-focus-in .splide__pagination__page:focus {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__progress__bar {
+                background: #ccc;
+                height: 3px
+            }
+
+            .splide__slide:focus {
+                outline: 0
+            }
+
+            @supports (outline-offset: -3px) {
+                .splide__slide:focus-visible {
+                    outline:3px solid #0bf;
+                    outline-offset: -3px
+                }
+            }
+
+            @media screen and (-ms-high-contrast:none) {
+                .splide__slide:focus-visible {
+                    border: 3px solid #0bf
+                }
+            }
+
+            @supports (outline-offset: -3px) {
+                .splide.is-focus-in .splide__slide:focus {
+                    outline:3px solid #0bf;
+                    outline-offset: -3px
+                }
+            }
+
+            @media screen and (-ms-high-contrast:none) {
+                .splide.is-focus-in .splide__slide:focus {
+                    border: 3px solid #0bf
+                }
+
+                .splide.is-focus-in .splide__track>.splide__list>.splide__slide:focus {
+                    border-color: #0bf
+                }
+            }
+
+            .splide__toggle:focus-visible {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide.is-focus-in .splide__toggle:focus {
+                outline: 3px solid #0bf;
+                outline-offset: 3px
+            }
+
+            .splide__track--nav>.splide__list>.splide__slide {
+                border: 3px solid transparent
+            }
+
+            .splide__track--nav>.splide__list>.splide__slide.is-active {
+                border: 3px solid #000
+            }
+
+            .splide__arrows--rtl .splide__arrow--prev {
+                left: auto;
+                right: 1em
+            }
+
+            .splide__arrows--rtl .splide__arrow--prev svg {
+                transform: scaleX(1)
+            }
+
+            .splide__arrows--rtl .splide__arrow--next {
+                left: 1em;
+                right: auto
+            }
+
+            .splide__arrows--rtl .splide__arrow--next svg {
+                transform: scaleX(-1)
+            }
+
+            .splide__arrows--ttb .splide__arrow {
+                left: 50%;
+                transform: translate(-50%)
+            }
+
+            .splide__arrows--ttb .splide__arrow--prev {
+                top: 1em
+            }
+
+            .splide__arrows--ttb .splide__arrow--prev svg {
+                transform: rotate(-90deg)
+            }
+
+            .splide__arrows--ttb .splide__arrow--next {
+                bottom: 1em;
+                top: auto
+            }
+
+            .splide__arrows--ttb .splide__arrow--next svg {
+                transform: rotate(90deg)
+            }
+
+            .splide__pagination--ttb {
+                bottom: 0;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                left: auto;
+                padding: 1em 0;
+                right: .5em;
+                top: 0
+            }
+
+            .min-desktop-width {
+                min-width: 768px
+            }
+
+            .skip-link {
+                clip: rect(1px,1px,1px,1px);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px
+            }
+
+            .skip-link:focus {
+                clip: auto;
+                color: #2a2c32;
+                height: auto;
+                overflow: auto;
+                position: absolute;
+                width: auto;
+                background: rgba(255,255,255,.95);
+                border: 1px solid rgba(128,128,128,.25);
+                padding: 10px;
+                margin-top: -5px;
+                z-index: 100;
+                line-height: 1
+            }
+
+            .footer {
+                padding: 0
+            }
+
+            .emu__content.footer__section,.footer__section {
+                padding-top: 40px
+            }
+
+            .footer-coming-soon__list {
+                position: relative;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                max-width: 100%;
+                overflow: hidden
+            }
+
+            .footer-coming-soon__list-item {
+                margin: 0 5px 18px 5px;
+                text-align: left;
+                width: 17.5%
+            }
+
+            .footer-nav {
+                padding: 40px 20px;
+                background-color: #161c20;
+                font-size: 14px
+            }
+
+            .footer-utility-links {
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 20px;
+                padding-bottom: 60px
+            }
+
+            .footer-utility-links__wrapper {
+                background-color: #ebebeb;
+                padding-left: 20px;
+                padding-right: 20px;
+                display: flex
+            }
+
+            .footer-utility-links__follow {
+                align-items: baseline
+            }
+
+            .footer-utility-links__apps {
+                align-items: end
+            }
+
+            .footer-utility-links__social-icon {
+                margin: 0 10px 6px 0;
+                width: 30px;
+                height: 30px;
+                background-size: 30px
+            }
+
+            .footer-utility-links__heading {
+                font-family: proxima-nova,Helvetica,Arial,sans-serif;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #333e48;
+                display: inline;
+                line-height: 1
+            }
+
+            .footer-utility-links__social {
+                display: flex;
+                margin-top: 37px
+            }
+
+            .footer-utility-links__app-store-icon {
+                margin-right: 10px
+            }
+
+            @media (min-width: 980px) {
+                .footer-utility-links__social-icon {
+                    margin-right:15px
+                }
+            }
+
+            .footer-site-info {
+                background-color: #fff;
+                text-align: center;
+                font-size: 14px
+            }
+
+            .footer-site-info__container {
+                padding: 30px 10px 20px
+            }
+
+            .footer-site-info__section {
+                margin-bottom: 10px
+            }
+
+            .footer-site-info__section:first-child {
+                margin-bottom: 28px;
+                text-transform: uppercase;
+                font-weight: 700
+            }
+
+            .footer-site-info__list {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap
+            }
+
+            .footer-site-info__list-item {
+                flex-shrink: 0;
+                border-left: 1px solid #b3b3b3;
+                padding-left: 5px;
+                margin: 0 0 5px 5px
+            }
+
+            .footer-site-info__list-item:first-of-type {
+                border-left: none;
+                margin-left: 0;
+                padding-left: 0
+            }
+
+            .footer-site-info__advertising-btn {
+                padding: 14px 0 24px
+            }
+
+            .footer-site-info__advertising-link {
+                padding: 6px 48px;
+                border-radius: 4px;
+                border: solid 1px #3478c1
+            }
+
+            .global-footer__copyright--link {
+                font-weight: 400
+            }
+
+            .carousel {
+                position: relative;
+                overflow: hidden
+            }
+
+            .carousel-items {
+                position: relative;
+                left: 0;
+                white-space: nowrap
+            }
+
+            .carousel-items>li {
+                display: inline-block;
+                vertical-align: top;
+                white-space: normal
+            }
+
+            .carousel-style-strip>.carousel-items {
+                margin: 0 43px;
+                font-size: 0
+            }
+
+            .carousel-style-strip>.carousel-items>li {
+                padding-right: 8px;
+                font-size: 14px
+            }
+
+            .carousel-style-strip>.carousel-items>li>div>time {
+                font-size: 10px
+            }
+
+            .carousel-style-strip>.left.icon,.carousel-style-strip>.right.icon {
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                margin: auto;
+                width: 43px;
+                height: 100%;
+                font-size: 0;
+                z-index: 1
+            }
+
+            .carousel-style-strip>.left.icon {
+                border-right: 5px solid #ebebeb
+            }
+
+            .carousel-style-strip>.right.icon {
+                border-left: 5px solid #ebebeb
+            }
+
+            .carousel-style-strip>.left.icon:focus,.carousel-style-strip>.right.icon:focus {
+                outline-style: auto;
+                outline-width: 3px;
+                outline-color: #3d7abb;
+                outline: 5px auto -webkit-focus-ring-color;
+                outline-offset: -2px
+            }
+
+            .carousel-style-strip>.left.icon:before {
+                content: "";
+                border-radius: 0 40px 40px 0;
+                background: #ebebeb;
+                position: absolute;
+                width: 20px;
+                height: 40px;
+                display: block;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                margin: auto
+            }
+
+            .carousel-style-strip>.left.icon:after {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 40px;
+                display: block;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                margin: auto;
+                opacity: .8;
+                background: transparent no-repeat 1px center;
+                background-image: url(//images.fandango.com/fandango-www/screenplay/assets/images/desktop/icons/global/left-arrow.svg)
+            }
+
+            .carousel-style-strip>.right.icon:before {
+                content: "";
+                border-radius: 40px 0 0 40px;
+                background: #ebebeb;
+                position: absolute;
+                width: 20px;
+                height: 40px;
+                display: block;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                margin: auto
+            }
+
+            .carousel-style-strip>.right.icon:after {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 40px;
+                display: block;
+                bottom: 0;
+                top: 0;
+                right: 0;
+                margin: auto;
+                opacity: .8;
+                background: transparent no-repeat 9px center;
+                background-image: url(//images.fandango.com/fandango-www/screenplay/assets/images/desktop/icons/global/right-arrow.svg)
+            }
+
+            .carousel-style-strip>.left.icon:hover:after,.carousel-style-strip>.right.icon:hover:after {
+                opacity: 1
+            }
+
+            .carousel-style-strip>.right {
+                right: 0
+            }
+
+            .carousel-style-strip {
+                padding: 0;
+                background-color: transparent
+            }
+
+            .carousel-style-strip>.carousel-items>li>.poster {
+                width: 126px;
+                height: 254px
+            }
+
+            .carousel-style-strip>.carousel-items>li>.poster .heading-style-1 {
+                margin-bottom: 2px;
+                max-height: 35px;
+                font-size: 20px
+            }
+
+            .carousel-style-strip>.carousel-items>li>.blogger-hCard {
+                width: 160px;
+                height: 300px
+            }
+
+            @media (max-width: 767px) {
+                body>#page {
+                    padding-top:0
+                }
+            }
+
+            .csspinner {
+                position: relative
+            }
+
+            .csspinner:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #999;
+                content: "";
+                opacity: .6
+            }
+
+            .csspinner:after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+                margin: -20px 0 0 -20px;
+                width: 40px;
+                height: 40px;
+                border-top: 4px solid #555;
+                border-radius: 100%;
+                content: "";
+                -webkit-animation: standard .75s infinite linear;
+                animation: standard .75s infinite linear
+            }
+
+            @-webkit-keyframes standard {
+                from {
+                    -webkit-transform: rotate(0)
+                }
+
+                to {
+                    -webkit-transform: rotate(360deg)
+                }
+            }
+
+            @keyframes standard {
+                from {
+                    transform: rotate(0)
+                }
+
+                to {
+                    transform: rotate(360deg)
+                }
+            }
+
+            .brand-bar {
+                background-color: #3185e0
+            }
+
+            .brand-bar__wrap {
+                height: 32px;
+                max-width: 1280px;
+                padding: 0 10px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center
+            }
+
+            .brand-bar__link {
+                color: #fff
+            }
+
+            .brand-bar__link:not(:last-of-type) {
+                margin-right: 30px
+            }
+
+            .brand-bar__peacock-logo {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgY2xpcC1wYXRoPSJ1cmwoI3ByZWZpeF9fY2xpcDBfMF8xMjk0KSI+PHBhdGggZD0iTTUuNDA1IDcuNTE0bC0yLjY4MS45NzFWNS42OTRjMC0xLjExNS45MS0xLjkzMSAxLjk5OS0xLjkzMXMxLjk5OS44MTYgMS45OTkgMS45M2MuMDEyLjcwNy0uMzYgMS40OC0xLjMxNyAxLjgyMXptLS42Ny01LjM0QTQuMDI5IDQuMDI5IDAgMDAyLjA0MiAzLjJDMS4zMjQgMy44NjIuOTI5IDQuNzU2LjkyOSA1LjY4M3Y4LjEzMmgxLjgwN1Y5LjMwMmwuNjU4LjY1MSAyLjY1Ny0uOTZjMS41Mi0uNTQgMi41MDItMS43OTkgMi41MDItMy4zIDAtLjkyNi0uNDA3LTEuODItMS4xMTMtMi40ODItLjcwNi0uNjYyLTEuNy0xLjAzNy0yLjcwNS0xLjAzN3oiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMTEuNTc3IDEwLjg3Yy0uMjE2IDAtLjQzMS4wNTYtLjYxLjE2Ni0uMTguMTEtLjMyNC4yNjUtLjQwOC40NTJhLjg5Ny44OTcgMCAwMC0uMDYuNTg1Yy4wNDguMTk5LjE0NC4zNzUuMy41MTkuMTU1LjE0My4zNDcuMjMxLjU2Mi4yNzZhMS4xMzEgMS4xMzEgMCAwMDEuMTI1LS40My45Ni45NiAwIDAwLjE4LS41NjNjMC0uMjY1LS4xMi0uNTItLjMyMy0uNzE4LS4yMDQtLjE5OC0uNDY3LS4yODctLjc2Ni0uMjg3eiIgZmlsbD0iIzA2OURFMCIvPjxwYXRoIGQ9Ik0xMS41NzcgOC4xNTNjLS4yMTYgMC0uNDMxLjA1NS0uNjEuMTY1LS4xOC4xMS0uMzI0LjI2NS0uNDA4LjQ1M2EuODk3Ljg5NyAwIDAwLS4wNi41ODRjLjA0OC4yLjE0NC4zNzYuMy41Mi4xNTUuMTQzLjM0Ny4yMy41NjIuMjc1LjIxNi4wNDQuNDMxLjAyMi42MzUtLjA1NS4yMDMtLjA3OC4zNy0uMjEuNDktLjM3NWEuOTYuOTYgMCAwMC4xOC0uNTYzYzAtLjI2NS0uMTItLjUxOS0uMzIzLS43MTctLjIwNC0uMTk5LS40NjctLjI4Ny0uNzY2LS4yODd6IiBmaWxsPSIjNkU1NURDIi8+PHBhdGggZD0iTTExLjY5NiAxMy44MDRjLS4yMTYgMC0uNDMuMDU1LS42MS4xNjUtLjE4LjExLS4zMjQuMjY1LS40MDcuNDUzYS44OTcuODk3IDAgMDAtLjA2LjU4NWMuMDQ4LjE5OC4xNDMuMzc1LjI5OS41MTguMTU2LjE0NC4zNDcuMjMyLjU2My4yNzZhMS4xMzEgMS4xMzEgMCAwMDEuMTI1LS40My45Ni45NiAwIDAwLjA5NS0uOTUgMS4wODYgMS4wODYgMCAwMC0uMjM5LS4zMyAxLjI2OCAxLjI2OCAwIDAwLS4zNi0uMjIgMS4yMDQgMS4yMDQgMCAwMC0uNDA2LS4wNjd6IiBmaWxsPSIjMDVBQzNGIi8+PHBhdGggZD0iTTExLjU3NyA1LjQzNWMtLjIxNiAwLS40MzEuMDU1LS42MS4xNjYtLjE4LjExLS4zMjQuMjY0LS40MDguNDUyYS44OTcuODk3IDAgMDAtLjA2LjU4NWMuMDQ4LjE5OC4xNDQuMzc1LjMuNTE4LjE1NS4xNDQuMzQ3LjIzMi41NjIuMjc2YTEuMTMxIDEuMTMxIDAgMDAxLjEyNS0uNDMuOTYxLjk2MSAwIDAwLjA5Ni0uOTUgMS4wODMgMS4wODMgMCAwMC0uMjQtLjMzIDEuMjY4IDEuMjY4IDAgMDAtLjM1OC0uMjIgMS41NTcgMS41NTcgMCAwMC0uNDA3LS4wNjd6IiBmaWxsPSIjRUYxNTQxIi8+PHBhdGggZD0iTTExLjU3NyAyLjcxOGMtLjIxNiAwLS40MzEuMDU1LS42MS4xNjUtLjE4LjExLS4zMjQuMjY1LS40MDguNDUzYS44OTcuODk3IDAgMDAtLjA2LjU4NGMuMDQ4LjE5OS4xNDQuMzc2LjMuNTE5LjE1NS4xNDMuMzQ3LjIzMi41NjIuMjc2YTEuMTMxIDEuMTMxIDAgMDAxLjEyNS0uNDMuOTYuOTYgMCAwMC4xOC0uNTYzYzAtLjI2NS0uMTItLjUxOS0uMzIzLS43MTctLjIwNC0uMTk5LS40NjctLjI4Ny0uNzY2LS4yODd6IiBmaWxsPSIjRkY3MTEyIi8+PHBhdGggZD0iTTExLjU3NyAwYy0uMjE2IDAtLjQzMS4wNTUtLjYxLjE2Ni0uMTguMTEtLjMyNC4yNjQtLjQwOC40NTJhLjg5Ny44OTcgMCAwMC0uMDYuNTg1Yy4wNDguMTk4LjE0NC4zNzUuMy41MTguMTU1LjE0NC4zNDcuMjMyLjU2Mi4yNzZhMS4xMzEgMS4xMzEgMCAwMDEuMTI1LS40My45Ni45NiAwIDAwLjE4LS41NjNjMC0uMjY1LS4xMi0uNTE4LS4zMjMtLjcxN0MxMi4xMzkuMDg4IDExLjg3NiAwIDExLjU3NyAweiIgZmlsbD0iI0ZDQ0MxMiIvPjwvZz48ZGVmcz48Y2xpcFBhdGggaWQ9InByZWZpeF9fY2xpcDBfMF8xMjk0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDEzdjE2SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
+                display: inline-block;
+                width: 13px;
+                height: 16px;
+                background-position: center;
+                vertical-align: middle;
+                margin-right: 5px;
+                margin-bottom: 1px
+            }
+
+            .nav-bar__adaptive-header-wrap {
+                min-width: 768px;
+                order: 1
+            }
+
+            .nav-bar__global-header-wrap {
+                background-color: #171c20
+            }
+
+            .nav-bar {
+                display: flex
+            }
+
+            .nav-bar__left-section {
+                align-items: center;
+                display: flex;
+                flex: 1;
+                height: 70px;
+                justify-content: space-between
+            }
+
+            .nav-bar__adaptive-header-logo {
+                background-image: url("data:image/svg+xml;charset%3DUS-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22242%22%20height%3D%2256%22%20viewBox%3D%220%200%20242%2056%22%3E%3Cstyle%3E.st0%7Bfill%3A%233e8ede%7D%3C%2Fstyle%3E%3Cpath%20d%3D%22M207.7%2016.5c-6.5%200-11.3%204.5-11.3%2011%200%206.4%204.8%2010.9%2011.3%2010.9S219%2033.9%20219%2027.5c0-6.5-4.8-11-11.3-11zm6.2%2011.4c-.1%201.5-.7%202.8-1.6%203.9-.1.1-.2.2-.4.3-1.1%201-2.6%201.7-4.2%201.7-3.4%200-6.2-2.8-6.2-6.2%200-3.5%202.8-6.2%206.2-6.2%203.3%200%206%202.6%206.2%205.9v.6zm-29.8-2v4.8h4.8v1.7c-.8.7-2.3%201.2-3.9%201.2-3.4%200-5.9-2.7-5.9-6.2s2.5-6.1%205.9-6.1c2.1%200%203.7%201.3%204.5%202.7l4.6-2.4c-1.5-2.6-4.3-5.1-9.1-5.1-6.3%200-11.4%204.2-11.4%2011s5.2%2011%2011.4%2011c3.6%200%206.5-1.3%208.6-3.3l.1-.2c.4-.4.6-.9.6-1.5v-7.6h-10.2zm-16-9h-.4c-1.2.1-2.1%201-2.1%202.2v9.4L157%2016.9h-5.6v21.2h5.4V25.8l9%2012.3h5.2V16.9h-2.9zm-26.8%200h-6.9l-8%2021.2h6.2l1-3.1h8.4l.5%201.6c.3.8%201.1%201.4%202.1%201.5h4.7l-8-21.2zm-6.1%2013.3l2.7-8%202.6%208h-5.3zm-19.5-13.3h-8.9v18.9c.1%201.2%201%202.2%202.3%202.2h6.6c6.7%200%2011.5-4%2011.5-10.6-.1-6.5-4.9-10.5-11.5-10.5zm0%2016.3h-3.5V21.6h3.5c3.8%200%205.8%202.5%205.8%205.8%200%203.2-2.2%205.8-5.8%205.8zM100%2016.9h-.3c-1.2%200-2.1%201-2.2%202.2v9.4l-8.6-11.6h-5.6v21.2h5.4V25.8l9%2012.3h5.2V16.9H100zm-26.6%200h-7l-8%2021.2h6.4l1-3.1h8.4l.5%201.6c.4.8%201.1%201.4%202.1%201.5h4.7l-8.1-21.2zm-6.2%2013.3l2.7-8%202.7%208h-5.4zm-6.7-8.7v-4.7H44.3V38h5.8v-7.5h5.7c1-.1%201.8-1%201.8-2v-2.8H50v-4.2h10.5z%22%20class%3D%22st0%22%2F%3E%3Cpath%20fill%3D%22%23ef7622%22%20d%3D%22M30.9%2019.8l-2.7-10L0%2017.3l2.7%2010c1.7.4%203.2%201.6%203.6%203.4.5%201.8-.1%203.6-1.4%204.8l2.7%2010L35.8%2038l-2.7-10.1c-1.7-.4-3.2-1.6-3.6-3.4-.5-1.8.1-3.6%201.4-4.7z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M20.4%2020.1L12%2022.3l1.7%206.3%208.4-2.2%201.7%206.3-8.4%202.2%201.7%206.3-8.4%202.2-2-7.6c1.2-1.5%201.8-3.5%201.2-5.6-.6-2-2-3.5-3.9-4.2l-2.1-7.7%2016.8-4.5%201.7%206.3z%22%2F%3E%3Cpath%20d%3D%22M219.85%2014.91c.6%200%201.09.49%201.09%201.09s-.49%201.09-1.09%201.09-1.09-.49-1.09-1.09.49-1.09%201.09-1.09zm-.84%201.09c0%20.46.37.83.83.83s.83-.37.83-.83c0-.46-.37-.83-.83-.83s-.83.37-.83.83z%22%20class%3D%22st0%22%2F%3E%3Cpath%20d%3D%22M219.98%2016.03c.12.03.26.45.33.55h-.25c-.09-.13-.16-.51-.37-.46v.46h-.23v-1.16c.17.01.54-.03.65.08.16.13.13.52-.13.53zm-.29-.42v.32c.13%200%20.29.01.28-.16.01-.17-.15-.16-.28-.16z%22%20class%3D%22st0%22%2F%3E%3C%2Fsvg%3E");
+                background-position: center;
+                display: flex;
+                height: 70px;
+                width: 242px
+            }
+
+            .nav-bar__autocomplete {
+                display: inline-block;
+                line-height: normal;
+                position: relative;
+                width: 452px
+            }
+
+            input[type=text].nav-bar__search-input {
+                border: 0;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 12px 25px;
+                position: relative;
+                height: 46px;
+                z-index: 4
+            }
+
+            .nav-bar__autocomplete .csspinner {
+                display: none;
+                height: 28px;
+                position: absolute;
+                right: 51px;
+                top: 8px;
+                width: 28px;
+                z-index: 4
+            }
+
+            .nav-bar__autocomplete.is-loading .csspinner {
+                display: block
+            }
+
+            .nav-bar__autocomplete .csspinner:after {
+                height: 28px;
+                margin-left: -14px;
+                margin-top: -14px;
+                width: 28px
+            }
+
+            .nav-bar__autocomplete .csspinner.no-overlay:before {
+                display: none;
+                content: none
+            }
+
+            .nav-bar__autocomplete .csspinner.double-up:after {
+                border-top: 4px double #e74c3c;
+                border-right: 4px solid #e74c3c;
+                border-bottom: 4px double #e74c3c;
+                border-left: 4px double #e74c3c
+            }
+
+            .nav-bar__go-btn {
+                background-color: #3478c1;
+                border-radius: 50%;
+                height: 29px;
+                width: 29px;
+                position: absolute;
+                right: 11px;
+                top: 8px;
+                z-index: 4
+            }
+
+            .nav-bar__go-btn:focus,.nav-bar__go-btn:hover {
+                background-color: #275b93
+            }
+
+            .nav-bar__search-icon {
+                margin: 0 1px 3px 0
+            }
+
+            .nav-bar__global-menu {
+                display: flex;
+                height: 70px
+            }
+
+            .nav-bar__item {
+                margin-left: 30px;
+                position: relative
+            }
+
+            .nav-bar__icon-link {
+                color: #fff;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center
+            }
+
+            .nav-bar__item a.nav-bar__icon-link:focus,.nav-bar__item a.nav-bar__icon-link:hover {
+                box-shadow: inset 0 -2px #3185e0;
+                color: #3185e0;
+                text-decoration: none
+            }
+
+            .nav-bar__svg-icon {
+                display: block;
+                fill: #fff;
+                margin-bottom: 5px;
+                max-height: 20px;
+                max-width: 24px
+            }
+
+            .nav-bar__item a.nav-bar__icon-link:focus .nav-bar__svg-icon,.nav-bar__item a.nav-bar__icon-link:hover .nav-bar__svg-icon {
+                fill: #3185e0
+            }
+
+            .nav-bar__text {
+                display: inline-block
+            }
+
+            .nav_container {
+                display: flex;
+                flex-direction: column
+            }
+
+            @media (max-width: 1229px) {
+                .nav-bar {
+                    display:block
+                }
+
+                .nav-bar__item {
+                    margin: auto
+                }
+            }
+
+            .fan-autocomplete-results {
+                background-color: #fff;
+                border-radius: 20px;
+                opacity: .95;
+                overflow: hidden;
+                position: absolute;
+                max-height: 700px;
+                width: 100%;
+                padding: 38px 0 0 0;
+                top: 0;
+                z-index: 3
+            }
+
+            .fan-autocomplete-category {
+                border-top: 1px solid #ccc;
+                padding: 15px
+            }
+
+            .fan-autocomplete-category:first-child {
+                border-top: none
+            }
+
+            .fan-autocomplete-heading {
+                font-family: alternate-gothic-no-1-d,"Futura Condensed","Arial Narrow",Arial,sans-serif;
+                font-size: 26px;
+                line-height: 1;
+                margin-bottom: 5px;
+                text-transform: uppercase
+            }
+
+            .fan-autocomplete-item {
+                font-size: 14px;
+                font-weight: 700;
+                padding: 3px 0;
+                text-transform: uppercase;
+                text-align: left
+            }
+
+            .fan-autocomplete-more-results {
+                background-color: #4aa7f6;
+                color: #fff;
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 4px;
+                text-align: center;
+                text-transform: uppercase;
+                width: 100%
+            }
+
+            .legacy.row {
+                padding-top: 30px
+            }
+
+            .legacy .columns {
+                position: relative;
+                padding-left: .714em;
+                padding-right: .714em;
+                float: left
+            }
+
+            @media only screen {
+                .legacy .small-12 {
+                    width: 100%
+                }
+            }
+
+            @media only screen and (min-width: 64.063em) {
+                .legacy .large-9 {
+                    width:75%
+                }
+            }
+        </style>
+        <!-- endfandango -->
+        <!-- fandango:critical-path-footer-styles -->
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-icons.ee1aade6ea3.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-icons.ee1aade6ea3.css">
+        </noscript>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-core.3643dded3a3.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-core.3643dded3a3.css">
+        </noscript>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-components.f5ec10e7d5f.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-components.f5ec10e7d5f.css">
+        </noscript>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-icons.ab526580d59.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-icons.ab526580d59.css">
+        </noscript>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-core.fbfe532d01d.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-core.fbfe532d01d.css">
+        </noscript>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-components.dcee711fe52.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-components.dcee711fe52.css">
+        </noscript>
+        <!-- begin preload fonts -->
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- end preload fonts -->
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/about/aboutUs/desktop.65e41c2ed16.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/about/aboutUs/desktop.65e41c2ed16.css">
+        </noscript>
+        <!-- begin preload fonts -->
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- end preload fonts -->
+        <script>
+            !function(t) {
+                "use strict";
+                t.loadCSS || (t.loadCSS = function() {}
+                );
+                var e = loadCSS.relpreload = {};
+                if (e.support = function() {
+                    var e;
+                    try {
+                        e = t.document.createElement("link").relList.supports("preload")
+                    } catch (t) {
+                        e = !1
+                    }
+                    return function() {
+                        return e
+                    }
+                }(),
+                e.bindMediaToggle = function(t) {
+                    var e = t.media || "all";
+                    function a() {
+                        t.media = e
+                    }
+                    t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a),
+                    setTimeout(function() {
+                        t.rel = "stylesheet",
+                        t.media = "only x"
+                    }),
+                    setTimeout(a, 3e3)
+                }
+                ,
+                e.poly = function() {
+                    if (!e.support())
+                        for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) {
+                            var o = a[n];
+                            "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0),
+                            e.bindMediaToggle(o))
+                        }
+                }
+                ,
+                !e.support()) {
+                    e.poly();
+                    var a = t.setInterval(e.poly, 500);
+                    t.addEventListener ? t.addEventListener("load", function() {
+                        e.poly(),
+                        t.clearInterval(a)
+                    }) : t.attachEvent && t.attachEvent("onload", function() {
+                        e.poly(),
+                        t.clearInterval(a)
+                    })
+                }
+                "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS
+            }("undefined" != typeof global ? global : this);
+        </script>
+        <script>
+            window.Fandango = {};
+            window.Fandango.adConfig = {
+                "site": "fandango-web",
+                "field[env]": "production",
+                "cag[screenplay]": 1,
+                "adunits": "Multi Logo|Box Ad|Top Banner|Marquee Banner|Banner|Banner Mid",
+                "cat": "",
+                "is_content": 0,
+                "isMobile": false,
+                "path": "/about-us",
+                "title": "",
+                "type": "aboutUs"
+            };
+        </script>
+        <!-- salt=lyt_base-5dad-a9(2) -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        </script>
+        <!-- salt=lyt_base-76b6-38(4) -->
+        <script src="//assets.adobedtm.com/77ca722dd820/8e9f15bbb593/launch-fb70769b79ec.min.js" async></script>
+        <script id="mps-page-integration">
+            (function() {
+                const CookieNames = {
+                    AD_INTERSTITIAL: 'AdInterstitial'
+                };
+
+                const QueryParams = {
+                    FULL_PAGE_AD: 'fpa'
+                };
+
+                const RegExes = {
+                    CAMPAIGN: /cmp=PT_ST_/i
+                };
+
+                const ONE_HOUR = 3600000;
+                /* milliseconds */
+                const SHOW_ON_NTH_CLICK = 2;
+
+                function getCookie(cookieName) {
+                    const cookieRow = document.cookie.split('; ').find(row => row.startsWith(cookieName));
+                    return cookieRow && cookieRow.split('=')[1];
+                }
+
+                function manageAdInterstitialCookie() {
+                    let value = getCookie(CookieNames.AD_INTERSTITIAL);
+                    const params = Object.fromEntries(new URLSearchParams(window.location.search).entries());
+                    let showAd = false;
+                    value = !!value && parseInt(value);
+
+                    const setCookie = (cookieName, cookieValue) => {
+                        const expires = (new Date(Date.now() + ONE_HOUR)).toUTCString();
+                        document.cookie = `${cookieName}=${cookieValue};expires=${expires};path=/;domain=.fandango.com;secure`;
+                    }
+                    ;
+
+                    if (!value || params[QueryParams.FULL_PAGE_AD] === '0') {
+                        setCookie(CookieNames.AD_INTERSTITIAL, 1);
+                    } else if (value < SHOW_ON_NTH_CLICK) {
+                        setCookie(CookieNames.AD_INTERSTITIAL, ++value);
+                    } else if (value === SHOW_ON_NTH_CLICK) {
+                        showAd = true;
+                        setCookie(CookieNames.AD_INTERSTITIAL, ++value);
+                    }
+
+                    return showAd;
+                }
+
+                if (!document.cookie.match(RegExes.CAMPAIGN)) {
+                    window.mpscall = {
+                        ...window.Fandango.adConfig,
+                        'field[fullpage]': window.Fandango.adConfig.isMobile && manageAdInterstitialCookie() ? 1 : 0
+                    };
+
+                    const mpsopts = {
+                        host: 'mps.nbcuni.com',
+                        updatecorrelator: 1
+                    };
+                    const mps = window.mps = window.mps || {};
+                    mps._ext = mps._ext || {};
+                    mps._adsheld = [];
+                    mps._queue = mps._queue || {};
+                    mps._queue.mpsloaded = mps._queue.mpsloaded || [];
+                    mps._queue.mpsinit = mps._queue.mpsinit || [];
+                    mps._queue.gptloaded = mps._queue.gptloaded || [];
+                    mps._queue.adload = mps._queue.adload || [];
+                    mps._queue.adclone = mps._queue.adclone || [];
+                    mps._queue.adview = mps._queue.adview || [];
+                    mps._queue.refreshads = mps._queue.refreshads || [];
+                    mps.__timer = Date.now || function() {
+                        return +new Date;
+                    }
+                    ;
+                    mps.__intcode = 'v2';
+                    if (typeof mps.getAd !== 'function') {
+                        mps.getAd = function(adunit) {
+                            if (typeof adunit !== 'string') {
+                                return false;
+                            }
+                            const slotid = 'mps-getad-' + adunit.replace(/\W/g, '');
+                            if (!mps._ext || !mps._ext.loaded) {
+                                mps._queue.gptloaded.push( () => {
+                                    typeof mps._gptfirst === 'function' && mps._gptfirst(adunit, slotid);
+                                    mps.insertAd('#' + slotid, adunit);
+                                }
+                                );
+                                mps._adsheld.push(adunit);
+                            }
+                            return '<div id="' + slotid + '" class="mps-wrapper" data-mps-fill-slot="' + adunit + '"></div>';
+                        }
+                        ;
+                    }
+
+                    const head = document.head || document.getElementsByTagName('head')[0];
+                    const mpsload = document.createElement('script');
+                    mpsload.src = '//' + mpsopts.host + '/fetch/ext/load-' + window.mpscall.site + '.js?nowrite=2';
+                    mpsload.id = 'mps-load';
+                    head.insertBefore(mpsload, head.firstChild);
+                }
+            }
+            )();
+        </script>
+        <script src="https://cdn.jwplayer.com/libraries/qr3Zjthd.js"></script>
+        <script type="module">
+            if (!("anchorName"in document.documentElement.style)) {
+                import("https://unpkg.com/@oddbird/css-anchor-positioning");
+            }
+        </script>
+    </head>
+    <body class=" dark-mode is-desktop   ">
+        <div aria-live="polite" class="sr-only" id="js-aria-live" tabindex="-1"></div>
+        <!-- salt=lyt-dsk-d298-e8 -->
+        <div id="top-banner">
+            <div class="ad-topbanner">
+                <div class="js-ad ad" data-slot="topbanner" data-media=""></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="nav_container">
+                <!-- salt=prt-shr_header-51b6-3b -->
+                <div id="header-wrap" class="nav-bar__adaptive-header-wrap">
+                    <header class="nav-bar__global-header-wrap" id="global-header">
+                        <nav class="nav-bar row">
+                            <ul class="nav-bar__left-section tablet-width-100">
+                                <li>
+                                    <a href="home.html" class="no-underline text-white text-[50px] p-5">
+                                        Tripple A
+                                    </a>
+                                </li>
+                                <li id="global-search">
+                                    <a class="skip-link" href="#page" id="main-content-skip-link">Skip to Main Content
+                    </a>
+                                    <form action="/search" autocomplete="off" novalidate role="search">
+                                        <div class="js-fd-header-nav-bar-search-autocomplete nav-bar__autocomplete">
+                                            <div class="js-fd-header-nav-bar-search-input">
+                                                <input aria-label="Search by city, state, zip or movie" class="nav-bar__search-input" id="global-header-search-input" name="q" placeholder="Search by city, state, zip or movie" type="text" value="">
+                                            </div>
+                                            <div class="csspinner double-up no-overlay"></div>
+                                            <button class="nav-bar__go-btn" id="global-header-go-btn" type="submit">
+                                                <span class="icon nav-bar__search-icon">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.313 5.177c0-2.131 1.75-3.864 3.901-3.864s3.902 1.733 3.902 3.864a3.826 3.826 0 0 1-1.114 2.705 3.893 3.893 0 0 1-2.788 1.16c-2.151 0-3.901-1.733-3.901-3.865zm12.497 7.706-4.482-4.53a5.131 5.131 0 0 0 1.1-3.176C10.428 2.317 8.094 0 5.214 0 2.334 0 0 2.318 0 5.177c0 2.86 2.335 5.178 5.214 5.178a5.215 5.215 0 0 0 3.18-1.08l4.484 4.53a.655.655 0 1 0 .932-.922z" fill="#fff"/>
+                                                    </svg>
+                                                    <span class="sr-only">Go</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input name="mode" type="hidden" value="all">
+                                    </form>
+                                </li>
+                            </ul>
+                            <!--?xml version="1.0" encoding="UTF-8"?-->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="hide">
+                                <symbol id="icon-nav-movies" viewBox="0 0 19 19">
+                                    <path d="m18.002 3.347-3.036.973v-.002L13.841.727l2.124-.682a.952.952 0 0 1 1.197.622l.84 2.68zm.048 4.466H3.908L2.797 4.261.66 4.945a.95.95 0 0 0-.616 1.189L.83 8.65v2.536H19V8.763a.95.95 0 0 0-.95-.95zM.83 18.05c0 .526.426.95.95.95H18.05a.95.95 0 0 0 .95-.95v-5.786H.83v5.786zM13.31 4.85l-1.123-3.59-3.035.972 1.124 3.59 3.034-.973zM7.49 2.761l1.124 3.591-3.034.973-1.125-3.592 3.035-.972z"/>
+                                </symbol>
+                                <symbol id="icon-nav-theaters" viewBox="0 0 25 18">
+                                    <path d="m23.138 8.502.798 2.82c.127.45.067.92-.166 1.324a1.77 1.77 0 0 1-1.107.832l-5.21 1.323-.409-1.443-2.975-10.52-.408-1.445L18.925.056c.94-.24 1.912.311 2.171 1.225l.787 2.783c.061.22.094.534-.087.816a1 1 0 0 1-.627.428c-.404.103-.75.356-.943.692a1.185 1.185 0 0 0-.122.922c.202.712 1.017 1.121 1.826.921.182-.046.383-.07.648.03.27.106.425.33.51.498l.05.131zm-10.93-6.739.408 1.443 2.975 10.521.408 1.444-10.924 2.772A1.793 1.793 0 0 1 4.63 18c-.784 0-1.508-.511-1.725-1.281l-.828-2.974c-.017-.195.003-.476.19-.705a.98.98 0 0 1 .567-.349 1.51 1.51 0 0 0 .941-.69c.165-.287.21-.614.122-.922-.2-.712-1.023-1.122-1.826-.921a.996.996 0 0 1-.735-.067c-.292-.146-.426-.429-.487-.64L.065 6.678a1.698 1.698 0 0 1 .166-1.323c.24-.417.633-.712 1.106-.833l10.87-2.759z"/>
+                                </symbol>
+                                <symbol id="icon-nav-on-demand" viewBox="0 0 30 20">
+                                    <path d="M24.24.35H4.77a2.07 2.07 0 00-2 2v11.69a2 2 0 002 1.89h19.47a2 2 0 002-2.13V2.36a2 2 0 00-2-2.01zm-7.79 8.14l-3.42 2.25a.36.36 0 01-.59-.24V6.01a.31.31 0 01.35-.35c.12 0 .12 0 .24.12l3.3 2.12a.52.52 0 01.12.59zM6.66 18.29H23.3v1.06H6.66z"/>
+                                </symbol>
+                                <symbol id="icon-nav-news" viewBox="0 0 20 20">
+                                    <path d="M10.008 0a.768.768 0 0 0-.748.552L7.27 6.989H.81c-.773 0-1.105.982-.49 1.451l5.26 4.017-2.018 6.534c-.169.543.264 1.008.743 1.008.157 0 .32-.05.467-.162l5.233-4.001 5.24 4.002a.76.76 0 0 0 .467.163c.479 0 .911-.465.744-1.008l-2.022-6.544 5.247-4.01c.613-.469.282-1.45-.49-1.45h-6.445L10.756.552A.77.77 0 0 0 10.009 0z"/>
+                                </symbol>
+                                <symbol id="icon-nav-account" viewBox="0 0 20 20">
+                                    <path d="M16 15c0 .467-.126.913-.347 1.33A8.473 8.473 0 0 0 18.5 10c0-4.687-3.814-8.5-8.5-8.5-4.687 0-8.5 3.813-8.5 8.5a8.472 8.472 0 0 0 2.846 6.33A2.834 2.834 0 0 1 4 15c0-2.209 2.686-4 6-4 3.313 0 6 1.791 6 4zM0 10C0 4.477 4.477 0 10 0c5.522 0 10 4.477 10 10 0 5.522-4.478 10-10 10-5.523 0-10-4.478-10-10zm7-3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+                                </symbol>
+                            </svg>
+                            <ul class="nav-bar__global-menu tablet-width-100" id="global-menu">
+                                <li class="nav-bar__item">
+                                    <a class="nav-bar__icon-link" href="about.html">
+                                        <i class="fas fa-info-circle text-[24px] p-2"></i>
+                
+                                        <span class="nav-bar__text">About</span>
+                                    </a>
+                                </li>
+                
+                                <li class="nav-bar__item">
+                                    <a class="nav-bar__icon-link" href="contact.html" >
+                                        <i class="fas fa-address-book text-[24px] p-2"></i>
+                                        <span class="nav-bar__text">Contacts</span>
+                                    </a>
+                                </li>
+                
+                                <li class="nav-bar__item">
+                                    <a class="nav-bar__icon-link" href="productListing.html">
+                                        <i class="fas fa-film text-[24px] p-2"></i>
+                
+                                        <span class="nav-bar__text">Movies</span>
+                                    </a>
+                                </li>
+                
+                                <li class="nav-bar__item">
+                                    <a class="nav-bar__icon-link" href="about.html">
+                                        <i class="fas fa-sign-in-alt text-[24px] p-2"></i>
+                
+                                        <span class="nav-bar__text">Login</span>
+                                    </a>
+                                </li>
+                
+                                <li class="nav-bar__item">
+                                    <a class="nav-bar__icon-link" href="register.html"> 
+                                        <i class="fas fa-user-plus text-[24px] p-2"></i>
+                                        
+                
+                                        <span class="nav-bar__text">Sign in</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div id="global-offer-banner" class="row global-offer-banner dark__section">
+            <h2 class="sr-only">Offers</h2>
+            <div class="js-fd-splide splide global-offer-banner__splide">
+                <div class="splide__track global-offer-banner__wrap">
+                    <button class="js-global-offer-arrow fd-carousel__arrow fd-carousel__arrow--left js-fd-carousel-arrow-left" disabled>
+                        <span class="sr-only">Go to previous offer</span>
+                    </button>
+                    <ul class="splide__list">
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="7800a" data-promo-name="Set sail with Moana&#39;s Ticket 2 Adventure" data-promo-position="1">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Set sail with Moana &#39;s Ticket 2 Adventure</strong>
+                                    <span class="global-offer-banner__title dark__text">Get 2 tickets to Moana 2 &amp;more!</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="2673a" data-promo-name="Seize the We Are Venom Bundle" data-promo-position="2">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Seize the We Are Venom Bundle</strong>
+                                    <span class="global-offer-banner__title dark__text">Get 2 tickets to Venom: The Last Dance &amp;more!</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="6169a" data-promo-name="Popular Poster Pack" data-promo-position="3">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Popular Poster Pack</strong>
+                                    <span class="global-offer-banner__title dark__text">Get 2 movie tickets to Wicked, a limited edition</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="3723a" data-promo-name="Wicked Exclusive Collector&#39;s Pin Pack" data-promo-position="4">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Wicked Exclusive Collector &#39;s Pin Pack</strong>
+                                    <span class="global-offer-banner__title dark__text">Purchase a ticket to see Wicked in IMAX and get </span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <a class="js-global-offer-tracking global-offer-banner__link js-fd-carousel-focus-elem" href="#" target="_blank" data-promo-link="https://www.fandangomovietickets.com/thecarpenter?cmp=TARS~FANDANGO~The_Carpenter_BOGO_GlobalNav" data-promo-name="Get BOGO Tickets Now for The Carpenter" data-promo-position="5">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Get BOGO Tickets Now for The Carpenter</strong>
+                                    <span class="global-offer-banner__title dark__text">In theaters November 1st. Get tickets early!</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="7992a" data-promo-name="Get Scream Worthy Savings" data-promo-position="6">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Get Scream Worthy Savings</strong>
+                                    <span class="global-offer-banner__title dark__text">See classic horror movies and get deals near you</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="6454a" data-promo-name="Save 25% off on all Andrea Bocelli products" data-promo-position="7">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Save 25% off on all Andrea Bocelli products</strong>
+                                    <span class="global-offer-banner__title dark__text">When you buy a ticket to Andrea Bocelli 30: The </span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="1413a" data-promo-name="Flowers + Movies = Perfect Halloween" data-promo-position="8">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Flowers + Movies = Perfect Halloween</strong>
+                                    <span class="global-offer-banner__title dark__text">Get $40 off spooky flowers with ticket purchase.</span>
+                                </span>
+                            </button>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <a class="js-global-offer-tracking global-offer-banner__link js-fd-carousel-focus-elem" href="#" target="_blank" data-promo-link="https://editorial.rottentomatoes.com/article/verified-hot-celebrating-the-best-verified-rated-films-by-fans/?cmp=TARS~FANDANGO~Verified Hot_GlobalNav" data-promo-name="New Audience Score Badge Unveiled: Verified Hot" data-promo-position="9">
+                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/64a40e40-5e81-11ef-a07e-5b03d6159fe4--rt-icon.svg" alt="offer icon" role="presentation">
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">New Audience Score Badge Unveiled: Verified Hot</strong>
+                                    <span class="global-offer-banner__title dark__text">Check out the first Verified Hot movies!</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="502" data-overlay-id="movie-offer-modal-502" data-promo-name="Flowers + Movies" data-promo-position="10">
+                                <span class="global-offer-banner__gift-box-icon icon icon-gift-box-white"></span>
+                                <span class="global-offer-banner__text">
+                                    <strong class="global-offer-banner__label">Flowers + Movies</strong>
+                                    <span class="global-offer-banner__title dark__text">Get $40 off spooky flowers with ticket purchase.</span>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                    <button class="js-global-offer-arrow fd-carousel__arrow fd-carousel__arrow--right js-fd-carousel-arrow-right" disabled>
+                        <span class="sr-only">Go to next offer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <main id="page" class="row min-desktop-width">
+            <!-- salt=pag-dsk_about-about-us -->
+            <div class="about-us">
+                <div class="legacy row">
+                    <div class="small-12 large-9 columns">
+                        <h1 class="heading-size-xl heading-style-1 inline-block">About Tripple A Group</h1>
+                        <div class="panel page-details">
+                            <div class="color-blue text-[50px] uppercase font-bold">Members</div>
+                            <div class="text-[20px]">
+                                <div class="">Our group consist of 3 individual:</div>
+                                <div class="font-bold">22120181 - Nguyen Duy Lam</div>
+                                <div class="font-bold">22120182 - Nguyen Dang Minh Lan</div>
+                                <div class="font-bold">22120186 - Huynh Tan Loc</div>
+                            </div>
+                            <div class="color-blue text-[50px] uppercase font-bold">EMAIL</div>
+                            <div class="text-[20px]">
+                                <div class="font-bold">22120181@student.hcmus.edu.vn</div>
+                                <div class="font-bold">22120182@student.hcmus.edu.vn</div>
+                                <div class="font-bold">22120186@student.hcmus.edu.vn</div>
+                            </div>
+
+                            
+                    </div>
+                    <div class="width-25">
+                        <div class="ad-unit--sidebar">
+                            <div class="js-ad ad" data-slot="boxaddt" data-media="desktop"></div>
+                        </div>
+                        <div class="ad-unit--sidebar">
+                            <div class="js-ad ad" data-slot="smallboxad" data-media="desktop"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="row footer">
+            <section class="emu__content row width-100 footer__section dark__section">
+                <div class="footer-offer__header">
+                    <h2 class="emu__heading--medium emu-override">Offers</h2>
+                    <a href="/offers" class="dark__link">SEE ALL OFFERS</a>
+                </div>
+                <ul class="footer-offer__list">
+                    <li class="footer-offer">
+                        <a href="#" target="_blank">
+                            <span class="sr-only">Set sail with the Moana 2 Ticket 2 Adventure image link</span>
+                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/b03cd7c0-9332-11ef-a588-3b078e6b3d8a--fan-globalofferunit-homepage-moanaticket2adventurebundle-292x118.jpg" alt="Set sail with the Moana 2 Ticket 2 Adventure">
+                        </a>
+                        <div class="footer-offer__description-section">
+                            <div>
+                                <h3 class="emu__heading--small dark__text">Set sail with the Moana 2 Ticket 2 Adventure</h3>
+                                <p class="emu__description footer-offer__description dark__text">Get two tickets to Moana 2, an exclusive limited release Disney pin set, and more!</p>
+                            </div>
+                            <a href="#" target="_blank" class="dark__link">BUY NOW</a>
+                        </div>
+                    </li>
+                    <li class="footer-offer">
+                        <a href="#" target="_blank">
+                            <span class="sr-only">Get $5 off on Moana image link</span>
+                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/dee210e0-9332-11ef-8321-2b978811c524--fan-globalofferunit-homepage-moana2gwp-292x118.png" alt="Get $5 off on Moana">
+                        </a>
+                        <div class="footer-offer__description-section">
+                            <div>
+                                <h3 class="emu__heading--small dark__text">Get $5 off on Moana</h3>
+                                <p class="emu__description footer-offer__description dark__text">Buy a ticket to Moana 2, Get $5 off on Moana to watch at home.</p>
+                            </div>
+                            <a href="#" target="_blank" class="dark__link">BUY TICKETS</a>
+                        </div>
+                    </li>
+                    <li class="footer-offer">
+                        <a href="#" target="_blank">
+                            <span class="sr-only">Seize the We Are Venom Bundle image link</span>
+                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/767aefa0-7d3d-11ef-a07e-5b03d6159fe4--fan-globalofferunit-homepage-venom-292x118.png" alt="Seize the We Are Venom Bundle">
+                        </a>
+                        <div class="footer-offer__description-section">
+                            <div>
+                                <h3 class="emu__heading--small dark__text">Seize the We Are Venom Bundle</h3>
+                                <p class="emu__description footer-offer__description dark__text">Get two tickets to Venom: The Last Dance, an exclusive Venom Collector's Cup, and more!</p>
+                            </div>
+                            <a href="#" target="_blank" class="dark__link">BUY NOW</a>
+                        </div>
+                    </li>
+                    <li class="footer-offer">
+                        <a href="#" target="_blank">
+                            <span class="sr-only">Halloween Deals Near You! image link</span>
+                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/d34c20c0-7f8e-11ef-a07e-5b03d6159fe4--fan-globalofferunit-halloweenoffers-week1-292x118.png" alt="Halloween Deals Near You!">
+                        </a>
+                        <div class="footer-offer__description-section">
+                            <div>
+                                <h3 class="emu__heading--small dark__text">Halloween Deals Near You!</h3>
+                                <p class="emu__description footer-offer__description dark__text">Your favorite Halloween classics at spooky good prices are just a click away.</p>
+                            </div>
+                            <a href="#" target="_blank" class="dark__link">GET TICKETS</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="emu__content footer__section dark__section">
+                <div class="footer-coming-soon">
+                    <h2 class="emu__heading--medium dark__text">New &amp;Coming soon</h2>
+                    <ul class="footer-coming-soon__list">
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234523/FND_poster_Wicked-Presale.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Wicked (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/235359/WRB_Tree1Sheet6_RGB_1.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">The Wild Robot (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234514/VNM3_OnLine_2000x3000_TSR_02_sm.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Venom: The Last Dance (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234519/FND_poster_Gladiator2-Presale.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Gladiator II (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/235494/Conclave_OfficialPoster.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Conclave (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/236735/S2_DOM_2025x3000_ONLINE_TEASER_ONE_SHEET_TORN.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Smile 2 (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234515/BTLBTL_VERT_MAIN_2764x4096_DOM_REV.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Beetlejuice Beetlejuice (2024)</p>
+                            </a>
+                        </li>
+                        <li class="footer-coming-soon__list-item">
+                            <a class="footer-coming-soon__link" href="#">
+                                <div class="visual-container footer-coming-soon__poster">
+                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/237168/TERRIFIER-3-Hero-Theatrical-SM.jpg" alt="" role="presentation"/>
+                                </div>
+                                <p class="footer-coming-soon__sr-only dark__text">Terrifier 3 (2024)</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <nav class="footer-nav">
+                <div class="row" role="group">
+                    <div class="width-25" role="group">
+                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Experience + Explore</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Movies In Theaters</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Movie Actors and Actresses</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Mobile</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">New For Streaming</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Special Offers</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Gift Cards</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="width-25" role="group">
+                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Editorial Features</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Indie Movie Guide</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Family Guide</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">House Of Screams</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Movie News</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="width-25" role="group">
+                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Videos</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Movie Trailers</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Weekly Ticket</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Mom &#39;s Movie Minute</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="width-25" role="group">
+                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Photos</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Red Carpet Premieres</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">October Celebrity Birthdays</a>
+                            </li>
+                            <li class="footer-nav__list-item">
+                                <a class="light dark__link__second" href="#">Award Show Galleries</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section id="site-utility-links" class="footer__section footer-utility-links__wrapper" role="group">
+                <div class="width-50 footer-utility-links footer-utility-links__follow" role="group">
+                    <h3 class="footer-utility-links__heading dark__text">Follow Us</h3>
+                    <ul class="footer-utility-links__social">
+                        <li>
+                            <a class="icon footer-utility-links__social-icon facebook" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Facebook</a>
+                        </li>
+                        <li>
+                            <a class="icon footer-utility-links__social-icon twitter" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Twitter</a>
+                        </li>
+                        <li>
+                            <a class="icon footer-utility-links__social-icon instagram" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Instagram</a>
+                        </li>
+                        <li>
+                            <a class="icon footer-utility-links__social-icon youtube" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="width-50 footer-utility-links footer-utility-links__apps" role="group">
+                    <h3 class="footer-utility-links__heading dark__text">Get Ours Apps</h3>
+                    <div class="footer-utility-links__social" role="group">
+                        <a class="footer-utility-links__app-store-icon icon apple-app-store" href="#">Fandango iOS App</a>
+                        <a class="footer-utility-links__app-store-icon icon google-play-store" href="#">Fandango Android App</a>
+                    </div>
+                </div>
+            </section>
+            <section id="site-info" class="footer-site-info footer__section dark__section">
+                <div class="row footer-site-info__container" role="group">
+                    <div class="footer-site-info__section" role="group">
+                        <ul class="footer-site-info__list">
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Check Gift Card Balance
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Refunds &amp;Exchanges
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Help
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">My Account
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <span id="footer-feedback" role="link" class="footer-site-info__link"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-site-info__section" role="group">
+                        <ul class="footer-site-info__list">
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">About Fandango
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Careers
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Link to Us
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Affiliate Program
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Fandango Rewards
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Site Index
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Ad Choices
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Privacy Policy
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <!-- OneTrust Cookies Settings button start -->
+                                <button id="ot-sdk-btn" class="ot-sdk-show-settings a footer-site-info__link "></button>
+                                <!-- OneTrust Cookies Settings button end -->
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">California Notice
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Terms and Policies
+                            </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Accessibility
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-site-info__section dark__text" role="group">
+                        <ul class="footer-site-info__list footer-site-info__list--affiliates">
+                            <li class="footer-site-info__list-item"></li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow"></a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Movieclips
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Rotten Tomatoes
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Flixster.com
+                        </a>
+                            </li>
+                            <li class="footer-site-info__list-item">
+                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">MovieTickets.com
+                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-site-info__advertising-btn" role="button">
+                        <a class="footer-site-info__advertising-link dark__text" href="#" rel="nofollow">Advertise With Us
+            </a>
+                    </div>
+                    &copy;2024 Fandango |
+
+        <a class="global-footer__copyright--link" href="#" target="_blank">A Division of NBCUniversal
+        </a>
+                </div>
+            </section>
+        </footer>
+        <div id="movie-offer-modal-7800a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/3c800e70-9340-11ef-a07e-5b03d6159fe4--fan-mobilewebmu-moana2gwp-194x223.png" alt="Set sail with Moana&#39;s Ticket 2 Adventure">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Buy a ticket to Moana 2, Get $5 off on Moana to watch at home.	</h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">&quot;The Moana 2 Ticket 2 Adventure bundle is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must have, and be logged into, a Fandango at Home account to buy your bundle. You must have a Fandango account to redeem your movie tickets and receive your 400 FanRewards Points, and you must buy your Moana 2 Ticket 2 Adventure bundle using the same email address used for your Fandango account to receive all components of the bundle. You must be 18 years of age or older to purchase a bundle. The exclusive limited release Disney Pin USA set will begin shipping at the end of November. Please use a physical address where the exclusive limited release Disney Pin USA set can be delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen deliveries. The 400 Bonus FanRewards Points will be added to your Fandango account after the release of Moana 2. See https://www.fandangomovietickets.com/moana2ticket2adventure for full terms and conditions.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_self">BUY TICKETS
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-2673a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/f95099d0-7d41-11ef-8321-2b978811c524--fan-globalnavbar-venom-343x362.jpg" alt="Seize the We Are Venom Bundle">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Get two tickets to Venom: The Last Dance, an exclusive Venom Collector &#39;s Cup, and more for $99.80!</h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">We Are Venom bundle is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must be 18 years of age or older to purchase a bundle. You must have, and be logged into, a Fandango at Home account to buy your bundle and receive Venom: The Last Dance (pre-order so that you can view it when the studio makes it available), Venom, and Venom: Let There Be Carnage on Fandango at Home. The collectible cup and exclusive poster will begin shipping in the month of November. Please use a physical address where the collectible cup and exclusive poster shipment can be delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen deliveries. See Offer Terms (https://www.watchfandangoathome.com/wearevenombundle/) for full terms and conditions for each item included in the We Are Venom bundle.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_self">BUY NOW
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-6169a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/351a2720-8db8-11ef-a588-3b078e6b3d8a--fan-globalnavbar-wickedbundle-343x362.png" alt="Popular Poster Pack">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Get 2 movie tickets to Wicked, a limited edition poster, and more!</h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">*Wicked Popular Poster Pack bundle is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must be 18 years of age or older to purchase a bundle. You must have, and be logged into, a Fandango at Home account to buy your bundle and receive Wicked (pre-order so that you can view it when the studio makes it available) on Fandango at Home. The limited edition Wicked poster will begin shipping in the month of November. Please use a physical address where the limited edition Wicked poster shipment can be delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen deliveries. See https://fandan.co/PopularPosterPack for full terms and conditions.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_self">BUY NOW
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-3723a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">Special Offer</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/2a60c6f0-82bd-11ef-8321-2b978811c524--fan-globalnavbar-wickedimax-343x362.jpg" alt="Wicked Exclusive Collector&#39;s Pin Pack">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Purchase a ticket to Wicked in IMAX and get a Wicked Collector &#39;s Pin Pack! While supplies lasts. See terms for details. </h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">Limited time offer. While supplies last. Log into your account on Fandango.com or the Fandango app and purchase at least one (1) IMAX movie ticket to ‘Wicked’ between 9:00am PT on 10/09/24 and 11:59pm PT on 12/31/24. Purchaser will receive a post purchase email containing one (1) Promotional Code (“Code”) that is good for the redemption of the Wicked Collector’s Pin Pack. Pin Pack will ship in November. There is a limited quantity of Codes available in this promotion. Codes will stop being distributed on the earlier of (i) the Code distribution limit being reached, (ii) Wicked no longer being in IMAX theaters, or (iii) 11:59pm PT on 12/31/24.  There is a limited quantity of Code redemptions available in this promotion. Code expires, and can no longer be used, when the limit of Code redemptions has been reached, or at 11:59pm PT on 1/31/25, whichever comes first. Limit one Code per transaction. You may have to pay taxes additionally. One-time use only. Void where prohibited. Offer is non-transferable and cannot be combined with any other offer or discount. If lost or stolen, cannot be replaced. No cash value, except as required by law. Not for resale; void if sold or exchanged. Offer valid in the U.S. only. You must have, and be logged into, your Fandango account to receive a Code. Fandango is free to join; you must be 18 years of age or older to create a Fandango account. Fandango reserves the right to modify or cancel this offer at any time and without notice. This offer is subject to Fandango Terms and Policies and Privacy Policy at Terms and Policies at http://www.fandango.com/terms-and-policies.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_self">Buy Tickets
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-7215a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">Get BOGO Tickets Now for The Carpenter</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description"></h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text"></small>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-7992a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">Halloween Deals Near You!</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/bcc09fb0-8a4d-11ef-ab6e-6bc4e16d49df--fan-globalnavbar-applepay-week4-tickets-343x362.png" alt="Get Scream Worthy Savings">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Your favorite Halloween classics at spooky good prices are just a click away. </h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">Offers are subject to change or cancellation by each theater, please contact your local theater with any questions.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_self">Learn More
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-6454a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">Special Offer</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/9b07b1d0-82bc-11ef-a588-3b078e6b3d8a--fan-globalnavbar-andreabocelli-343x362.png" alt="Save 25% off on all Andrea Bocelli products">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Buy a Ticket, Save 25% off on Andrea Bocelli products at Verve Record Store.	</h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">*Limited time offer. Log into your account on Fandango.com or the Fandango app and purchase at least one movie ticket to ‘Andrea Bocelli 30: The Celebration’ between 9:00am PT on 10/8/24 and 11:59pm PT on 11/14/24 (the “Offer Period”). Purchaser will receive a post purchase email containing 1 Verve Records Store Promotional Code (“Code”) that is good for 25% off the purchase of all Andrea Bocelli products in the store. You must have, and be logged into, your Fandango account to receive a Code. Fandango is free to join; you must be 18 years of age or older to create a Fandango account.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_blank">Buy Tickets
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-1413a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">LIMITED TIME OFFER</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/05d80380-82bc-11ef-a07e-5b03d6159fe4--fan-globalnavbar-bouqshalloween-343x362-v2b.jpg" alt="Flowers + Movies = Perfect Halloween">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Get $40 OFF from The Bouqs Co. when you purchase a ticket between 10/1 and 10/31.</h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">Limited time offer. While supplies last. Rent or purchase any movie or TV show on Fandango at Home or purchase at least (1) movie ticket on Fandango between 12:00am PT on October 1, 2024 and 11:59pm PT on October 31, 2024 and get a Bouqs promo code (“code”) for $40 off one (1) qualifying merchandise product (before taxes) from a list of eligible flowers at https://bouqs.com/offers/fandangohalloween2024 plus receive $7.00 off shipping on weekday delivery. Code expires at 11:59 PT on November 18, 2024. Delivery not available in Puerto Rico, American Samoa, Guam, the Northern Marina Islands, the USVI, or APO/FPO addresses. Certain FedEx limitations exist in some areas of Hawaii and Alaska. Not combinable or stackable with any other offers. Code is not valid on vases, sale items, prior purchases, in-store pick-up orders or purchase made on The Bouqs Company iPhone, iPad or Android apps. One code per person per transaction. Code cannot be redeemed for cash and is not valid for resale.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_self">LEARN MORE
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-534a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+                <div class="offer-modal__header">
+                    <h3 class="offer-modal__title dark__text">Apple Pay Wednesday</h3>
+                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+                </div>
+                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/43da3a80-5c02-11ef-a588-3b078e6b3d8a--fan-globalnavbar-applepay-week7-tickets-343x362.png" alt="New Audience Score Badge Unveiled: Verified Hot">
+                <div class="offer-modal__text">
+                    <h4 class="offer-modal__description">Today only! Save $5 off your order with Apple Pay.</h4>
+                </div>
+                <div class="offer-modal__footer">
+                    <small class="offer-modal__terms-and-conditions dark__text">Limited time offer, and limited quantities available. To redeem the offer, purchase one or more movie tickets on Wednesday 8/21/2024, to see any film through Fandango.com or the Fandango iOS mobile app and use Apple Pay®️ as the payment method, and enter the Fandango Promotional Code APPLEPAYWED (“Code”) in order to get the $5 off the entire purchase. There is a limited quantity of Code redemptions allowed in this promotion and therefore the offer is only available first come first served while supplies last. Code expires, and can no longer be used, upon earlier of Wednesday 8/21/2024, or after the limit of Code redemptions have been reached. Only valid for purchase of movie tickets made at Fandango.com or via the Fandango iOS app and cannot be redeemed directly at any theater box office. If lost or stolen, cannot be replaced. No cash value, except as required by law. Void where prohibited. Not valid with any other offer. Offer valid in U.S. One-time use only per email address, for a maximum of one transaction, receiving a maximum of one $5 discount on the purchase total regardless of how many tickets were purchased in that one transaction. Not for resale; void if sold or exchanged. Limit 1 Code per email address. Fandango reserves the right to modify or cancel this offer at any time and without notice. The redemption of the Code is subject to Fandango’s Terms and Policies at www.fandango.com/terms-and-policies. Apple Pay is a registered mark of Apple Inc.
+            </small>
+                    <a class="btn offer-modal__button" href="#" target="_blank">Buy Tickets
+            </a>
+                </div>
+            </div>
+        </div>
+        <div id="movie-offer-modal-502" class="offer-dialog dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+            <div class="font-sans-serif-alt width-60 tablet-width-60 dialog-content animate-slide-down animate-speed-normal">
+                <div class="offer-banner">
+                    <span class="icon-gift-box-white"></span>
+                    SPECIAL OFFER
+                
+            
+                </div>
+                <button class="js-modal-close-btn style-none close-modal icon icon-close">Close</button>
+                <img class="offer-heading" src="https://images.fandango.com/images/offers/502/1/FAN_MOPLightboxUnit_Desktop_BouqsHalloween_620x350-v2B_lg.jpg" alt="Flowers + Movies">
+                <div class="offer-footer">
+                    <h4 class="font-sans-serif-alt dark__text">Make a purchase on Fandango or Fandango at Home and enjoy $40 off Bouqs flowers, plus $7 off weekday shipping.</h4>
+                </div>
+                <small class="font-sans-serif-alt dark__text">
+                    <p>Not a member? Join now or during checkout - it's free!</p>
+                    Limited time offer. While supplies last. Rent or purchase any movie or TV show on Fandango at Home or purchase at least (1) movie ticket on Fandango between 12:00am PT on October 1, 2024 and 11:59pm PT on October 31, 2024 and get a Bouqs promo code (“code”) for $40 off one (1) qualifying merchandise product (before taxes) from a list of eligible flowers at https://bouqs.com/offers/fandangohalloween2024 plus receive $7.00 off shipping on weekday delivery. Code expires at 11:59 PT on November 18, 2024. Delivery not available in Puerto Rico, American Samoa, Guam, the Northern Marina Islands, the USVI, or APO/FPO addresses. Certain FedEx limitations exist in some areas of Hawaii and Alaska. Not combinable or stackable with any other offers. Code is not valid on vases, sale items, prior purchases, in-store pick-up orders or purchase made on The Bouqs Company iPhone, iPad or Android apps. One code per person per transaction. Code cannot be redeemed for cash and is not valid for resale.
+            
+                </small>
+            </div>
+        </div>
+        <script>
+
+            (function(root) {
+                /* -- Data -- */
+                root.Fandango || (root.Fandango = {});
+                root.Fandango.context = {
+                    "config": {
+                        "disqus": {
+                            "shortname": "fandangocom"
+                        }
+                    }
+                };
+                root.Fandango.context || (root.Fandango.context = {});
+                root.Fandango.context.device = {
+                    "isAndroid": false,
+                    "isIOS": false,
+                    "isMobile": false,
+                    "isWebView": false,
+                    "webView": ""
+                };
+                root.Fandango.context.req = {
+                    "params": {},
+                    "route": "aboutUs",
+                    "url": "\u002Fabout-us",
+                    "secure": false,
+                    "buildVersion": "${buildVersion}"
+                };
+                root.Fandango.configs = {
+                    "loyaltyEnabled": true,
+                    "mayCallHeader": true
+                };
+                root.Fandango.logInUrls = {
+                    "joinNow": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fjoin-now?from=https%3A%2F%2Fwww.fandango.com%2Fabout-us",
+                    "signIn": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fsign-in?from=https%3A%2F%2Fwww.fandango.com%2Fabout-us",
+                    "accountDashboard": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fdashboard"
+                };
+                root.Fandango.dtmData = {
+                    "loggedInStatus": "logged out",
+                    "webVersion": "node",
+                    "site": "desktop",
+                    "loadCsquare": true,
+                    "loadTarget": true
+                };
+                root.Fandango.account = {
+                    "isLoggedIn": false,
+                    "isVerifiedLoggedIn": false
+                };
+                root.Fandango.context.featureFlags = {
+                    "concessionAnnouncementEnabled": true,
+                    "darkModeEnabled": true,
+                    "filmFormatsEnabled": true,
+                    "mopDefaultTab": "intheaters",
+                    "mopTabsEnabled": true,
+                    "openChainFilterEnabled": true,
+                    "rottenTomatoesEnabled": true,
+                    "usePopovers": false
+                };
+                root.Fandango.analyticsData = {
+                    "event": "pageview",
+                    "loggedInStatus": "not logged in",
+                    "server": "fandango web discovery",
+                    "platform": "fandango web",
+                    "cachedPage": "non-cached page",
+                    "loadCsquare": true,
+                    "loadTarget": true,
+                    "pageName": "about-us",
+                    "pageType": "about-us"
+                };
+            }(this));
+            // this is where the Fandango object gets inserted into the window
+        </script>
+        <script src="/canvas/javascripts/1730132312137/client-routes.js"></script>
+        <script>
+            if (Fandango.analyticsData && Object.keys(Fandango.analyticsData).length) {
+                var displayMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark mode' : 'light mode';
+                Fandango.analyticsData.display = displayMode;
+                window.dataLayer.push(Fandango.analyticsData);
+            }
+        </script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/base/vendor.df459ec8874.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/base/polyfills.9e25e56148c.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/require-core.79c4e6fcf86.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/templates/base/templates.09c48725d64.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/base/libraries.c2f527be198.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/require-global.9f80ce69ff3.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/desktop/vendor-legacy.fc4c3e4ecfb.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/templates/desktop/base.c0d6329accd.js"></script>
+        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/desktop/require-core.0ddf9996e35.js"></script>
+        <script>
+            if (window.mps && 'function' === typeof window.mps.writeFooter)
+                window.mps.writeFooter()
+        </script>
+        <script>
+            window._satellite && _satellite.pageBottom();
+        </script>
+        <script>
+            function gMapsCallback() {
+                Object.assign(Fandango.context, {
+                    googleMapsLoaded: true
+                });
+
+                var gMapsEvent = new CustomEvent('googleMapsLoaded');
+                document.dispatchEvent(gMapsEvent);
+            }
+        </script>
+        <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFYmA0LDwoSx60YFDoWLXuZJnvXsqN96I&callback=gMapsCallback"></script>
+    </body>
+</html>
