@@ -1,324 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- OneTrust Cookies Consent Notice start for fandango.com -->
-        <!-- salt=jsScriptBlock-CMP2.1.1-feature-flag -->
-        <script type="text/javascript">
-            window.useOnetrustActiveGroups = true;
-        </script>
-        <!-- salt=jsScriptBlock-808a-m1Pa2209 -->
-        <!-- OneTrust Cookies Consent Notice start for fandango.com -->
-        <script type="text/javascript">
-            function OptanonWrapper() {}
-        </script>
-        <!-- OneTrust Cookies Consent Notice end for fandango.com -->
-        <!-- add image back in for all platforms IF in the US v1.5 -->
-        <style>
-            body #ot-sdk-btn.ot-sdk-show-settings.footer-site-info__link.us-privacy:not(:empty)::before {
-                content: '';
-                background-image: none;
-                display: inline-block;
-                height: 14px;
-                width: 29px;
-                margin-right: 4px;
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- OneTrust Cookies Consent Notice start for fandango.com -->
+    <!-- salt=jsScriptBlock-CMP2.1.1-feature-flag -->
+    <script type="text/javascript">
+        window.useOnetrustActiveGroups = true;
+    </script>
+    <!-- salt=jsScriptBlock-808a-m1Pa2209 -->
+    <!-- OneTrust Cookies Consent Notice start for fandango.com -->
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <!-- OneTrust Cookies Consent Notice end for fandango.com -->
+    <!-- add image back in for all platforms IF in the US v1.5 -->
+    <style>
+        body #ot-sdk-btn.ot-sdk-show-settings.footer-site-info__link.us-privacy:not(:empty)::before {
+            content: '';
+            background-image: none;
+            display: inline-block;
+            height: 14px;
+            width: 29px;
+            margin-right: 4px;
+        }
+
+        body #ot-sdk-btn.ot-sdk-show-settings.footer-site-info__link.us-privacy.take2-5287:not(:empty)::before {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAOCAYAAADT0Rc6AAAACXBIWXMAAACWAAAAlgEGQc5mAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAkZJREFUOI2VlE1IVFEYhp9zZqwZTaeNCdEiIgzLVmFUY4swadFyaFFQoNYwLlpJjhmaAxXWCBL9OWaQkUILWwSBZJTBMNOP5UL6oSLIoHIhQ/iT48zc0+Kqd+7cMcd39b3vd77v/e655xxBJryqDWgA1llyq8c00EG3CKSLYinyKTcaYZeT5BUPsroMmb9mKZvQFDFNIwZo6Q02NVGWk73CzW0RMUwXDHuOE6+rZG2un5HUIK8+19WAYB8hEbUDoBG+c4JUrTt3Q4D7L1ezGlBEACGlT7W4nKRq3dhWqik4DY/HDH5jOK1fCLz7Db57s6458jKaeFWzXUBT0LOyYWkLlBTB4Z2GNvLdiHddhLfn9C0fHYdXZ6GmF+YSllaN9pRG/qEdZvXzBJSWGNzTBT9iMHvN0CZnzDXvxqHiErxp1rmvD+5Gss7vkgDCOMNMzcG2VuiN6rzzKTwchYmged2tYWu36bgRz8St+UXYbZK/Qx9w1rp1odABUT/svQyffkP7IIydhyKnufDmCzPfWgwfA9A4AOGvEPGDpqD/tcVzSiroODNAKl3ds0Uvah+EezVQvtE67a8/Zv7lArQ+guATiH6DyiD01cH6jGERdAhQAi9a/0m0oxXI5TfFwPufUB4wa4UO/dekI88GiZRZo1sICUKhUXWsB/lgBOtZy4Lrz61apiFkMZQcgPRn8JQ6iGBoQxHJziPYq7eDM/OOLaC4IetV+D8kVXSJZ2ZTgDYlCybpnJ2nXimWsVwV5oGrhPAjhFoU/wFkb7M55NWangAAAABJRU5ErkJggg==");
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        (function () {
+            const info = '808a-m1Pa2209: cmp 2, OneTrust';
+            const maxAttempts = 8;
+            const attemptDelay = 300;
+
+            let attempts = 0;
+
+            function updateOtBtn() {
+                let isSuccess = false;
+                const country = (window.OneTrust && window.OneTrust.getGeolocationData() || {}).country;
+                if (country === 'US') {
+                    isSuccess = true;
+                    const btn = document.getElementById('ot-sdk-btn');
+                    if (!btn)
+                        return;
+                    btn.classList.add('ot-sdk-show-settings', 'footer-site-info__link', 'us-privacy', 'take2-5287');
+                    btn.innerHTML = btn.innerText || 'Your Privacy Choices';
+                }
+                const feedback = window.Fandango && window.Fandango.debug || console;
+                feedback.log(attempts, info, 'country:', country, isSuccess ? 'success' : 'fail');
+                return isSuccess;
             }
 
-            body #ot-sdk-btn.ot-sdk-show-settings.footer-site-info__link.us-privacy.take2-5287:not(:empty)::before {
-                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAOCAYAAADT0Rc6AAAACXBIWXMAAACWAAAAlgEGQc5mAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAkZJREFUOI2VlE1IVFEYhp9zZqwZTaeNCdEiIgzLVmFUY4swadFyaFFQoNYwLlpJjhmaAxXWCBL9OWaQkUILWwSBZJTBMNOP5UL6oSLIoHIhQ/iT48zc0+Kqd+7cMcd39b3vd77v/e655xxBJryqDWgA1llyq8c00EG3CKSLYinyKTcaYZeT5BUPsroMmb9mKZvQFDFNIwZo6Q02NVGWk73CzW0RMUwXDHuOE6+rZG2un5HUIK8+19WAYB8hEbUDoBG+c4JUrTt3Q4D7L1ezGlBEACGlT7W4nKRq3dhWqik4DY/HDH5jOK1fCLz7Db57s6458jKaeFWzXUBT0LOyYWkLlBTB4Z2GNvLdiHddhLfn9C0fHYdXZ6GmF+YSllaN9pRG/qEdZvXzBJSWGNzTBT9iMHvN0CZnzDXvxqHiErxp1rmvD+5Gss7vkgDCOMNMzcG2VuiN6rzzKTwchYmged2tYWu36bgRz8St+UXYbZK/Qx9w1rp1odABUT/svQyffkP7IIydhyKnufDmCzPfWgwfA9A4AOGvEPGDpqD/tcVzSiroODNAKl3ds0Uvah+EezVQvtE67a8/Zv7lArQ+guATiH6DyiD01cH6jGERdAhQAi9a/0m0oxXI5TfFwPufUB4wa4UO/dekI88GiZRZo1sICUKhUXWsB/lgBOtZy4Lrz61apiFkMZQcgPRn8JQ6iGBoQxHJziPYq7eDM/OOLaC4IetV+D8kVXSJZ2ZTgDYlCybpnJ2nXimWsVwV5oGrhPAjhFoU/wFkb7M55NWangAAAABJRU5ErkJggg==");
-                vertical-align: middle;
+            const intHandle = setInterval(() => {
+                const isSuccess = updateOtBtn();
+                attempts++;
+                if (isSuccess || attempts >= maxAttempts) {
+                    clearInterval(intHandle);
+                }
             }
-        </style>
-        <script>
-            (function() {
-                const info = '808a-m1Pa2209: cmp 2, OneTrust';
-                const maxAttempts = 8;
-                const attemptDelay = 300;
-
-                let attempts = 0;
-
-                function updateOtBtn() {
-                    let isSuccess = false;
-                    const country = (window.OneTrust && window.OneTrust.getGeolocationData() || {}).country;
-                    if (country === 'US') {
-                        isSuccess = true;
-                        const btn = document.getElementById('ot-sdk-btn');
-                        if (!btn)
-                            return;
-                        btn.classList.add('ot-sdk-show-settings', 'footer-site-info__link', 'us-privacy', 'take2-5287');
-                        btn.innerHTML = btn.innerText || 'Your Privacy Choices';
-                    }
-                    const feedback = window.Fandango && window.Fandango.debug || console;
-                    feedback.log(attempts, info, 'country:', country, isSuccess ? 'success' : 'fail');
-                    return isSuccess;
-                }
-
-                const intHandle = setInterval( () => {
-                    const isSuccess = updateOtBtn();
-                    attempts++;
-                    if (isSuccess || attempts >= maxAttempts) {
-                        clearInterval(intHandle);
-                    }
-                }
                 , attemptDelay);
 
-            }
-            )();
-        </script>
-        <!-- OneTrust Cookies Consent Notice end for fandango.com -->
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <!-- salt=lyt_base-1ab3-gc -->
-        <title id="page-title">Movie Tickets &amp; Movie Times</title>
-        <meta name="description" content="Buy movie tickets in advance, find movie times, watch trailers, read movie reviews, and more at Fandango."/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-        <meta http-equiv="x-dns-prefetch-control" content="on">
-        <link rel="canonical" href="#"/>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-icons.ee1aade6ea3.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-core.3643dded3a3.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-components.f5ec10e7d5f.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-icons.ab526580d59.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-core.fbfe532d01d.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-components.dcee711fe52.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <!-- begin preload fonts -->
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2" as="font" type="font/woff2" crossorigin>
-        <!-- end preload fonts -->
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/about/aboutUs/desktop.65e41c2ed16.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript>
-            <link rel="stylesheet" href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/about/aboutUs/desktop.65e41c2ed16.css">
-        </noscript>
-        <!-- begin preload fonts -->
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2" as="font" type="font/woff2" crossorigin>
-    </head>
-    <body class=" dark-mode is-desktop   ">
-        <div aria-live="polite" class="sr-only" id="js-aria-live" tabindex="-1"></div>
-        <!-- salt=lyt-dsk-d298-e8 -->
-        <div class="row">
-            <div class="nav_container">
-                <!-- salt=prt-shr_header-51b6-3b -->
-                <div id="header-wrap" class="nav-bar__adaptive-header-wrap">
-                    <header class="nav-bar__global-header-wrap" id="global-header">
-                        <nav class="nav-bar row">
-                            <ul class="nav-bar__left-section tablet-width-100">
-                                <li>
-                                    <a href="index.html" class="no-underline text-white text-[50px] p-2">
-                                        Tripple A Group
-                                    </a>
-                                </li>
-                                <li id="global-search">
-                                    <a class="skip-link" href="#page" id="main-content-skip-link">Skip to Main Content
-                    </a>
-                                    <form action="/search" autocomplete="off" novalidate role="search">
-                                        <div class="js-fd-header-nav-bar-search-autocomplete nav-bar__autocomplete">
-                                            <div class="js-fd-header-nav-bar-search-input">
-                                                <input aria-label="Search by city, state, zip or movie" class="nav-bar__search-input" id="global-header-search-input" name="q" placeholder="Search by city, state, zip or movie" type="text" value="">
-                                            </div>
-                                            <div class="csspinner double-up no-overlay"></div>
-                                        </div>
-                                        <input name="mode" type="hidden" value="all">
-                                    </form>
-                                </li>
-                            </ul>
-                            <!--?xml version="1.0" encoding="UTF-8"?-->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="hide">
-                                <symbol id="icon-nav-movies" viewBox="0 0 19 19">
-                                    <path d="m18.002 3.347-3.036.973v-.002L13.841.727l2.124-.682a.952.952 0 0 1 1.197.622l.84 2.68zm.048 4.466H3.908L2.797 4.261.66 4.945a.95.95 0 0 0-.616 1.189L.83 8.65v2.536H19V8.763a.95.95 0 0 0-.95-.95zM.83 18.05c0 .526.426.95.95.95H18.05a.95.95 0 0 0 .95-.95v-5.786H.83v5.786zM13.31 4.85l-1.123-3.59-3.035.972 1.124 3.59 3.034-.973zM7.49 2.761l1.124 3.591-3.034.973-1.125-3.592 3.035-.972z"/>
-                                </symbol>
-                                <symbol id="icon-nav-theaters" viewBox="0 0 25 18">
-                                    <path d="m23.138 8.502.798 2.82c.127.45.067.92-.166 1.324a1.77 1.77 0 0 1-1.107.832l-5.21 1.323-.409-1.443-2.975-10.52-.408-1.445L18.925.056c.94-.24 1.912.311 2.171 1.225l.787 2.783c.061.22.094.534-.087.816a1 1 0 0 1-.627.428c-.404.103-.75.356-.943.692a1.185 1.185 0 0 0-.122.922c.202.712 1.017 1.121 1.826.921.182-.046.383-.07.648.03.27.106.425.33.51.498l.05.131zm-10.93-6.739.408 1.443 2.975 10.521.408 1.444-10.924 2.772A1.793 1.793 0 0 1 4.63 18c-.784 0-1.508-.511-1.725-1.281l-.828-2.974c-.017-.195.003-.476.19-.705a.98.98 0 0 1 .567-.349 1.51 1.51 0 0 0 .941-.69c.165-.287.21-.614.122-.922-.2-.712-1.023-1.122-1.826-.921a.996.996 0 0 1-.735-.067c-.292-.146-.426-.429-.487-.64L.065 6.678a1.698 1.698 0 0 1 .166-1.323c.24-.417.633-.712 1.106-.833l10.87-2.759z"/>
-                                </symbol>
-                                <symbol id="icon-nav-on-demand" viewBox="0 0 30 20">
-                                    <path d="M24.24.35H4.77a2.07 2.07 0 00-2 2v11.69a2 2 0 002 1.89h19.47a2 2 0 002-2.13V2.36a2 2 0 00-2-2.01zm-7.79 8.14l-3.42 2.25a.36.36 0 01-.59-.24V6.01a.31.31 0 01.35-.35c.12 0 .12 0 .24.12l3.3 2.12a.52.52 0 01.12.59zM6.66 18.29H23.3v1.06H6.66z"/>
-                                </symbol>
-                                <symbol id="icon-nav-news" viewBox="0 0 20 20">
-                                    <path d="M10.008 0a.768.768 0 0 0-.748.552L7.27 6.989H.81c-.773 0-1.105.982-.49 1.451l5.26 4.017-2.018 6.534c-.169.543.264 1.008.743 1.008.157 0 .32-.05.467-.162l5.233-4.001 5.24 4.002a.76.76 0 0 0 .467.163c.479 0 .911-.465.744-1.008l-2.022-6.544 5.247-4.01c.613-.469.282-1.45-.49-1.45h-6.445L10.756.552A.77.77 0 0 0 10.009 0z"/>
-                                </symbol>
-                                <symbol id="icon-nav-account" viewBox="0 0 20 20">
-                                    <path d="M16 15c0 .467-.126.913-.347 1.33A8.473 8.473 0 0 0 18.5 10c0-4.687-3.814-8.5-8.5-8.5-4.687 0-8.5 3.813-8.5 8.5a8.472 8.472 0 0 0 2.846 6.33A2.834 2.834 0 0 1 4 15c0-2.209 2.686-4 6-4 3.313 0 6 1.791 6 4zM0 10C0 4.477 4.477 0 10 0c5.522 0 10 4.477 10 10 0 5.522-4.478 10-10 10-5.523 0-10-4.478-10-10zm7-3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
-                                </symbol>
-                            </svg>
-                            <ul class="nav-bar__global-menu tablet-width-100" id="global-menu">
-                                <li class="nav-bar__item">
-                                    <a class="nav-bar__icon-link" href="about.html">
-                                        <i class="fas fa-info-circle text-[24px] p-2"></i>
-                
-                                        <span class="nav-bar__text">About</span>
-                                    </a>
-                                </li>
-                
-                                <li class="nav-bar__item">
-                                    <a class="nav-bar__icon-link" href="contact.html" >
-                                        <i class="fas fa-address-book text-[24px] p-2"></i>
-                                        <span class="nav-bar__text">Contacts</span>
-                                    </a>
-                                </li>
-                
-                                <li class="nav-bar__item">
-                                    <a class="nav-bar__icon-link" href="productListing.html">
-                                        <i class="fas fa-film text-[24px] p-2"></i>
-                
-                                        <span class="nav-bar__text">Movies</span>
-                                    </a>
-                                </li>
-                
-                                <li class="nav-bar__item">
-                                    <a class="nav-bar__icon-link" href="about.html">
-                                        <i class="fas fa-sign-in-alt text-[24px] p-2"></i>
-                
-                                        <span class="nav-bar__text">Login</span>
-                                    </a>
-                                </li>
-                
-                                <li class="nav-bar__item">
-                                    <a class="nav-bar__icon-link" href="register.html"> 
-                                        <i class="fas fa-user-plus text-[24px] p-2"></i>
-                                        
-                
-                                        <span class="nav-bar__text">Sign in</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </header>
-                </div>
-            </div>
-        </div>
-        <div id="global-offer-banner" class="row global-offer-banner dark__section">
-            <h2 class="sr-only">Offers</h2>
-            <div class="js-fd-splide splide global-offer-banner__splide">
-                <div class="splide__track global-offer-banner__wrap">
-                    <button class="js-global-offer-arrow fd-carousel__arrow fd-carousel__arrow--left js-fd-carousel-arrow-left" disabled>
-                        <span class="sr-only">Go to previous offer</span>
-                    </button>
-                    <ul class="splide__list">
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="7800a" data-promo-name="Set sail with Moana&#39;s Ticket 2 Adventure" data-promo-position="1">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Set sail with Moana &#39;s Ticket 2 Adventure</strong>
-                                    <span class="global-offer-banner__title dark__text">Get 2 tickets to Moana 2 &amp;more!</span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="2673a" data-promo-name="Seize the We Are Venom Bundle" data-promo-position="2">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Seize the We Are Venom Bundle</strong>
-                                    <span class="global-offer-banner__title dark__text">Get 2 tickets to Venom: The Last Dance &amp;more!</span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="6169a" data-promo-name="Popular Poster Pack" data-promo-position="3">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Popular Poster Pack</strong>
-                                    <span class="global-offer-banner__title dark__text">Get 2 movie tickets to Wicked, a limited edition</span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="3723a" data-promo-name="Wicked Exclusive Collector&#39;s Pin Pack" data-promo-position="4">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Wicked Exclusive Collector &#39;s Pin Pack</strong>
-                                    <span class="global-offer-banner__title dark__text">Purchase a ticket to see Wicked in IMAX and get </span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <a class="js-global-offer-tracking global-offer-banner__link js-fd-carousel-focus-elem" href="#" target="_blank" data-promo-link="https://www.fandangomovietickets.com/thecarpenter?cmp=TARS~FANDANGO~The_Carpenter_BOGO_GlobalNav" data-promo-name="Get BOGO Tickets Now for The Carpenter" data-promo-position="5">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Get BOGO Tickets Now for The Carpenter</strong>
-                                    <span class="global-offer-banner__title dark__text">In theaters November 1st. Get tickets early!</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="7992a" data-promo-name="Get Scream Worthy Savings" data-promo-position="6">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Get Scream Worthy Savings</strong>
-                                    <span class="global-offer-banner__title dark__text">See classic horror movies and get deals near you</span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="6454a" data-promo-name="Save 25% off on all Andrea Bocelli products" data-promo-position="7">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Save 25% off on all Andrea Bocelli products</strong>
-                                    <span class="global-offer-banner__title dark__text">When you buy a ticket to Andrea Bocelli 30: The </span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="1413a" data-promo-name="Flowers + Movies = Perfect Halloween" data-promo-position="8">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Flowers + Movies = Perfect Halloween</strong>
-                                    <span class="global-offer-banner__title dark__text">Get $40 off spooky flowers with ticket purchase.</span>
-                                </span>
-                            </button>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <a class="js-global-offer-tracking global-offer-banner__link js-fd-carousel-focus-elem" href="#" target="_blank" data-promo-link="https://editorial.rottentomatoes.com/article/verified-hot-celebrating-the-best-verified-rated-films-by-fans/?cmp=TARS~FANDANGO~Verified Hot_GlobalNav" data-promo-name="New Audience Score Badge Unveiled: Verified Hot" data-promo-position="9">
-                                <img class="global-offer-banner__icon" src="https://images.fandango.com/cms/assets/64a40e40-5e81-11ef-a07e-5b03d6159fe4--rt-icon.svg" alt="offer icon" role="presentation">
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">New Audience Score Badge Unveiled: Verified Hot</strong>
-                                    <span class="global-offer-banner__title dark__text">Check out the first Verified Hot movies!</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
-                            <button class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem" data-offer-id="502" data-overlay-id="movie-offer-modal-502" data-promo-name="Flowers + Movies" data-promo-position="10">
-                                <span class="global-offer-banner__gift-box-icon icon icon-gift-box-white"></span>
-                                <span class="global-offer-banner__text">
-                                    <strong class="global-offer-banner__label">Flowers + Movies</strong>
-                                    <span class="global-offer-banner__title dark__text">Get $40 off spooky flowers with ticket purchase.</span>
-                                </span>
-                            </button>
-                        </li>
-                    </ul>
-                    <button class="js-global-offer-arrow fd-carousel__arrow fd-carousel__arrow--right js-fd-carousel-arrow-right" disabled>
-                        <span class="sr-only">Go to next offer</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <main id="page" class="row min-desktop-width">
-            <!-- salt=pag-dsk_about-about-us -->
-            <div class="about-us">
-                <div class="legacy row">
-                    <div class="small-12 large-9 columns">
-                        <h1 class="heading-size-xl heading-style-1 inline-block">About Tripple A Group</h1>
-                        <div class="panel page-details">
-                            <div class="color-blue text-[50px] uppercase font-bold">Members</div>
-                            <div class="text-[20px]">
-                                <div class="">Our group consist of 3 individual:</div>
-                                <div class="font-bold">22120181 - Nguyen Duy Lam</div>
-                                <div class="font-bold">22120182 - Nguyen Dang Minh Lan</div>
-                                <div class="font-bold">22120186 - Huynh Tan Loc</div>
-                            </div>
-                            <div class="color-blue text-[50px] uppercase font-bold">EMAIL</div>
-                            <div class="text-[20px]">
-                                <div class="font-bold">22120181@student.hcmus.edu.vn</div>
-                                <div class="font-bold">22120182@student.hcmus.edu.vn</div>
-                                <div class="font-bold">22120186@student.hcmus.edu.vn</div>
-                            </div>
+        }
+        )();
+    </script>
+    <!-- OneTrust Cookies Consent Notice end for fandango.com -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- salt=lyt_base-1ab3-gc -->
+    <title id="page-title">Movie Tickets &amp; Movie Times</title>
+    <meta name="description"
+        content="Buy movie tickets in advance, find movie times, watch trailers, read movie reviews, and more at Fandango." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="canonical" href="#" />
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-icons.ee1aade6ea3.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-core.3643dded3a3.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/base/global-components.f5ec10e7d5f.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-icons.ab526580d59.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-core.fbfe532d01d.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/desktop/global-components.dcee711fe52.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- begin preload fonts -->
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <!-- end preload fonts -->
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/about/aboutUs/desktop.65e41c2ed16.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="//images.fandango.com/fandango-www/screenplay/assets/stylesheets/bundles/about/aboutUs/desktop.65e41c2ed16.css">
+    </noscript>
+    <!-- begin preload fonts -->
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/alternate-gothic/alternate_gothic_no1_pro-webfont.e51b88e2752.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regular-webfont.92affc9f7d5.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-regularit-webfont.d47def19c1c.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-bold-webfont.22c920045cf.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="//images.fandango.com/fandango-www/screenplay/assets/fd-pkgs/@fd-assets/core-styles/fonts/proxima-nova/proximanova-boldit-webfont.170970ee557.woff2"
+        as="font" type="font/woff2" crossorigin>
+</head>
 
-                            
+<body class=" dark-mode is-desktop   ">
+    <div aria-live="polite" class="sr-only" id="js-aria-live" tabindex="-1"></div>
+    <!-- salt=lyt-dsk-d298-e8 -->
+    <div class="row">
+        <div class="nav_container">
+            <!-- salt=prt-shr_header-51b6-3b -->
+            <div id="header-wrap" class="nav-bar__adaptive-header-wrap">
+                <header class="nav-bar__global-header-wrap" id="global-header">
+                    <nav class="nav-bar row">
+                        <ul class="nav-bar__left-section tablet-width-100">
+                            <li>
+                                <a href="index.html" class="no-underline text-white text-[50px] p-2">
+                                    Tripple A Group
+                                </a>
+                            </li>
+                            <li id="global-search">
+                                <a class="skip-link" href="#page" id="main-content-skip-link">Skip to Main Content
+                                </a>
+                                <form action="/search" autocomplete="off" novalidate role="search">
+                                    <div class="js-fd-header-nav-bar-search-autocomplete nav-bar__autocomplete">
+                                        <div class="js-fd-header-nav-bar-search-input">
+                                            <input aria-label="Search by city, state, zip or movie"
+                                                class="nav-bar__search-input" id="global-header-search-input" name="q"
+                                                placeholder="Search by city, state, zip or movie" type="text" value="">
+                                        </div>
+                                        <div class="csspinner double-up no-overlay"></div>
+                                    </div>
+                                    <input name="mode" type="hidden" value="all">
+                                </form>
+                            </li>
+                        </ul>
+                        <!--?xml version="1.0" encoding="UTF-8"?-->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hide">
+                            <symbol id="icon-nav-movies" viewBox="0 0 19 19">
+                                <path
+                                    d="m18.002 3.347-3.036.973v-.002L13.841.727l2.124-.682a.952.952 0 0 1 1.197.622l.84 2.68zm.048 4.466H3.908L2.797 4.261.66 4.945a.95.95 0 0 0-.616 1.189L.83 8.65v2.536H19V8.763a.95.95 0 0 0-.95-.95zM.83 18.05c0 .526.426.95.95.95H18.05a.95.95 0 0 0 .95-.95v-5.786H.83v5.786zM13.31 4.85l-1.123-3.59-3.035.972 1.124 3.59 3.034-.973zM7.49 2.761l1.124 3.591-3.034.973-1.125-3.592 3.035-.972z" />
+                            </symbol>
+                            <symbol id="icon-nav-theaters" viewBox="0 0 25 18">
+                                <path
+                                    d="m23.138 8.502.798 2.82c.127.45.067.92-.166 1.324a1.77 1.77 0 0 1-1.107.832l-5.21 1.323-.409-1.443-2.975-10.52-.408-1.445L18.925.056c.94-.24 1.912.311 2.171 1.225l.787 2.783c.061.22.094.534-.087.816a1 1 0 0 1-.627.428c-.404.103-.75.356-.943.692a1.185 1.185 0 0 0-.122.922c.202.712 1.017 1.121 1.826.921.182-.046.383-.07.648.03.27.106.425.33.51.498l.05.131zm-10.93-6.739.408 1.443 2.975 10.521.408 1.444-10.924 2.772A1.793 1.793 0 0 1 4.63 18c-.784 0-1.508-.511-1.725-1.281l-.828-2.974c-.017-.195.003-.476.19-.705a.98.98 0 0 1 .567-.349 1.51 1.51 0 0 0 .941-.69c.165-.287.21-.614.122-.922-.2-.712-1.023-1.122-1.826-.921a.996.996 0 0 1-.735-.067c-.292-.146-.426-.429-.487-.64L.065 6.678a1.698 1.698 0 0 1 .166-1.323c.24-.417.633-.712 1.106-.833l10.87-2.759z" />
+                            </symbol>
+                            <symbol id="icon-nav-on-demand" viewBox="0 0 30 20">
+                                <path
+                                    d="M24.24.35H4.77a2.07 2.07 0 00-2 2v11.69a2 2 0 002 1.89h19.47a2 2 0 002-2.13V2.36a2 2 0 00-2-2.01zm-7.79 8.14l-3.42 2.25a.36.36 0 01-.59-.24V6.01a.31.31 0 01.35-.35c.12 0 .12 0 .24.12l3.3 2.12a.52.52 0 01.12.59zM6.66 18.29H23.3v1.06H6.66z" />
+                            </symbol>
+                            <symbol id="icon-nav-news" viewBox="0 0 20 20">
+                                <path
+                                    d="M10.008 0a.768.768 0 0 0-.748.552L7.27 6.989H.81c-.773 0-1.105.982-.49 1.451l5.26 4.017-2.018 6.534c-.169.543.264 1.008.743 1.008.157 0 .32-.05.467-.162l5.233-4.001 5.24 4.002a.76.76 0 0 0 .467.163c.479 0 .911-.465.744-1.008l-2.022-6.544 5.247-4.01c.613-.469.282-1.45-.49-1.45h-6.445L10.756.552A.77.77 0 0 0 10.009 0z" />
+                            </symbol>
+                            <symbol id="icon-nav-account" viewBox="0 0 20 20">
+                                <path
+                                    d="M16 15c0 .467-.126.913-.347 1.33A8.473 8.473 0 0 0 18.5 10c0-4.687-3.814-8.5-8.5-8.5-4.687 0-8.5 3.813-8.5 8.5a8.472 8.472 0 0 0 2.846 6.33A2.834 2.834 0 0 1 4 15c0-2.209 2.686-4 6-4 3.313 0 6 1.791 6 4zM0 10C0 4.477 4.477 0 10 0c5.522 0 10 4.477 10 10 0 5.522-4.478 10-10 10-5.523 0-10-4.478-10-10zm7-3a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" />
+                            </symbol>
+                        </svg>
+                        <ul class="nav-bar__global-menu tablet-width-100" id="global-menu">
+                            <li class="nav-bar__item">
+                                <a class="nav-bar__icon-link" href="about.html">
+                                    <i class="fas fa-info-circle text-[24px] p-2"></i>
+
+                                    <span class="nav-bar__text">About</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-bar__item">
+                                <a class="nav-bar__icon-link" href="contact.html">
+                                    <i class="fas fa-address-book text-[24px] p-2"></i>
+                                    <span class="nav-bar__text">Contacts</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-bar__item">
+                                <a class="nav-bar__icon-link" href="productListing.html">
+                                    <i class="fas fa-film text-[24px] p-2"></i>
+
+                                    <span class="nav-bar__text">Movies</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-bar__item">
+                                <a class="nav-bar__icon-link" href="login.html">
+                                    <i class="fas fa-sign-in-alt text-[24px] p-2"></i>
+
+                                    <span class="nav-bar__text">Login</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-bar__item">
+                                <a class="nav-bar__icon-link" href="register.html">
+                                    <i class="fas fa-user-plus text-[24px] p-2"></i>
+
+
+                                    <span class="nav-bar__text">Sign in</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div id="global-offer-banner" class="row global-offer-banner dark__section">
+        <h2 class="sr-only">Offers</h2>
+        <div class="js-fd-splide splide global-offer-banner__splide">
+            <div class="splide__track global-offer-banner__wrap">
+                <button
+                    class="js-global-offer-arrow fd-carousel__arrow fd-carousel__arrow--left js-fd-carousel-arrow-left"
+                    disabled>
+                    <span class="sr-only">Go to previous offer</span>
+                </button>
+                <ul class="splide__list">
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="7800a" data-promo-name="Set sail with Moana&#39;s Ticket 2 Adventure"
+                            data-promo-position="1">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Set sail with Moana &#39;s Ticket 2
+                                    Adventure</strong>
+                                <span class="global-offer-banner__title dark__text">Get 2 tickets to Moana 2
+                                    &amp;more!</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="2673a" data-promo-name="Seize the We Are Venom Bundle"
+                            data-promo-position="2">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Seize the We Are Venom Bundle</strong>
+                                <span class="global-offer-banner__title dark__text">Get 2 tickets to Venom: The Last
+                                    Dance &amp;more!</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="6169a" data-promo-name="Popular Poster Pack" data-promo-position="3">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Popular Poster Pack</strong>
+                                <span class="global-offer-banner__title dark__text">Get 2 movie tickets to Wicked, a
+                                    limited edition</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="3723a" data-promo-name="Wicked Exclusive Collector&#39;s Pin Pack"
+                            data-promo-position="4">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/c5928c80-ca9f-11ed-9577-b524031771c2--gift-icon-svg.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Wicked Exclusive Collector &#39;s Pin
+                                    Pack</strong>
+                                <span class="global-offer-banner__title dark__text">Purchase a ticket to see Wicked in
+                                    IMAX and get </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <a class="js-global-offer-tracking global-offer-banner__link js-fd-carousel-focus-elem" href="#"
+                            target="_blank"
+                            data-promo-link="https://www.fandangomovietickets.com/thecarpenter?cmp=TARS~FANDANGO~The_Carpenter_BOGO_GlobalNav"
+                            data-promo-name="Get BOGO Tickets Now for The Carpenter" data-promo-position="5">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Get BOGO Tickets Now for The
+                                    Carpenter</strong>
+                                <span class="global-offer-banner__title dark__text">In theaters November 1st. Get
+                                    tickets early!</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="7992a" data-promo-name="Get Scream Worthy Savings" data-promo-position="6">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Get Scream Worthy Savings</strong>
+                                <span class="global-offer-banner__title dark__text">See classic horror movies and get
+                                    deals near you</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="6454a" data-promo-name="Save 25% off on all Andrea Bocelli products"
+                            data-promo-position="7">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Save 25% off on all Andrea Bocelli
+                                    products</strong>
+                                <span class="global-offer-banner__title dark__text">When you buy a ticket to Andrea
+                                    Bocelli 30: The </span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="1413a" data-promo-name="Flowers + Movies = Perfect Halloween"
+                            data-promo-position="8">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/95b0efd0-c6e7-11ee-a14e-3f3f55d13640--ticket-icon.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Flowers + Movies = Perfect Halloween</strong>
+                                <span class="global-offer-banner__title dark__text">Get $40 off spooky flowers with
+                                    ticket purchase.</span>
+                            </span>
+                        </button>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <a class="js-global-offer-tracking global-offer-banner__link js-fd-carousel-focus-elem" href="#"
+                            target="_blank"
+                            data-promo-link="https://editorial.rottentomatoes.com/article/verified-hot-celebrating-the-best-verified-rated-films-by-fans/?cmp=TARS~FANDANGO~Verified Hot_GlobalNav"
+                            data-promo-name="New Audience Score Badge Unveiled: Verified Hot" data-promo-position="9">
+                            <img class="global-offer-banner__icon"
+                                src="https://images.fandango.com/cms/assets/64a40e40-5e81-11ef-a07e-5b03d6159fe4--rt-icon.svg"
+                                alt="offer icon" role="presentation">
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">New Audience Score Badge Unveiled: Verified
+                                    Hot</strong>
+                                <span class="global-offer-banner__title dark__text">Check out the first Verified Hot
+                                    movies!</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="splide__slide fd-carousel__slide global-offer-banner__slide">
+                        <button
+                            class="js-global-offer-tracking js-offer-modal-cta global-offer-banner__link js-fd-carousel-focus-elem"
+                            data-offer-id="502" data-overlay-id="movie-offer-modal-502"
+                            data-promo-name="Flowers + Movies" data-promo-position="10">
+                            <span class="global-offer-banner__gift-box-icon icon icon-gift-box-white"></span>
+                            <span class="global-offer-banner__text">
+                                <strong class="global-offer-banner__label">Flowers + Movies</strong>
+                                <span class="global-offer-banner__title dark__text">Get $40 off spooky flowers with
+                                    ticket purchase.</span>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+                <button
+                    class="js-global-offer-arrow fd-carousel__arrow fd-carousel__arrow--right js-fd-carousel-arrow-right"
+                    disabled>
+                    <span class="sr-only">Go to next offer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <main id="page" class="row min-desktop-width">
+        <!-- salt=pag-dsk_about-about-us -->
+        <div class="about-us">
+            <div class="legacy row">
+                <div class="small-12 large-9 columns">
+                    <h1 class="heading-size-xl heading-style-1 inline-block">About Tripple A Group</h1>
+                    <div class="panel page-details">
+                        <div class="color-blue text-[50px] uppercase font-bold">Members</div>
+                        <div class="text-[20px]">
+                            <div class="">Our group consist of 3 individual:</div>
+                            <div class="font-bold">22120181 - Nguyen Duy Lam</div>
+                            <div class="font-bold">22120182 - Nguyen Dang Minh Lan</div>
+                            <div class="font-bold">22120186 - Huynh Tan Loc</div>
+                        </div>
+                        <div class="color-blue text-[50px] uppercase font-bold">EMAIL</div>
+                        <div class="text-[20px]">
+                            <div class="font-bold">22120181@student.hcmus.edu.vn</div>
+                            <div class="font-bold">22120182@student.hcmus.edu.vn</div>
+                            <div class="font-bold">22120186@student.hcmus.edu.vn</div>
+                        </div>
+
+
                     </div>
                     <div class="width-25">
                         <div class="ad-unit--sidebar">
@@ -330,633 +440,806 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <footer class="row footer">
-            <section class="emu__content row width-100 footer__section dark__section">
-                <div class="footer-offer__header">
-                    <h2 class="emu__heading--medium emu-override">Offers</h2>
-                    <a href="/offers" class="dark__link">SEE ALL OFFERS</a>
-                </div>
-                <ul class="footer-offer__list">
-                    <li class="footer-offer">
-                        <a href="#" target="_blank">
-                            <span class="sr-only">Set sail with the Moana 2 Ticket 2 Adventure image link</span>
-                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/b03cd7c0-9332-11ef-a588-3b078e6b3d8a--fan-globalofferunit-homepage-moanaticket2adventurebundle-292x118.jpg" alt="Set sail with the Moana 2 Ticket 2 Adventure">
-                        </a>
-                        <div class="footer-offer__description-section">
-                            <div>
-                                <h3 class="emu__heading--small dark__text">Set sail with the Moana 2 Ticket 2 Adventure</h3>
-                                <p class="emu__description footer-offer__description dark__text">Get two tickets to Moana 2, an exclusive limited release Disney pin set, and more!</p>
-                            </div>
-                            <a href="#" target="_blank" class="dark__link">BUY NOW</a>
+    </main>
+    <footer class="row footer">
+        <section class="emu__content row width-100 footer__section dark__section">
+            <div class="footer-offer__header">
+                <h2 class="emu__heading--medium emu-override">Offers</h2>
+                <a href="/offers" class="dark__link">SEE ALL OFFERS</a>
+            </div>
+            <ul class="footer-offer__list">
+                <li class="footer-offer">
+                    <a href="#" target="_blank">
+                        <span class="sr-only">Set sail with the Moana 2 Ticket 2 Adventure image link</span>
+                        <img class="footer-offer__img"
+                            src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/b03cd7c0-9332-11ef-a588-3b078e6b3d8a--fan-globalofferunit-homepage-moanaticket2adventurebundle-292x118.jpg"
+                            alt="Set sail with the Moana 2 Ticket 2 Adventure">
+                    </a>
+                    <div class="footer-offer__description-section">
+                        <div>
+                            <h3 class="emu__heading--small dark__text">Set sail with the Moana 2 Ticket 2 Adventure</h3>
+                            <p class="emu__description footer-offer__description dark__text">Get two tickets to Moana 2,
+                                an exclusive limited release Disney pin set, and more!</p>
                         </div>
+                        <a href="#" target="_blank" class="dark__link">BUY NOW</a>
+                    </div>
+                </li>
+                <li class="footer-offer">
+                    <a href="#" target="_blank">
+                        <span class="sr-only">Get $5 off on Moana image link</span>
+                        <img class="footer-offer__img"
+                            src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/dee210e0-9332-11ef-8321-2b978811c524--fan-globalofferunit-homepage-moana2gwp-292x118.png"
+                            alt="Get $5 off on Moana">
+                    </a>
+                    <div class="footer-offer__description-section">
+                        <div>
+                            <h3 class="emu__heading--small dark__text">Get $5 off on Moana</h3>
+                            <p class="emu__description footer-offer__description dark__text">Buy a ticket to Moana 2,
+                                Get $5 off on Moana to watch at home.</p>
+                        </div>
+                        <a href="#" target="_blank" class="dark__link">BUY TICKETS</a>
+                    </div>
+                </li>
+                <li class="footer-offer">
+                    <a href="#" target="_blank">
+                        <span class="sr-only">Seize the We Are Venom Bundle image link</span>
+                        <img class="footer-offer__img"
+                            src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/767aefa0-7d3d-11ef-a07e-5b03d6159fe4--fan-globalofferunit-homepage-venom-292x118.png"
+                            alt="Seize the We Are Venom Bundle">
+                    </a>
+                    <div class="footer-offer__description-section">
+                        <div>
+                            <h3 class="emu__heading--small dark__text">Seize the We Are Venom Bundle</h3>
+                            <p class="emu__description footer-offer__description dark__text">Get two tickets to Venom:
+                                The Last Dance, an exclusive Venom Collector's Cup, and more!</p>
+                        </div>
+                        <a href="#" target="_blank" class="dark__link">BUY NOW</a>
+                    </div>
+                </li>
+                <li class="footer-offer">
+                    <a href="#" target="_blank">
+                        <span class="sr-only">Halloween Deals Near You! image link</span>
+                        <img class="footer-offer__img"
+                            src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/d34c20c0-7f8e-11ef-a07e-5b03d6159fe4--fan-globalofferunit-halloweenoffers-week1-292x118.png"
+                            alt="Halloween Deals Near You!">
+                    </a>
+                    <div class="footer-offer__description-section">
+                        <div>
+                            <h3 class="emu__heading--small dark__text">Halloween Deals Near You!</h3>
+                            <p class="emu__description footer-offer__description dark__text">Your favorite Halloween
+                                classics at spooky good prices are just a click away.</p>
+                        </div>
+                        <a href="#" target="_blank" class="dark__link">GET TICKETS</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="emu__content footer__section dark__section">
+            <div class="footer-coming-soon">
+                <h2 class="emu__heading--medium dark__text">New &amp;Coming soon</h2>
+                <ul class="footer-coming-soon__list">
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234523/FND_poster_Wicked-Presale.jpg"
+                                    alt="" role="presentation" />
+                            </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Wicked (2024)</p>
+                        </a>
                     </li>
-                    <li class="footer-offer">
-                        <a href="#" target="_blank">
-                            <span class="sr-only">Get $5 off on Moana image link</span>
-                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/dee210e0-9332-11ef-8321-2b978811c524--fan-globalofferunit-homepage-moana2gwp-292x118.png" alt="Get $5 off on Moana">
-                        </a>
-                        <div class="footer-offer__description-section">
-                            <div>
-                                <h3 class="emu__heading--small dark__text">Get $5 off on Moana</h3>
-                                <p class="emu__description footer-offer__description dark__text">Buy a ticket to Moana 2, Get $5 off on Moana to watch at home.</p>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/235359/WRB_Tree1Sheet6_RGB_1.jpg"
+                                    alt="" role="presentation" />
                             </div>
-                            <a href="#" target="_blank" class="dark__link">BUY TICKETS</a>
-                        </div>
+                            <p class="footer-coming-soon__sr-only dark__text">The Wild Robot (2024)</p>
+                        </a>
                     </li>
-                    <li class="footer-offer">
-                        <a href="#" target="_blank">
-                            <span class="sr-only">Seize the We Are Venom Bundle image link</span>
-                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/767aefa0-7d3d-11ef-a07e-5b03d6159fe4--fan-globalofferunit-homepage-venom-292x118.png" alt="Seize the We Are Venom Bundle">
-                        </a>
-                        <div class="footer-offer__description-section">
-                            <div>
-                                <h3 class="emu__heading--small dark__text">Seize the We Are Venom Bundle</h3>
-                                <p class="emu__description footer-offer__description dark__text">Get two tickets to Venom: The Last Dance, an exclusive Venom Collector's Cup, and more!</p>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234514/VNM3_OnLine_2000x3000_TSR_02_sm.jpg"
+                                    alt="" role="presentation" />
                             </div>
-                            <a href="#" target="_blank" class="dark__link">BUY NOW</a>
-                        </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Venom: The Last Dance (2024)</p>
+                        </a>
                     </li>
-                    <li class="footer-offer">
-                        <a href="#" target="_blank">
-                            <span class="sr-only">Halloween Deals Near You! image link</span>
-                            <img class="footer-offer__img" src="https://images.fandango.com/render/interlace/quality-65/resize-300/images.fandango.com/cms/assets/d34c20c0-7f8e-11ef-a07e-5b03d6159fe4--fan-globalofferunit-halloweenoffers-week1-292x118.png" alt="Halloween Deals Near You!">
-                        </a>
-                        <div class="footer-offer__description-section">
-                            <div>
-                                <h3 class="emu__heading--small dark__text">Halloween Deals Near You!</h3>
-                                <p class="emu__description footer-offer__description dark__text">Your favorite Halloween classics at spooky good prices are just a click away.</p>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234519/FND_poster_Gladiator2-Presale.jpg"
+                                    alt="" role="presentation" />
                             </div>
-                            <a href="#" target="_blank" class="dark__link">GET TICKETS</a>
-                        </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Gladiator II (2024)</p>
+                        </a>
+                    </li>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/235494/Conclave_OfficialPoster.jpg"
+                                    alt="" role="presentation" />
+                            </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Conclave (2024)</p>
+                        </a>
+                    </li>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/236735/S2_DOM_2025x3000_ONLINE_TEASER_ONE_SHEET_TORN.jpg"
+                                    alt="" role="presentation" />
+                            </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Smile 2 (2024)</p>
+                        </a>
+                    </li>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234515/BTLBTL_VERT_MAIN_2764x4096_DOM_REV.jpg"
+                                    alt="" role="presentation" />
+                            </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Beetlejuice Beetlejuice (2024)</p>
+                        </a>
+                    </li>
+                    <li class="footer-coming-soon__list-item">
+                        <a class="footer-coming-soon__link" href="productDetail.html">
+                            <div class="visual-container footer-coming-soon__poster">
+                                <img class="footer-coming-soon__img visual-thumb"
+                                    src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/237168/TERRIFIER-3-Hero-Theatrical-SM.jpg"
+                                    alt="" role="presentation" />
+                            </div>
+                            <p class="footer-coming-soon__sr-only dark__text">Terrifier 3 (2024)</p>
+                        </a>
                     </li>
                 </ul>
-            </section>
-            <section class="emu__content footer__section dark__section">
-                <div class="footer-coming-soon">
-                    <h2 class="emu__heading--medium dark__text">New &amp;Coming soon</h2>
-                    <ul class="footer-coming-soon__list">
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234523/FND_poster_Wicked-Presale.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Wicked (2024)</p>
+            </div>
+        </section>
+        <nav class="footer-nav">
+            <div class="row" role="group">
+                <div class="width-25" role="group">
+                    <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Experience + Explore</h3>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Movies In Theaters</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Movie Actors and Actresses</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Mobile</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">New For Streaming</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Special Offers</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Gift Cards</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="width-25" role="group">
+                    <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Editorial Features</h3>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Indie Movie Guide</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Family Guide</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">House Of Screams</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Movie News</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="width-25" role="group">
+                    <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Videos</h3>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Movie Trailers</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Weekly Ticket</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Mom &#39;s Movie Minute</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="width-25" role="group">
+                    <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Photos</h3>
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Red Carpet Premieres</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">October Celebrity Birthdays</a>
+                        </li>
+                        <li class="footer-nav__list-item">
+                            <a class="light dark__link__second" href="#">Award Show Galleries</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="site-utility-links" class="footer__section footer-utility-links__wrapper" role="group">
+            <div class="width-50 footer-utility-links footer-utility-links__follow" role="group">
+                <h3 class="footer-utility-links__heading dark__text">Follow Us</h3>
+                <ul class="footer-utility-links__social">
+                    <li>
+                        <a class="icon footer-utility-links__social-icon facebook" href="#" rel="nofollow noreferrer"
+                            target="_blank">Fandango on Facebook</a>
+                    </li>
+                    <li>
+                        <a class="icon footer-utility-links__social-icon twitter" href="#" rel="nofollow noreferrer"
+                            target="_blank">Fandango on Twitter</a>
+                    </li>
+                    <li>
+                        <a class="icon footer-utility-links__social-icon instagram" href="#" rel="nofollow noreferrer"
+                            target="_blank">Fandango on Instagram</a>
+                    </li>
+                    <li>
+                        <a class="icon footer-utility-links__social-icon youtube" href="#" rel="nofollow noreferrer"
+                            target="_blank">Fandango on Youtube</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="width-50 footer-utility-links footer-utility-links__apps" role="group">
+                <h3 class="footer-utility-links__heading dark__text">Get Ours Apps</h3>
+                <div class="footer-utility-links__social" role="group">
+                    <a class="footer-utility-links__app-store-icon icon apple-app-store" href="#">Fandango iOS App</a>
+                    <a class="footer-utility-links__app-store-icon icon google-play-store" href="#">Fandango Android
+                        App</a>
+                </div>
+            </div>
+        </section>
+        <section id="site-info" class="footer-site-info footer__section dark__section">
+            <div class="row footer-site-info__container" role="group">
+                <div class="footer-site-info__section" role="group">
+                    <ul class="footer-site-info__list">
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Check Gift Card
+                                Balance
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/235359/WRB_Tree1Sheet6_RGB_1.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">The Wild Robot (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Refunds
+                                &amp;Exchanges
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234514/VNM3_OnLine_2000x3000_TSR_02_sm.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Venom: The Last Dance (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Help
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234519/FND_poster_Gladiator2-Presale.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Gladiator II (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">My Account
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/235494/Conclave_OfficialPoster.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Conclave (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <span id="footer-feedback" role="link" class="footer-site-info__link"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-site-info__section" role="group">
+                    <ul class="footer-site-info__list">
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">About Fandango
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/236735/S2_DOM_2025x3000_ONLINE_TEASER_ONE_SHEET_TORN.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Smile 2 (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Careers
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/234515/BTLBTL_VERT_MAIN_2764x4096_DOM_REV.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Beetlejuice Beetlejuice (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Link to Us
                             </a>
                         </li>
-                        <li class="footer-coming-soon__list-item">
-                            <a class="footer-coming-soon__link" href="productDetail.html">
-                                <div class="visual-container footer-coming-soon__poster">
-                                    <img class="footer-coming-soon__img visual-thumb" src="https://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/237168/TERRIFIER-3-Hero-Theatrical-SM.jpg" alt="" role="presentation"/>
-                                </div>
-                                <p class="footer-coming-soon__sr-only dark__text">Terrifier 3 (2024)</p>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Affiliate
+                                Program
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Fandango
+                                Rewards
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Site Index
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Ad Choices
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Privacy Policy
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <!-- OneTrust Cookies Settings button start -->
+                            <button id="ot-sdk-btn" class="ot-sdk-show-settings a footer-site-info__link "></button>
+                            <!-- OneTrust Cookies Settings button end -->
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">California
+                                Notice
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Terms and
+                                Policies
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Accessibility
                             </a>
                         </li>
                     </ul>
                 </div>
-            </section>
-            <nav class="footer-nav">
-                <div class="row" role="group">
-                    <div class="width-25" role="group">
-                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Experience + Explore</h3>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Movies In Theaters</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Movie Actors and Actresses</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Mobile</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">New For Streaming</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Special Offers</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Gift Cards</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="width-25" role="group">
-                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Editorial Features</h3>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Indie Movie Guide</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Family Guide</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">House Of Screams</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Movie News</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="width-25" role="group">
-                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Videos</h3>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Movie Trailers</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Weekly Ticket</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Mom &#39;s Movie Minute</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="width-25" role="group">
-                        <h3 class="heading-style-1 heading-size-m footer-nav__heading dark__text">Photos</h3>
-                        <ul class="footer-nav__list">
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Red Carpet Premieres</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">October Celebrity Birthdays</a>
-                            </li>
-                            <li class="footer-nav__list-item">
-                                <a class="light dark__link__second" href="#">Award Show Galleries</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <section id="site-utility-links" class="footer__section footer-utility-links__wrapper" role="group">
-                <div class="width-50 footer-utility-links footer-utility-links__follow" role="group">
-                    <h3 class="footer-utility-links__heading dark__text">Follow Us</h3>
-                    <ul class="footer-utility-links__social">
-                        <li>
-                            <a class="icon footer-utility-links__social-icon facebook" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Facebook</a>
+                <div class="footer-site-info__section dark__text" role="group">
+                    <ul class="footer-site-info__list footer-site-info__list--affiliates">
+                        <li class="footer-site-info__list-item"></li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__text" href="#" rel="nofollow"></a>
                         </li>
-                        <li>
-                            <a class="icon footer-utility-links__social-icon twitter" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Twitter</a>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Movieclips
+                            </a>
                         </li>
-                        <li>
-                            <a class="icon footer-utility-links__social-icon instagram" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Instagram</a>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Rotten Tomatoes
+                            </a>
                         </li>
-                        <li>
-                            <a class="icon footer-utility-links__social-icon youtube" href="#" rel="nofollow noreferrer" target="_blank">Fandango on Youtube</a>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Flixster.com
+                            </a>
+                        </li>
+                        <li class="footer-site-info__list-item">
+                            <a class="footer-site-info__link dark__text" href="#" rel="nofollow">MovieTickets.com
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <div class="width-50 footer-utility-links footer-utility-links__apps" role="group">
-                    <h3 class="footer-utility-links__heading dark__text">Get Ours Apps</h3>
-                    <div class="footer-utility-links__social" role="group">
-                        <a class="footer-utility-links__app-store-icon icon apple-app-store" href="#">Fandango iOS App</a>
-                        <a class="footer-utility-links__app-store-icon icon google-play-store" href="#">Fandango Android App</a>
-                    </div>
+                <div class="footer-site-info__advertising-btn" role="button">
+                    <a class="footer-site-info__advertising-link dark__text" href="#" rel="nofollow">Advertise With Us
+                    </a>
                 </div>
-            </section>
-            <section id="site-info" class="footer-site-info footer__section dark__section">
-                <div class="row footer-site-info__container" role="group">
-                    <div class="footer-site-info__section" role="group">
-                        <ul class="footer-site-info__list">
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Check Gift Card Balance
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Refunds &amp;Exchanges
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Help
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">My Account
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <span id="footer-feedback" role="link" class="footer-site-info__link"></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-site-info__section" role="group">
-                        <ul class="footer-site-info__list">
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">About Fandango
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Careers
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Link to Us
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Affiliate Program
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Fandango Rewards
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Site Index
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Ad Choices
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Privacy Policy
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <!-- OneTrust Cookies Settings button start -->
-                                <button id="ot-sdk-btn" class="ot-sdk-show-settings a footer-site-info__link "></button>
-                                <!-- OneTrust Cookies Settings button end -->
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">California Notice
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Terms and Policies
-                            </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__link__second" href="#" rel="nofollow">Accessibility
-                            </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-site-info__section dark__text" role="group">
-                        <ul class="footer-site-info__list footer-site-info__list--affiliates">
-                            <li class="footer-site-info__list-item"></li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow"></a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Movieclips
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Rotten Tomatoes
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">Flixster.com
-                        </a>
-                            </li>
-                            <li class="footer-site-info__list-item">
-                                <a class="footer-site-info__link dark__text" href="#" rel="nofollow">MovieTickets.com
-                        </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-site-info__advertising-btn" role="button">
-                        <a class="footer-site-info__advertising-link dark__text" href="#" rel="nofollow">Advertise With Us
-            </a>
-                    </div>
-                    &copy;2024 Fandango |
+                &copy;2024 Fandango |
 
-        <a class="global-footer__copyright--link" href="#" target="_blank">A Division of NBCUniversal
-        </a>
-                </div>
-            </section>
-        </footer>
-        <div id="movie-offer-modal-7800a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/3c800e70-9340-11ef-a07e-5b03d6159fe4--fan-mobilewebmu-moana2gwp-194x223.png" alt="Set sail with Moana&#39;s Ticket 2 Adventure">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Buy a ticket to Moana 2, Get $5 off on Moana to watch at home.	</h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">&quot;The Moana 2 Ticket 2 Adventure bundle is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must have, and be logged into, a Fandango at Home account to buy your bundle. You must have a Fandango account to redeem your movie tickets and receive your 400 FanRewards Points, and you must buy your Moana 2 Ticket 2 Adventure bundle using the same email address used for your Fandango account to receive all components of the bundle. You must be 18 years of age or older to purchase a bundle. The exclusive limited release Disney Pin USA set will begin shipping at the end of November. Please use a physical address where the exclusive limited release Disney Pin USA set can be delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen deliveries. The 400 Bonus FanRewards Points will be added to your Fandango account after the release of Moana 2. See https://www.fandangomovietickets.com/moana2ticket2adventure for full terms and conditions.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_self">BUY TICKETS
-            </a>
-                </div>
+                <a class="global-footer__copyright--link" href="#" target="_blank">A Division of NBCUniversal
+                </a>
             </div>
-        </div>
-        <div id="movie-offer-modal-2673a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/f95099d0-7d41-11ef-8321-2b978811c524--fan-globalnavbar-venom-343x362.jpg" alt="Seize the We Are Venom Bundle">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Get two tickets to Venom: The Last Dance, an exclusive Venom Collector &#39;s Cup, and more for $99.80!</h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">We Are Venom bundle is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must be 18 years of age or older to purchase a bundle. You must have, and be logged into, a Fandango at Home account to buy your bundle and receive Venom: The Last Dance (pre-order so that you can view it when the studio makes it available), Venom, and Venom: Let There Be Carnage on Fandango at Home. The collectible cup and exclusive poster will begin shipping in the month of November. Please use a physical address where the collectible cup and exclusive poster shipment can be delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen deliveries. See Offer Terms (https://www.watchfandangoathome.com/wearevenombundle/) for full terms and conditions for each item included in the We Are Venom bundle.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_self">BUY NOW
-            </a>
-                </div>
+        </section>
+    </footer>
+    <div id="movie-offer-modal-7800a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
             </div>
-        </div>
-        <div id="movie-offer-modal-6169a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/351a2720-8db8-11ef-a588-3b078e6b3d8a--fan-globalnavbar-wickedbundle-343x362.png" alt="Popular Poster Pack">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Get 2 movie tickets to Wicked, a limited edition poster, and more!</h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">*Wicked Popular Poster Pack bundle is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must be 18 years of age or older to purchase a bundle. You must have, and be logged into, a Fandango at Home account to buy your bundle and receive Wicked (pre-order so that you can view it when the studio makes it available) on Fandango at Home. The limited edition Wicked poster will begin shipping in the month of November. Please use a physical address where the limited edition Wicked poster shipment can be delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen deliveries. See https://fandan.co/PopularPosterPack for full terms and conditions.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_self">BUY NOW
-            </a>
-                </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/3c800e70-9340-11ef-a07e-5b03d6159fe4--fan-mobilewebmu-moana2gwp-194x223.png"
+                alt="Set sail with Moana&#39;s Ticket 2 Adventure">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Buy a ticket to Moana 2, Get $5 off on Moana to watch at home.
+                </h4>
             </div>
-        </div>
-        <div id="movie-offer-modal-3723a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">Special Offer</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/2a60c6f0-82bd-11ef-8321-2b978811c524--fan-globalnavbar-wickedimax-343x362.jpg" alt="Wicked Exclusive Collector&#39;s Pin Pack">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Purchase a ticket to Wicked in IMAX and get a Wicked Collector &#39;s Pin Pack! While supplies lasts. See terms for details. </h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">Limited time offer. While supplies last. Log into your account on Fandango.com or the Fandango app and purchase at least one (1) IMAX movie ticket to ‘Wicked’ between 9:00am PT on 10/09/24 and 11:59pm PT on 12/31/24. Purchaser will receive a post purchase email containing one (1) Promotional Code (“Code”) that is good for the redemption of the Wicked Collector’s Pin Pack. Pin Pack will ship in November. There is a limited quantity of Codes available in this promotion. Codes will stop being distributed on the earlier of (i) the Code distribution limit being reached, (ii) Wicked no longer being in IMAX theaters, or (iii) 11:59pm PT on 12/31/24.  There is a limited quantity of Code redemptions available in this promotion. Code expires, and can no longer be used, when the limit of Code redemptions has been reached, or at 11:59pm PT on 1/31/25, whichever comes first. Limit one Code per transaction. You may have to pay taxes additionally. One-time use only. Void where prohibited. Offer is non-transferable and cannot be combined with any other offer or discount. If lost or stolen, cannot be replaced. No cash value, except as required by law. Not for resale; void if sold or exchanged. Offer valid in the U.S. only. You must have, and be logged into, your Fandango account to receive a Code. Fandango is free to join; you must be 18 years of age or older to create a Fandango account. Fandango reserves the right to modify or cancel this offer at any time and without notice. This offer is subject to Fandango Terms and Policies and Privacy Policy at Terms and Policies at http://www.fandango.com/terms-and-policies.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_self">Buy Tickets
-            </a>
-                </div>
-            </div>
-        </div>
-        <div id="movie-offer-modal-7215a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">Get BOGO Tickets Now for The Carpenter</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description"></h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text"></small>
-                </div>
-            </div>
-        </div>
-        <div id="movie-offer-modal-7992a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">Halloween Deals Near You!</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/bcc09fb0-8a4d-11ef-ab6e-6bc4e16d49df--fan-globalnavbar-applepay-week4-tickets-343x362.png" alt="Get Scream Worthy Savings">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Your favorite Halloween classics at spooky good prices are just a click away. </h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">Offers are subject to change or cancellation by each theater, please contact your local theater with any questions.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_self">Learn More
-            </a>
-                </div>
-            </div>
-        </div>
-        <div id="movie-offer-modal-6454a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">Special Offer</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/9b07b1d0-82bc-11ef-a588-3b078e6b3d8a--fan-globalnavbar-andreabocelli-343x362.png" alt="Save 25% off on all Andrea Bocelli products">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Buy a Ticket, Save 25% off on Andrea Bocelli products at Verve Record Store.	</h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">*Limited time offer. Log into your account on Fandango.com or the Fandango app and purchase at least one movie ticket to ‘Andrea Bocelli 30: The Celebration’ between 9:00am PT on 10/8/24 and 11:59pm PT on 11/14/24 (the “Offer Period”). Purchaser will receive a post purchase email containing 1 Verve Records Store Promotional Code (“Code”) that is good for 25% off the purchase of all Andrea Bocelli products in the store. You must have, and be logged into, your Fandango account to receive a Code. Fandango is free to join; you must be 18 years of age or older to create a Fandango account.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_blank">Buy Tickets
-            </a>
-                </div>
-            </div>
-        </div>
-        <div id="movie-offer-modal-1413a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">LIMITED TIME OFFER</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/05d80380-82bc-11ef-a07e-5b03d6159fe4--fan-globalnavbar-bouqshalloween-343x362-v2b.jpg" alt="Flowers + Movies = Perfect Halloween">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Get $40 OFF from The Bouqs Co. when you purchase a ticket between 10/1 and 10/31.</h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">Limited time offer. While supplies last. Rent or purchase any movie or TV show on Fandango at Home or purchase at least (1) movie ticket on Fandango between 12:00am PT on October 1, 2024 and 11:59pm PT on October 31, 2024 and get a Bouqs promo code (“code”) for $40 off one (1) qualifying merchandise product (before taxes) from a list of eligible flowers at https://bouqs.com/offers/fandangohalloween2024 plus receive $7.00 off shipping on weekday delivery. Code expires at 11:59 PT on November 18, 2024. Delivery not available in Puerto Rico, American Samoa, Guam, the Northern Marina Islands, the USVI, or APO/FPO addresses. Certain FedEx limitations exist in some areas of Hawaii and Alaska. Not combinable or stackable with any other offers. Code is not valid on vases, sale items, prior purchases, in-store pick-up orders or purchase made on The Bouqs Company iPhone, iPad or Android apps. One code per person per transaction. Code cannot be redeemed for cash and is not valid for resale.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_self">LEARN MORE
-            </a>
-                </div>
-            </div>
-        </div>
-        <div id="movie-offer-modal-534a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
-                <div class="offer-modal__header">
-                    <h3 class="offer-modal__title dark__text">Apple Pay Wednesday</h3>
-                    <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
-                </div>
-                <img class="offer-modal__image" src="https://images.fandango.com/cms/assets/43da3a80-5c02-11ef-a588-3b078e6b3d8a--fan-globalnavbar-applepay-week7-tickets-343x362.png" alt="New Audience Score Badge Unveiled: Verified Hot">
-                <div class="offer-modal__text">
-                    <h4 class="offer-modal__description">Today only! Save $5 off your order with Apple Pay.</h4>
-                </div>
-                <div class="offer-modal__footer">
-                    <small class="offer-modal__terms-and-conditions dark__text">Limited time offer, and limited quantities available. To redeem the offer, purchase one or more movie tickets on Wednesday 8/21/2024, to see any film through Fandango.com or the Fandango iOS mobile app and use Apple Pay®️ as the payment method, and enter the Fandango Promotional Code APPLEPAYWED (“Code”) in order to get the $5 off the entire purchase. There is a limited quantity of Code redemptions allowed in this promotion and therefore the offer is only available first come first served while supplies last. Code expires, and can no longer be used, upon earlier of Wednesday 8/21/2024, or after the limit of Code redemptions have been reached. Only valid for purchase of movie tickets made at Fandango.com or via the Fandango iOS app and cannot be redeemed directly at any theater box office. If lost or stolen, cannot be replaced. No cash value, except as required by law. Void where prohibited. Not valid with any other offer. Offer valid in U.S. One-time use only per email address, for a maximum of one transaction, receiving a maximum of one $5 discount on the purchase total regardless of how many tickets were purchased in that one transaction. Not for resale; void if sold or exchanged. Limit 1 Code per email address. Fandango reserves the right to modify or cancel this offer at any time and without notice. The redemption of the Code is subject to Fandango’s Terms and Policies at www.fandango.com/terms-and-policies. Apple Pay is a registered mark of Apple Inc.
-            </small>
-                    <a class="btn offer-modal__button" href="#" target="_blank">Buy Tickets
-            </a>
-                </div>
-            </div>
-        </div>
-        <div id="movie-offer-modal-502" class="offer-dialog dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
-            <div class="font-sans-serif-alt width-60 tablet-width-60 dialog-content animate-slide-down animate-speed-normal">
-                <div class="offer-banner">
-                    <span class="icon-gift-box-white"></span>
-                    SPECIAL OFFER
-                
-            
-                </div>
-                <button class="js-modal-close-btn style-none close-modal icon icon-close">Close</button>
-                <img class="offer-heading" src="https://images.fandango.com/images/offers/502/1/FAN_MOPLightboxUnit_Desktop_BouqsHalloween_620x350-v2B_lg.jpg" alt="Flowers + Movies">
-                <div class="offer-footer">
-                    <h4 class="font-sans-serif-alt dark__text">Make a purchase on Fandango or Fandango at Home and enjoy $40 off Bouqs flowers, plus $7 off weekday shipping.</h4>
-                </div>
-                <small class="font-sans-serif-alt dark__text">
-                    <p>Not a member? Join now or during checkout - it's free!</p>
-                    Limited time offer. While supplies last. Rent or purchase any movie or TV show on Fandango at Home or purchase at least (1) movie ticket on Fandango between 12:00am PT on October 1, 2024 and 11:59pm PT on October 31, 2024 and get a Bouqs promo code (“code”) for $40 off one (1) qualifying merchandise product (before taxes) from a list of eligible flowers at https://bouqs.com/offers/fandangohalloween2024 plus receive $7.00 off shipping on weekday delivery. Code expires at 11:59 PT on November 18, 2024. Delivery not available in Puerto Rico, American Samoa, Guam, the Northern Marina Islands, the USVI, or APO/FPO addresses. Certain FedEx limitations exist in some areas of Hawaii and Alaska. Not combinable or stackable with any other offers. Code is not valid on vases, sale items, prior purchases, in-store pick-up orders or purchase made on The Bouqs Company iPhone, iPad or Android apps. One code per person per transaction. Code cannot be redeemed for cash and is not valid for resale.
-            
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">&quot;The Moana 2 Ticket 2 Adventure bundle
+                    is non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You
+                    must have, and be logged into, a Fandango at Home account to buy your bundle. You must have a
+                    Fandango account to redeem your movie tickets and receive your 400 FanRewards Points, and you must
+                    buy your Moana 2 Ticket 2 Adventure bundle using the same email address used for your Fandango
+                    account to receive all components of the bundle. You must be 18 years of age or older to purchase a
+                    bundle. The exclusive limited release Disney Pin USA set will begin shipping at the end of November.
+                    Please use a physical address where the exclusive limited release Disney Pin USA set can be
+                    delivered. Once carrier confirms delivery, Fandango is not responsible for lost or stolen
+                    deliveries. The 400 Bonus FanRewards Points will be added to your Fandango account after the release
+                    of Moana 2. See https://www.fandangomovietickets.com/moana2ticket2adventure for full terms and
+                    conditions.
                 </small>
+                <a class="btn offer-modal__button" href="#" target="_self">BUY TICKETS
+                </a>
             </div>
         </div>
-        <script>
+    </div>
+    <div id="movie-offer-modal-2673a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/f95099d0-7d41-11ef-8321-2b978811c524--fan-globalnavbar-venom-343x362.jpg"
+                alt="Seize the We Are Venom Bundle">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Get two tickets to Venom: The Last Dance, an exclusive Venom
+                    Collector &#39;s Cup, and more for $99.80!</h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">We Are Venom bundle is non-refundable. While
+                    supplies last. Movie tickets are non-refundable and non-exchangeable. You must be 18 years of age or
+                    older to purchase a bundle. You must have, and be logged into, a Fandango at Home account to buy
+                    your bundle and receive Venom: The Last Dance (pre-order so that you can view it when the studio
+                    makes it available), Venom, and Venom: Let There Be Carnage on Fandango at Home. The collectible cup
+                    and exclusive poster will begin shipping in the month of November. Please use a physical address
+                    where the collectible cup and exclusive poster shipment can be delivered. Once carrier confirms
+                    delivery, Fandango is not responsible for lost or stolen deliveries. See Offer Terms
+                    (https://www.watchfandangoathome.com/wearevenombundle/) for full terms and conditions for each item
+                    included in the We Are Venom bundle.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_self">BUY NOW
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-6169a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">SPECIAL OFFER</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/351a2720-8db8-11ef-a588-3b078e6b3d8a--fan-globalnavbar-wickedbundle-343x362.png"
+                alt="Popular Poster Pack">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Get 2 movie tickets to Wicked, a limited edition poster, and more!
+                </h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">*Wicked Popular Poster Pack bundle is
+                    non-refundable. While supplies last. Movie tickets are non-refundable and non-exchangeable. You must
+                    be 18 years of age or older to purchase a bundle. You must have, and be logged into, a Fandango at
+                    Home account to buy your bundle and receive Wicked (pre-order so that you can view it when the
+                    studio makes it available) on Fandango at Home. The limited edition Wicked poster will begin
+                    shipping in the month of November. Please use a physical address where the limited edition Wicked
+                    poster shipment can be delivered. Once carrier confirms delivery, Fandango is not responsible for
+                    lost or stolen deliveries. See https://fandan.co/PopularPosterPack for full terms and conditions.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_self">BUY NOW
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-3723a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">Special Offer</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/2a60c6f0-82bd-11ef-8321-2b978811c524--fan-globalnavbar-wickedimax-343x362.jpg"
+                alt="Wicked Exclusive Collector&#39;s Pin Pack">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Purchase a ticket to Wicked in IMAX and get a Wicked Collector
+                    &#39;s Pin Pack! While supplies lasts. See terms for details. </h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">Limited time offer. While supplies last. Log
+                    into your account on Fandango.com or the Fandango app and purchase at least one (1) IMAX movie
+                    ticket to ‘Wicked’ between 9:00am PT on 10/09/24 and 11:59pm PT on 12/31/24. Purchaser will receive
+                    a post purchase email containing one (1) Promotional Code (“Code”) that is good for the redemption
+                    of the Wicked Collector’s Pin Pack. Pin Pack will ship in November. There is a limited quantity of
+                    Codes available in this promotion. Codes will stop being distributed on the earlier of (i) the Code
+                    distribution limit being reached, (ii) Wicked no longer being in IMAX theaters, or (iii) 11:59pm PT
+                    on 12/31/24. There is a limited quantity of Code redemptions available in this promotion. Code
+                    expires, and can no longer be used, when the limit of Code redemptions has been reached, or at
+                    11:59pm PT on 1/31/25, whichever comes first. Limit one Code per transaction. You may have to pay
+                    taxes additionally. One-time use only. Void where prohibited. Offer is non-transferable and cannot
+                    be combined with any other offer or discount. If lost or stolen, cannot be replaced. No cash value,
+                    except as required by law. Not for resale; void if sold or exchanged. Offer valid in the U.S. only.
+                    You must have, and be logged into, your Fandango account to receive a Code. Fandango is free to
+                    join; you must be 18 years of age or older to create a Fandango account. Fandango reserves the right
+                    to modify or cancel this offer at any time and without notice. This offer is subject to Fandango
+                    Terms and Policies and Privacy Policy at Terms and Policies at
+                    http://www.fandango.com/terms-and-policies.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_self">Buy Tickets
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-7215a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">Get BOGO Tickets Now for The Carpenter</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description"></h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text"></small>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-7992a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">Halloween Deals Near You!</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/bcc09fb0-8a4d-11ef-ab6e-6bc4e16d49df--fan-globalnavbar-applepay-week4-tickets-343x362.png"
+                alt="Get Scream Worthy Savings">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Your favorite Halloween classics at spooky good prices are just a
+                    click away. </h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">Offers are subject to change or cancellation
+                    by each theater, please contact your local theater with any questions.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_self">Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-6454a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">Special Offer</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/9b07b1d0-82bc-11ef-a588-3b078e6b3d8a--fan-globalnavbar-andreabocelli-343x362.png"
+                alt="Save 25% off on all Andrea Bocelli products">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Buy a Ticket, Save 25% off on Andrea Bocelli products at Verve
+                    Record Store. </h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">*Limited time offer. Log into your account
+                    on Fandango.com or the Fandango app and purchase at least one movie ticket to ‘Andrea Bocelli 30:
+                    The Celebration’ between 9:00am PT on 10/8/24 and 11:59pm PT on 11/14/24 (the “Offer Period”).
+                    Purchaser will receive a post purchase email containing 1 Verve Records Store Promotional Code
+                    (“Code”) that is good for 25% off the purchase of all Andrea Bocelli products in the store. You must
+                    have, and be logged into, your Fandango account to receive a Code. Fandango is free to join; you
+                    must be 18 years of age or older to create a Fandango account.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_blank">Buy Tickets
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-1413a"
+        class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide" aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">LIMITED TIME OFFER</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/05d80380-82bc-11ef-a07e-5b03d6159fe4--fan-globalnavbar-bouqshalloween-343x362-v2b.jpg"
+                alt="Flowers + Movies = Perfect Halloween">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Get $40 OFF from The Bouqs Co. when you purchase a ticket between
+                    10/1 and 10/31.</h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">Limited time offer. While supplies last.
+                    Rent or purchase any movie or TV show on Fandango at Home or purchase at least (1) movie ticket on
+                    Fandango between 12:00am PT on October 1, 2024 and 11:59pm PT on October 31, 2024 and get a Bouqs
+                    promo code (“code”) for $40 off one (1) qualifying merchandise product (before taxes) from a list of
+                    eligible flowers at https://bouqs.com/offers/fandangohalloween2024 plus receive $7.00 off shipping
+                    on weekday delivery. Code expires at 11:59 PT on November 18, 2024. Delivery not available in Puerto
+                    Rico, American Samoa, Guam, the Northern Marina Islands, the USVI, or APO/FPO addresses. Certain
+                    FedEx limitations exist in some areas of Hawaii and Alaska. Not combinable or stackable with any
+                    other offers. Code is not valid on vases, sale items, prior purchases, in-store pick-up orders or
+                    purchase made on The Bouqs Company iPhone, iPad or Android apps. One code per person per
+                    transaction. Code cannot be redeemed for cash and is not valid for resale.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_self">LEARN MORE
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-534a" class="dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide"
+        aria-hidden="true">
+        <div class="animate-slide-down animate-speed-normal dialog-content offer-modal__content dark__section">
+            <div class="offer-modal__header">
+                <h3 class="offer-modal__title dark__text">Apple Pay Wednesday</h3>
+                <button class="js-modal-close-btn offer-modal__close icon icon-close--large">Close</button>
+            </div>
+            <img class="offer-modal__image"
+                src="https://images.fandango.com/cms/assets/43da3a80-5c02-11ef-a588-3b078e6b3d8a--fan-globalnavbar-applepay-week7-tickets-343x362.png"
+                alt="New Audience Score Badge Unveiled: Verified Hot">
+            <div class="offer-modal__text">
+                <h4 class="offer-modal__description">Today only! Save $5 off your order with Apple Pay.</h4>
+            </div>
+            <div class="offer-modal__footer">
+                <small class="offer-modal__terms-and-conditions dark__text">Limited time offer, and limited quantities
+                    available. To redeem the offer, purchase one or more movie tickets on Wednesday 8/21/2024, to see
+                    any film through Fandango.com or the Fandango iOS mobile app and use Apple Pay®️ as the payment
+                    method, and enter the Fandango Promotional Code APPLEPAYWED (“Code”) in order to get the $5 off the
+                    entire purchase. There is a limited quantity of Code redemptions allowed in this promotion and
+                    therefore the offer is only available first come first served while supplies last. Code expires, and
+                    can no longer be used, upon earlier of Wednesday 8/21/2024, or after the limit of Code redemptions
+                    have been reached. Only valid for purchase of movie tickets made at Fandango.com or via the Fandango
+                    iOS app and cannot be redeemed directly at any theater box office. If lost or stolen, cannot be
+                    replaced. No cash value, except as required by law. Void where prohibited. Not valid with any other
+                    offer. Offer valid in U.S. One-time use only per email address, for a maximum of one transaction,
+                    receiving a maximum of one $5 discount on the purchase total regardless of how many tickets were
+                    purchased in that one transaction. Not for resale; void if sold or exchanged. Limit 1 Code per email
+                    address. Fandango reserves the right to modify or cancel this offer at any time and without notice.
+                    The redemption of the Code is subject to Fandango’s Terms and Policies at
+                    www.fandango.com/terms-and-policies. Apple Pay is a registered mark of Apple Inc.
+                </small>
+                <a class="btn offer-modal__button" href="#" target="_blank">Buy Tickets
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="movie-offer-modal-502"
+        class="offer-dialog dialog style-lightbox animate-fade-in animate-speed-slow offer-banner--hide"
+        aria-hidden="true">
+        <div
+            class="font-sans-serif-alt width-60 tablet-width-60 dialog-content animate-slide-down animate-speed-normal">
+            <div class="offer-banner">
+                <span class="icon-gift-box-white"></span>
+                SPECIAL OFFER
 
-            (function(root) {
-                /* -- Data -- */
-                root.Fandango || (root.Fandango = {});
-                root.Fandango.context = {
-                    "config": {
-                        "disqus": {
-                            "shortname": "fandangocom"
-                        }
+
+            </div>
+            <button class="js-modal-close-btn style-none close-modal icon icon-close">Close</button>
+            <img class="offer-heading"
+                src="https://images.fandango.com/images/offers/502/1/FAN_MOPLightboxUnit_Desktop_BouqsHalloween_620x350-v2B_lg.jpg"
+                alt="Flowers + Movies">
+            <div class="offer-footer">
+                <h4 class="font-sans-serif-alt dark__text">Make a purchase on Fandango or Fandango at Home and enjoy $40
+                    off Bouqs flowers, plus $7 off weekday shipping.</h4>
+            </div>
+            <small class="font-sans-serif-alt dark__text">
+                <p>Not a member? Join now or during checkout - it's free!</p>
+                Limited time offer. While supplies last. Rent or purchase any movie or TV show on Fandango at Home or
+                purchase at least (1) movie ticket on Fandango between 12:00am PT on October 1, 2024 and 11:59pm PT on
+                October 31, 2024 and get a Bouqs promo code (“code”) for $40 off one (1) qualifying merchandise product
+                (before taxes) from a list of eligible flowers at https://bouqs.com/offers/fandangohalloween2024 plus
+                receive $7.00 off shipping on weekday delivery. Code expires at 11:59 PT on November 18, 2024. Delivery
+                not available in Puerto Rico, American Samoa, Guam, the Northern Marina Islands, the USVI, or APO/FPO
+                addresses. Certain FedEx limitations exist in some areas of Hawaii and Alaska. Not combinable or
+                stackable with any other offers. Code is not valid on vases, sale items, prior purchases, in-store
+                pick-up orders or purchase made on The Bouqs Company iPhone, iPad or Android apps. One code per person
+                per transaction. Code cannot be redeemed for cash and is not valid for resale.
+
+            </small>
+        </div>
+    </div>
+    <script>
+
+        (function (root) {
+            /* -- Data -- */
+            root.Fandango || (root.Fandango = {});
+            root.Fandango.context = {
+                "config": {
+                    "disqus": {
+                        "shortname": "fandangocom"
                     }
-                };
-                root.Fandango.context || (root.Fandango.context = {});
-                root.Fandango.context.device = {
-                    "isAndroid": false,
-                    "isIOS": false,
-                    "isMobile": false,
-                    "isWebView": false,
-                    "webView": ""
-                };
-                root.Fandango.context.req = {
-                    "params": {},
-                    "route": "aboutUs",
-                    "url": "\u002Fabout-us",
-                    "secure": false,
-                    "buildVersion": "${buildVersion}"
-                };
-                root.Fandango.configs = {
-                    "loyaltyEnabled": true,
-                    "mayCallHeader": true
-                };
-                root.Fandango.logInUrls = {
-                    "joinNow": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fjoin-now?from=https%3A%2F%2Fwww.fandango.com%2Fabout-us",
-                    "signIn": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fsign-in?from=https%3A%2F%2Fwww.fandango.com%2Fabout-us",
-                    "accountDashboard": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fdashboard"
-                };
-                root.Fandango.dtmData = {
-                    "loggedInStatus": "logged out",
-                    "webVersion": "node",
-                    "site": "desktop",
-                    "loadCsquare": true,
-                    "loadTarget": true
-                };
-                root.Fandango.account = {
-                    "isLoggedIn": false,
-                    "isVerifiedLoggedIn": false
-                };
-                root.Fandango.context.featureFlags = {
-                    "concessionAnnouncementEnabled": true,
-                    "darkModeEnabled": true,
-                    "filmFormatsEnabled": true,
-                    "mopDefaultTab": "intheaters",
-                    "mopTabsEnabled": true,
-                    "openChainFilterEnabled": true,
-                    "rottenTomatoesEnabled": true,
-                    "usePopovers": false
-                };
-                root.Fandango.analyticsData = {
-                    "event": "pageview",
-                    "loggedInStatus": "not logged in",
-                    "server": "fandango web discovery",
-                    "platform": "fandango web",
-                    "cachedPage": "non-cached page",
-                    "loadCsquare": true,
-                    "loadTarget": true,
-                    "pageName": "about-us",
-                    "pageType": "about-us"
-                };
-            }(this));
-            // this is where the Fandango object gets inserted into the window
-        </script>
-        <script src="/canvas/javascripts/1730132312137/client-routes.js"></script>
-        <script>
-            if (Fandango.analyticsData && Object.keys(Fandango.analyticsData).length) {
-                var displayMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark mode' : 'light mode';
-                Fandango.analyticsData.display = displayMode;
-                window.dataLayer.push(Fandango.analyticsData);
-            }
-        </script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/base/vendor.df459ec8874.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/base/polyfills.9e25e56148c.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/require-core.79c4e6fcf86.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/templates/base/templates.09c48725d64.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/base/libraries.c2f527be198.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/require-global.9f80ce69ff3.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/desktop/vendor-legacy.fc4c3e4ecfb.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/templates/desktop/base.c0d6329accd.js"></script>
-        <script DEFER src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/desktop/require-core.0ddf9996e35.js"></script>
-        <script>
-            if (window.mps && 'function' === typeof window.mps.writeFooter)
-                window.mps.writeFooter()
-        </script>
-        <script>
-            window._satellite && _satellite.pageBottom();
-        </script>
-        <script>
-            function gMapsCallback() {
-                Object.assign(Fandango.context, {
-                    googleMapsLoaded: true
-                });
+                }
+            };
+            root.Fandango.context || (root.Fandango.context = {});
+            root.Fandango.context.device = {
+                "isAndroid": false,
+                "isIOS": false,
+                "isMobile": false,
+                "isWebView": false,
+                "webView": ""
+            };
+            root.Fandango.context.req = {
+                "params": {},
+                "route": "aboutUs",
+                "url": "\u002Fabout-us",
+                "secure": false,
+                "buildVersion": "${buildVersion}"
+            };
+            root.Fandango.configs = {
+                "loyaltyEnabled": true,
+                "mayCallHeader": true
+            };
+            root.Fandango.logInUrls = {
+                "joinNow": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fjoin-now?from=https%3A%2F%2Fwww.fandango.com%2Fabout-us",
+                "signIn": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fsign-in?from=https%3A%2F%2Fwww.fandango.com%2Fabout-us",
+                "accountDashboard": "https:\u002F\u002Fwww.fandango.com\u002Faccounts\u002Fdashboard"
+            };
+            root.Fandango.dtmData = {
+                "loggedInStatus": "logged out",
+                "webVersion": "node",
+                "site": "desktop",
+                "loadCsquare": true,
+                "loadTarget": true
+            };
+            root.Fandango.account = {
+                "isLoggedIn": false,
+                "isVerifiedLoggedIn": false
+            };
+            root.Fandango.context.featureFlags = {
+                "concessionAnnouncementEnabled": true,
+                "darkModeEnabled": true,
+                "filmFormatsEnabled": true,
+                "mopDefaultTab": "intheaters",
+                "mopTabsEnabled": true,
+                "openChainFilterEnabled": true,
+                "rottenTomatoesEnabled": true,
+                "usePopovers": false
+            };
+            root.Fandango.analyticsData = {
+                "event": "pageview",
+                "loggedInStatus": "not logged in",
+                "server": "fandango web discovery",
+                "platform": "fandango web",
+                "cachedPage": "non-cached page",
+                "loadCsquare": true,
+                "loadTarget": true,
+                "pageName": "about-us",
+                "pageType": "about-us"
+            };
+        }(this));
+        // this is where the Fandango object gets inserted into the window
+    </script>
+    <script src="/canvas/javascripts/1730132312137/client-routes.js"></script>
+    <script>
+        if (Fandango.analyticsData && Object.keys(Fandango.analyticsData).length) {
+            var displayMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark mode' : 'light mode';
+            Fandango.analyticsData.display = displayMode;
+            window.dataLayer.push(Fandango.analyticsData);
+        }
+    </script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/base/vendor.df459ec8874.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/base/polyfills.9e25e56148c.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/require-core.79c4e6fcf86.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/templates/base/templates.09c48725d64.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/base/libraries.c2f527be198.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/require-global.9f80ce69ff3.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/desktop/vendor-legacy.fc4c3e4ecfb.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/templates/desktop/base.c0d6329accd.js"></script>
+    <script DEFER
+        src="//images.fandango.com/fandango-www/screenplay/assets/javascripts/bundles/transpiled/desktop/require-core.0ddf9996e35.js"></script>
+    <script>
+        if (window.mps && 'function' === typeof window.mps.writeFooter)
+            window.mps.writeFooter()
+    </script>
+    <script>
+        window._satellite && _satellite.pageBottom();
+    </script>
+    <script>
+        function gMapsCallback() {
+            Object.assign(Fandango.context, {
+                googleMapsLoaded: true
+            });
 
-                var gMapsEvent = new CustomEvent('googleMapsLoaded');
-                document.dispatchEvent(gMapsEvent);
-            }
-        </script>
-        <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFYmA0LDwoSx60YFDoWLXuZJnvXsqN96I&callback=gMapsCallback"></script>
-    </body>
+            var gMapsEvent = new CustomEvent('googleMapsLoaded');
+            document.dispatchEvent(gMapsEvent);
+        }
+    </script>
+    <script async defer type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFYmA0LDwoSx60YFDoWLXuZJnvXsqN96I&callback=gMapsCallback"></script>
+</body>
+
 </html>
